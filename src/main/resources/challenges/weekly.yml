@@ -13,23 +13,23 @@ gui:
       name: " "
     'B':
       material: laboratorio:lab_furniture_v1_empty
-      name: "&6ᴠᴏʟᴠᴇʀ"
+      name: "<gold>ᴠᴏʟᴠᴇʀ</gold>"
       lore:
         - ""
-        - "&7¡Volver a la Central de Misiones!"
+        - "<gray>¡Volver a la Central de Misiones!</gray>"
         - ""
       commands:
         - "execute as {player} run challenges"
     '<':
       material: laboratorio:lab_furniture_v1_empty
-      name: "&6ᴘᴀɢɪɴᴀ ᴀɴᴛᴇʀɪᴏʀ"
+      name: "<gold>ᴘᴀɢɪɴᴀ ᴀɴᴛᴇʀɪᴏʀ</gold>"
       back-page: true
       lore:
         - ""
     '>':
       material: laboratorio:lab_furniture_v1_empty
       next-page: true
-      name: "&6ᴘᴀɢɪɴᴀ ꜱɪɢᴜɪᴇɴᴛᴇ"
+      name: "<gold>ᴘᴀɢɪɴᴀ ꜱɪɢᴜɪᴇɴᴛᴇ</gold>"
       lore:
         - ""
 
@@ -47,17 +47,17 @@ challenge-list:
       time-limit: "7d"
       repeatable: 6d23h
       description:
-        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
-        - "&7Cría 20 Pokémon de cualquier tipo."
+        - "<gradient:pink:light_purple><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gray>Cría 20 Pokémon de cualquier tipo.</gray>"
         - " "
-        - "    &bRecompensas:"
-        - "    &b- &f+8000$"
-        - "    &b- &f8 Ultra Balls"
-        - "    &b- &f10 Rare Candies"
-        - "    &b- &f1 Piedra Evolutiva"
+        - "<aqua>Recompensas:</aqua>"
+        - "<aqua>- <white>+8000$</white></aqua>"
+        - "<aqua>- <white>8 Ultra Balls</white></aqua>"
+        - "<aqua>- <white>10 Rare Candies</white></aqua>"
+        - "<aqua>- <white>1 Piedra Evolutiva</white></aqua>"
       display-item:
         material: cobblemon:friend_ball
-        name: "&f&lCrianza Masiva"
+        name: "<white><bold>Crianza Masiva</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -87,17 +87,17 @@ challenge-list:
       time-limit: "7d"
       repeatable: 6d23h
       description:
-        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
-        - "&7Haz eclosionar 20 huevos Pokémon."
+        - "<gradient:yellow:orange><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gray>Haz eclosionar 20 huevos Pokémon.</gray>"
         - " "
-        - "    &bRecompensas:"
-        - "    &b- &f+9000$"
-        - "    &b- &f6 Premier Balls"
-        - "    &b- &f8 Luxury Balls"
-        - "    &b- &f2 Super Pociones"
+        - "<aqua>Recompensas:</aqua>"
+        - "<aqua>- <white>+9000$</white></aqua>"
+        - "<aqua>- <white>6 Premier Balls</white></aqua>"
+        - "<aqua>- <white>8 Luxury Balls</white></aqua>"
+        - "<aqua>- <white>2 Super Pociones</white></aqua>"
       display-item:
         material: cobblemon:moon_ball
-        name: "&f&lPequeños Nacimientos"
+        name: "<white><bold>Pequeños Nacimientos</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -127,17 +127,17 @@ challenge-list:
       time-limit: "7d"
       repeatable: 6d23h
       description:
-        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
-        - "&7Sube un total de 350 niveles entre todos tus Pokémon."
+        - "<gradient:purple:dark_purple><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gray>Sube un total de 350 niveles entre todos tus Pokémon.</gray>"
         - " "
-        - "    &bRecompensas:"
-        - "    &b- &f+10000$"
-        - "    &b- &f12 Rare Candies"
-        - "    &b- &f3 Hiper Pociones"
-        - "    &b- &f1 Pase de Incursión"
+        - "<aqua>Recompensas:</aqua>"
+        - "<aqua>- <white>+10000$</white></aqua>"
+        - "<aqua>- <white>12 Rare Candies</white></aqua>"
+        - "<aqua>- <white>3 Hiper Pociones</white></aqua>"
+        - "<aqua>- <white>1 Pase de Incursión</white></aqua>"
       display-item:
         material: cobblemon:heavy_ball
-        name: "&f&lEntrenamiento Legendario"
+        name: "<white><bold>Entrenamiento Legendario</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -167,17 +167,17 @@ challenge-list:
       time-limit: "7d"
       repeatable: 6d23h
       description:
-        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
-        - "&7Derrota 200 Pokémon salvajes."
+        - "<gradient:red:dark_red><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gray>Derrota 200 Pokémon salvajes.</gray>"
         - " "
-        - "    &bRecompensas:"
-        - "    &b- &f+6000$"
-        - "    &b- &f10 Ultra Balls"
-        - "    &b- &f6 Diamantes"
-        - "    &b- &f2 Máx Pociones"
+        - "<aqua>Recompensas:</aqua>"
+        - "<aqua>- <white>+6000$</white></aqua>"
+        - "<aqua>- <white>10 Ultra Balls</white></aqua>"
+        - "<aqua>- <white>6 Diamantes</white></aqua>"
+        - "<aqua>- <white>2 Máx Pociones</white></aqua>"
       display-item:
         material: cobblemon:dive_ball
-        name: "&f&lCazador Infatigable"
+        name: "<white><bold>Cazador Infatigable</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -207,17 +207,17 @@ challenge-list:
       time-limit: "7d"
       repeatable: 6d23h
       description:
-        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
-        - "&7Captura 50 Pokémon de tipo Agua."
+        - "<gradient:blue:dark_blue><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gray>Captura 50 Pokémon de tipo Agua.</gray>"
         - " "
-        - "    &bRecompensas:"
-        - "    &b- &f+7000$"
-        - "    &b- &f10 Premier Balls"
-        - "    &b- &f5 Rare Candies"
-        - "    &b- &f2 Lingotes de Hierro"
+        - "<aqua>Recompensas:</aqua>"
+        - "<aqua>- <white>+7000$</white></aqua>"
+        - "<aqua>- <white>10 Premier Balls</white></aqua>"
+        - "<aqua>- <white>5 Rare Candies</white></aqua>"
+        - "<aqua>- <white>2 Lingotes de Hierro</white></aqua>"
       display-item:
         material: cobblemon:net_ball
-        name: "&f&lMaratón de Capturas"
+        name: "<white><bold>Maratón de Capturas</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -247,17 +247,17 @@ challenge-list:
       time-limit: "7d"
       repeatable: 6d23h
       description:
-        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
-        - "&7Derrota 25 Pokémon de tipo Dragón."
+        - "<gradient:dark_purple:red><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gray>Derrota 25 Pokémon de tipo Dragón.</gray>"
         - " "
-        - "    &bRecompensas:"
-        - "    &b- &f+9000$"
-        - "    &b- &f8 Ultra Balls"
-        - "    &b- &f4 Super Pociones"
-        - "    &b- &f1 Piedra Evolutiva"
+        - "<aqua>Recompensas:</aqua>"
+        - "<aqua>- <white>+9000$</white></aqua>"
+        - "<aqua>- <white>8 Ultra Balls</white></aqua>"
+        - "<aqua>- <white>4 Super Pociones</white></aqua>"
+        - "<aqua>- <white>1 Piedra Evolutiva</white></aqua>"
       display-item:
         material: cobblemon:beast_ball
-        name: "&f&lCazador de Jefes"
+        name: "<white><bold>Cazador de Jefes</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -287,17 +287,17 @@ challenge-list:
       time-limit: "7d"
       repeatable: 6d23h
       description:
-        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
-        - "&7Juega un total de 20 horas en el servidor."
+        - "<gradient:green:dark_green><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gray>Juega un total de 20 horas en el servidor.</gray>"
         - " "
-        - "    &bRecompensas:"
-        - "    &b- &f+10000$"
-        - "    &b- &f10 Luxury Balls"
-        - "    &b- &f6 Rare Candies"
-        - "    &b- &f1 Llave Normal"
+        - "<aqua>Recompensas:</aqua>"
+        - "<aqua>- <white>+10000$</white></aqua>"
+        - "<aqua>- <white>10 Luxury Balls</white></aqua>"
+        - "<aqua>- <white>6 Rare Candies</white></aqua>"
+        - "<aqua>- <white>1 Llave Normal</white></aqua>"
       display-item:
         material: cobblemon:cherish_ball
-        name: "&f&lGran Aventura"
+        name: "<white><bold>Gran Aventura</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -320,17 +320,17 @@ challenge-list:
       time-limit: "7d"
       repeatable: 6d23h
       description:
-        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
-        - "&7Libera 25 Pokémon desde tu PC."
+        - "<gradient:light_purple:purple><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gray>Libera 25 Pokémon desde tu PC.</gray>"
         - " "
-        - "    &bRecompensas:"
-        - "    &b- &f+7000$"
-        - "    &b- &f6 Ultra Balls"
-        - "    &b- &f6 Rare Candies"
-        - "    &b- &f2 Fichas de Arcade"
+        - "<aqua>Recompensas:</aqua>"
+        - "<aqua>- <white>+7000$</white></aqua>"
+        - "<aqua>- <white>6 Ultra Balls</white></aqua>"
+        - "<aqua>- <white>6 Rare Candies</white></aqua>"
+        - "<aqua>- <white>2 Fichas de Arcade</white></aqua>"
       display-item:
         material: cobblemon:safari_ball
-        name: "&f&lLiberación Espiritual"
+        name: "<white><bold>Liberación Espiritual</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -360,17 +360,17 @@ challenge-list:
       time-limit: "7d"
       repeatable: 6d23h
       description:
-        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
-        - "&7Captura a Bulbasaur, Charmander y Squirtle."
+        - "<gradient:rainbow><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gray>Captura a Bulbasaur, Charmander y Squirtle.</gray>"
         - " "
-        - "    &bRecompensas:"
-        - "    &b- &f+12000$"
-        - "    &b- &f10 Ultra Balls"
-        - "    &b- &f10 Rare Candies"
-        - "    &b- &f1 Llave Normal"
+        - "<aqua>Recompensas:</aqua>"
+        - "<aqua>- <white>+12000$</white></aqua>"
+        - "<aqua>- <white>10 Ultra Balls</white></aqua>"
+        - "<aqua>- <white>10 Rare Candies</white></aqua>"
+        - "<aqua>- <white>1 Llave Normal</white></aqua>"
       display-item:
         material: cobblemon:master_ball
-        name: "&f&lComienzos de Kanto"
+        name: "<white><bold>Comienzos de Kanto</bold></white>"
         lore:
           - "{progression_status}"
           - " "

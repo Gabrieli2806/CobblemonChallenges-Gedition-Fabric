@@ -14,23 +14,23 @@ gui:
       name: " "
     'B':
       material: laboratorio:lab_furniture_v1_empty
-      name: "&6ᴠᴏʟᴠᴇʀ"
+      name: "<gold>ᴠᴏʟᴠᴇʀ</gold>"
       lore:
         - ""
-        - "&7¡Volver a la Central de Misiones!"
+        - "<gray>¡Volver a la Central de Misiones!</gray>"
         - ""
       commands:
         - "execute as {player} run challenges"
     '<':
       material: laboratorio:lab_furniture_v1_empty
-      name: "&6ᴘᴀɢɪɴᴀ ᴀɴᴛᴇʀɪᴏʀ"
+      name: "<gold>ᴘᴀɢɪɴᴀ ᴀɴᴛᴇʀɪᴏʀ</gold>"
       back-page: true
       lore:
         - ""
     '>':
       material: laboratorio:lab_furniture_v1_empty
       next-page: true
-      name: "&6ᴘᴀɢɪɴᴀ ꜱɪɢᴜɪᴇɴᴛᴇ"
+      name: "<gold>ᴘᴀɢɪɴᴀ ꜱɪɢᴜɪᴇɴᴛᴇ</gold>"
       lore:
         - ""
 
@@ -60,7 +60,7 @@ challenge-list:
         - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:poke_ball
-        name: "&f&lCosecha de Bonguris"
+        name: "<white><bold>Cosecha de Bonguris</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -91,7 +91,7 @@ challenge-list:
         - "<green>- <white>2 Premier Ball</white></green>"
       display-item:
         material: cobblemon:premier_ball
-        name: "&f&lCosecha Roja"
+        name: "<white><bold>Cosecha Roja</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -113,18 +113,18 @@ challenge-list:
       time-limit: "24h"
       repeatable: 23h30m
       description:
-        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
-        - "&7Derrota 3 Hoothoot salvajes."
+        - "<gradient:gold:orange><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gray>Derrota 3 Hoothoot salvajes.</gray>"
         - " "
-        - "&aRecompensas:"
-        - "&a- &f+400$"
-        - "&a- &f1 Caramelo Raro"
-        - "&a- &f2 Pociones"
+        - "<green>Recompensas:</green>"
+        - "<green>- <white>+400$</white></green>"
+        - "<green>- <white>1 Caramelo Raro</white></green>"
+        - "<green>- <white>2 Pociones</white></green>"
         - ""
-        - "&7(&cClick Derecho para cancelar&7)"
+        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:great_ball
-        name: "&f&lCazador de Búhos"
+        name: "<white><bold>Cazador de Búhos</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -149,18 +149,18 @@ challenge-list:
       time-limit: "24h"
       repeatable: 23h30m
       description:
-        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
-        - "&7Captura 1 Pikachu."
+        - "<gradient:yellow:gold><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gray>Captura 1 Pikachu.</gray>"
         - " "
-        - "&aRecompensas:"
-        - "&a- &f+500$"
-        - "&a- &f1 Caramelo Raro"
-        - "&a- &f2 Poké Ball"
+        - "<green>Recompensas:</green>"
+        - "<green>- <white>+500$</white></green>"
+        - "<green>- <white>1 Caramelo Raro</white></green>"
+        - "<green>- <white>2 Poké Ball</white></green>"
         - ""
-        - "&7(&cClick Derecho para cancelar&7)"
+        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:dive_ball
-        name: "&f&lCaza Eléctrica"
+        name: "<white><bold>Caza Eléctrica</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -185,17 +185,17 @@ challenge-list:
       time-limit: "24h"
       repeatable: 23h30m
       description:
-        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
-        - "&7Juega por 2 horas."
+        - "<gradient:blue:cyan><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gray>Juega por 2 horas.</gray>"
         - " "
-        - "&aRecompensas:"
-        - "&a- &f+300$"
-        - "&a- &f2 Premier Ball"
+        - "<green>Recompensas:</green>"
+        - "<green>- <white>+300$</white></green>"
+        - "<green>- <white>2 Premier Ball</white></green>"
         - ""
-        - "&7(&cClick Derecho para cancelar&7)"
+        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:luxury_ball
-        name: "&f&lViajero del Tiempo"
+        name: "<white><bold>Viajero del Tiempo</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -216,17 +216,17 @@ challenge-list:
       time-limit: "24h"
       repeatable: 23h30m
       description:
-        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
-        - "&7Mina 3 Diamantes."
+        - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gray>Mina 3 Diamantes.</gray>"
         - " "
-        - "&aRecompensas:"
-        - "&a- &f+600$"
-        - "&a- &f2 Diamantes"
+        - "<green>Recompensas:</green>"
+        - "<green>- <white>+600$</white></green>"
+        - "<green>- <white>2 Diamantes</white></green>"
         - ""
-        - "&7(&cClick Derecho para cancelar&7)"
+        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:ultra_ball
-        name: "&f&lCazador de Diamantes"
+        name: "<white><bold>Cazador de Diamantes</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -248,17 +248,17 @@ challenge-list:
       time-limit: "24h"
       repeatable: 23h30m
       description:
-        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
-        - "&7Sube 15 niveles con tus Pokémon."
+        - "<gradient:dark_purple:purple><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gray>Sube 15 niveles con tus Pokémon.</gray>"
         - " "
-        - "&aRecompensas:"
-        - "&a- &f+750$"
-        - "&a- &f3 Caramelos Raros"
+        - "<green>Recompensas:</green>"
+        - "<green>- <white>+750$</white></green>"
+        - "<green>- <white>3 Caramelos Raros</white></green>"
         - ""
-        - "&7(&cClick Derecho para cancelar&7)"
+        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:repeat_ball
-        name: "&f&lEntrenamiento Intenso"
+        name: "<white><bold>Entrenamiento Intenso</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -279,18 +279,18 @@ challenge-list:
       time-limit: "24h"
       repeatable: 23h30m
       description:
-        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
-        - "&7Captura 5 Pokémon de Tipo Agua."
+        - "<gradient:blue:dark_blue><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gray>Captura 5 Pokémon de Tipo Agua.</gray>"
         - " "
-        - "&aRecompensas:"
-        - "&a- &f+800$"
-        - "&a- &f3 Dive Ball"
-        - "&a- &f1 Caramelo Raro"
+        - "<green>Recompensas:</green>"
+        - "<green>- <white>+800$</white></green>"
+        - "<green>- <white>3 Dive Ball</white></green>"
+        - "<green>- <white>1 Caramelo Raro</white></green>"
         - ""
-        - "&7(&cClick Derecho para cancelar&7)"
+        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:dusk_ball
-        name: "&f&lCazador Acuático"
+        name: "<white><bold>Cazador Acuático</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -313,17 +313,17 @@ challenge-list:
       time-limit: "24h"
       repeatable: 23h30m
       description:
-        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
-        - "&7Mina 5 menas de Diamante."
+        - "<gradient:gray:white><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gray>Mina 5 menas de Diamante.</gray>"
         - " "
-        - "&aRecompensas:"
-        - "&a- &f+700$"
-        - "&a- &f3 Diamantes"
+        - "<green>Recompensas:</green>"
+        - "<green>- <white>+700$</white></green>"
+        - "<green>- <white>3 Diamantes</white></green>"
         - ""
-        - "&7(&cClick Derecho para cancelar&7)"
+        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:net_ball
-        name: "&f&lMinería Extrema"
+        name: "<white><bold>Minería Extrema</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -346,18 +346,18 @@ challenge-list:
       time-limit: "24h"
       repeatable: 23h30m
       description:
-        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
-        - "&7Derrota 15 Pokémon de Tipo Volador."
+        - "<gradient:light_purple:dark_purple><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gray>Derrota 15 Pokémon de Tipo Volador.</gray>"
         - " "
-        - "&aRecompensas:"
-        - "&a- &f+600$"
-        - "&a- &f4 Great Ball"
-        - "&a- &f1 Caramelo Raro"
+        - "<green>Recompensas:</green>"
+        - "<green>- <white>+600$</white></green>"
+        - "<green>- <white>4 Great Ball</white></green>"
+        - "<green>- <white>1 Caramelo Raro</white></green>"
         - ""
-        - "&7(&cClick Derecho para cancelar&7)"
+        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:timer_ball
-        name: "&f&lDerrota Voladores"
+        name: "<white><bold>Derrota Voladores</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -381,17 +381,17 @@ challenge-list:
       time-limit: "24h"
       repeatable: 23h30m
       description:
-        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
-        - "&7Captura 12 Pokémon de Tipo Normal."
+        - "<gradient:white:gray><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gray>Captura 12 Pokémon de Tipo Normal.</gray>"
         - " "
-        - "&aRecompensas:"
-        - "&a- &f+700$"
-        - "&a- &f3 Luxury Ball"
+        - "<green>Recompensas:</green>"
+        - "<green>- <white>+700$</white></green>"
+        - "<green>- <white>3 Luxury Ball</white></green>"
         - ""
-        - "&7(&cClick Derecho para cancelar&7)"
+        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:quick_ball
-        name: "&f&lDomador de Normal"
+        name: "<white><bold>Domador de Normal</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -413,18 +413,18 @@ challenge-list:
       time-limit: "24h"
       repeatable: 23h30m
       description:
-        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
-        - "&7Derrota 30 Pokémon salvajes."
+        - "<gradient:dark_red:red><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gray>Derrota 30 Pokémon salvajes.</gray>"
         - " "
-        - "&aRecompensas:"
-        - "&a- &f+700$"
-        - "&a- &f3 Great Ball"
-        - "&a- &f2 Super Pociones"
+        - "<green>Recompensas:</green>"
+        - "<green>- <white>+700$</white></green>"
+        - "<green>- <white>3 Great Ball</white></green>"
+        - "<green>- <white>2 Super Pociones</white></green>"
         - ""
-        - "&7(&cClick Derecho para cancelar&7)"
+        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:heavy_ball
-        name: "&f&lCazador Incansable"
+        name: "<white><bold>Cazador Incansable</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -447,18 +447,18 @@ challenge-list:
       time-limit: "24h"
       repeatable: 23h30m
       description:
-        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
-        - "&7Captura 25 Pokémon salvajes."
+        - "<gradient:green:dark_green><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gray>Captura 25 Pokémon salvajes.</gray>"
         - " "
-        - "&aRecompensas:"
-        - "&a- &f+900$"
-        - "&a- &f5 Poké Ball"
-        - "&a- &f2 Super Pociones"
+        - "<green>Recompensas:</green>"
+        - "<green>- <white>+900$</white></green>"
+        - "<green>- <white>5 Poké Ball</white></green>"
+        - "<green>- <white>2 Super Pociones</white></green>"
         - ""
-        - "&7(&cClick Derecho para cancelar&7)"
+        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:friend_ball
-        name: "&f&lCazador Masivo"
+        name: "<white><bold>Cazador Masivo</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -480,18 +480,18 @@ challenge-list:
       time-limit: "24h"
       repeatable: 23h30m
       description:
-        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
-        - "&7Pesca 10 Magikarp."
+        - "<gradient:gold:yellow><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gray>Pesca 10 Magikarp.</gray>"
         - " "
-        - "&aRecompensas:"
-        - "&a- &f+800$"
-        - "&a- &f1 Ficha de Arcade"
-        - "&a- &f2 Caramelos Raros"
+        - "<green>Recompensas:</green>"
+        - "<green>- <white>+800$</white></green>"
+        - "<green>- <white>1 Ficha de Arcade</white></green>"
+        - "<green>- <white>2 Caramelos Raros</white></green>"
         - ""
-        - "&7(&cClick Derecho para cancelar&7)"
+        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:lure_ball
-        name: "&f&lPesca Magikarp"
+        name: "<white><bold>Pesca Magikarp</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -515,17 +515,17 @@ challenge-list:
       time-limit: "24h"
       repeatable: 23h30m
       description:
-        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
-        - "&7Juega por 4 horas."
+        - "<gradient:dark_blue:blue><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gray>Juega por 4 horas.</gray>"
         - " "
-        - "&aRecompensas:"
-        - "&a- &f+600$"
-        - "&a- &f2 Super Pociones"
+        - "<green>Recompensas:</green>"
+        - "<green>- <white>+600$</white></green>"
+        - "<green>- <white>2 Super Pociones</white></green>"
         - ""
-        - "&7(&cClick Derecho para cancelar&7)"
+        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:moon_ball
-        name: "&f&lTiempo de Maestría"
+        name: "<white><bold>Tiempo de Maestría</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -546,16 +546,16 @@ challenge-list:
       time-limit: "24h"
       repeatable: 23h30m
       description:
-        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
-        - "&7Juega por 6 horas."
+        - "<gradient:dark_green:green><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gray>Juega por 6 horas.</gray>"
         - " "
-        - "&aRecompensas:"
-        - "&a- &f1 Llave Normal"
+        - "<green>Recompensas:</green>"
+        - "<green>- <white>1 Llave Normal</white></green>"
         - ""
-        - "&7(&cClick Derecho para cancelar&7)"
+        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:beast_ball
-        name: "&f&lExplorador Incansable"
+        name: "<white><bold>Explorador Incansable</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -575,18 +575,18 @@ challenge-list:
       time-limit: "24h"
       repeatable: 23h30m
       description:
-        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
-        - "&7Libera 15 Magikarp de tu PC."
+        - "<gradient:orange:red><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gray>Libera 15 Magikarp de tu PC.</gray>"
         - " "
-        - "&aRecompensas:"
-        - "&a- &f+1000$"
-        - "&a- &f1 Llave Normal"
-        - "&a- &f2 Caramelos Raros"
+        - "<green>Recompensas:</green>"
+        - "<green>- <white>+1000$</white></green>"
+        - "<green>- <white>1 Llave Normal</white></green>"
+        - "<green>- <white>2 Caramelos Raros</white></green>"
         - ""
-        - "&7(&cClick Derecho para cancelar&7)"
+        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:master_ball
-        name: "&f&lSacrificio Magikarp"
+        name: "<white><bold>Sacrificio Magikarp</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -609,17 +609,17 @@ challenge-list:
       time-limit: "24h"
       repeatable: 23h30m
       description:
-        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
-        - "&7Derrota a 15 jugadores (usuarios)."
+        - "<gradient:dark_purple:red><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gray>Derrota a 15 jugadores (usuarios).</gray>"
         - " "
-        - "&aRecompensas:"
-        - "&a- &f+1000$"
-        - "&a- &f5 Great Ball"
+        - "<green>Recompensas:</green>"
+        - "<green>- <white>+1000$</white></green>"
+        - "<green>- <white>5 Great Ball</white></green>"
         - ""
-        - "&7(&cClick Derecho para cancelar&7)"
+        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:safari_ball
-        name: "&f&lDuelo de Entrenadores"
+        name: "<white><bold>Duelo de Entrenadores</bold></white>"
         lore:
           - "{progression_status}"
           - " "

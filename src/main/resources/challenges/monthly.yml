@@ -13,23 +13,23 @@ gui:
       name: " "
     'B':
       material: laboratorio:lab_furniture_v1_empty
-      name: "&6ᴠᴏʟᴠᴇʀ"
+      name: "<gold>ᴠᴏʟᴠᴇʀ</gold>"
       lore:
         - ""
-        - "&7¡Volver a la Central de Misiones!"
+        - "<gray>¡Volver a la Central de Misiones!</gray>"
         - ""
       commands:
         - "execute as {player} run challenges"
     '<':
       material: laboratorio:lab_furniture_v1_empty
-      name: "&6ᴘᴀɢɪɴᴀ ᴀɴᴛᴇʀɪᴏʀ"
+      name: "<gold>ᴘᴀɢɪɴᴀ ᴀɴᴛᴇʀɪᴏʀ</gold>"
       back-page: true
       lore:
         - ""
     '>':
       material: laboratorio:lab_furniture_v1_empty
       next-page: true
-      name: "&6ᴘᴀɢɪɴᴀ ꜱɪɢᴜɪᴇɴᴛᴇ"
+      name: "<gold>ᴘᴀɢɪɴᴀ ꜱɪɢᴜɪᴇɴᴛᴇ</gold>"
       lore:
         - ""
 
@@ -46,17 +46,17 @@ challenge-list:
       needs-selection: true
       time-limit: "30d"
       description:
-        - "&fɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
-        - "&7Pesca 30 Pokémon de tipo Agua y libéralos."
+        - "<gradient:aqua:blue><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gray>Pesca 30 Pokémon de tipo Agua y libéralos.</gray>"
         - " "
-        - "&cRecompensas:"
-        - "&c- &f+10000$"
-        - "&c- &f6 Diamantes"
+        - "<red>Recompensas:</red>"
+        - "<red>- <white>+10000$</white></red>"
+        - "<red>- <white>6 Diamantes</white></red>"
         - ""
-        - "&7(&cClick Derecho para cancelar&7)"
+        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:net_ball
-        name: "&f&lPescador Compasivo"
+        name: "<white><bold>Pescador Compasivo</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -93,18 +93,18 @@ challenge-list:
       needs-selection: true
       time-limit: "30d"
       description:
-        - "&fɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
-        - "&7Evoluciona un total de 50 Pokémon."
+        - "<gradient:green:lime><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gray>Evoluciona un total de 50 Pokémon.</gray>"
         - " "
-        - "&cRecompensas:"
-        - "&c- &f10 Caramelos Raros"
-        - "&c- &f2 Máx Pociones"
-        - "&c- &f1 Llave Mega"
+        - "<red>Recompensas:</red>"
+        - "<red>- <white>10 Caramelos Raros</white></red>"
+        - "<red>- <white>2 Máx Pociones</white></red>"
+        - "<red>- <white>1 Llave Mega</white></red>"
         - ""
-        - "&7(&cClick Derecho para cancelar&7)"
+        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:great_ball
-        name: "&f&lEvolución Suprema"
+        name: "<white><bold>Evolución Suprema</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -132,17 +132,17 @@ challenge-list:
       needs-selection: true
       time-limit: "30d"
       description:
-        - "&fɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
-        - "&7Cría 5 Charizard y eclosiona 5 Charmander."
+        - "<gradient:red:orange><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gray>Cría 5 Charizard y eclosiona 5 Charmander.</gray>"
         - " "
-        - "&cRecompensas:"
-        - "&c- &f+12000$"
-        - "&c- &f1 Pase de Incursión"
+        - "<red>Recompensas:</red>"
+        - "<red>- <white>+12000$</white></red>"
+        - "<red>- <white>1 Pase de Incursión</white></red>"
         - ""
-        - "&7(&cClick Derecho para cancelar&7)"
+        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:luxury_ball
-        name: "&f&lLínea de Fuego"
+        name: "<white><bold>Línea de Fuego</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -179,18 +179,18 @@ challenge-list:
       needs-selection: true
       time-limit: "30d"
       description:
-        - "&fɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
-        - "&7Sube un total de 500 niveles con tus Pokémon."
+        - "<gradient:purple:magenta><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gray>Sube un total de 500 niveles con tus Pokémon.</gray>"
         - " "
-        - "&cRecompensas:"
-        - "&c- &f+20000$"
-        - "&c- &f15 Caramelos Raros"
-        - "&c- &f12 Lingotes de Hierro"
+        - "<red>Recompensas:</red>"
+        - "<red>- <white>+20000$</white></red>"
+        - "<red>- <white>15 Caramelos Raros</white></red>"
+        - "<red>- <white>12 Lingotes de Hierro</white></red>"
         - ""
-        - "&7(&cClick Derecho para cancelar&7)"
+        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:ultra_ball
-        name: "&f&lEntrenador Dedicado"
+        name: "<white><bold>Entrenador Dedicado</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -218,17 +218,17 @@ challenge-list:
       needs-selection: true
       time-limit: "30d"
       description:
-        - "&fɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
-        - "&7Captura un Riolu, evoluciona a Lucario y súbelo a nivel 70."
+        - "<gradient:blue:cyan><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gray>Captura un Riolu, evoluciona a Lucario y súbelo a nivel 70.</gray>"
         - " "
-        - "&cRecompensas:"
-        - "&c- &f+15000$"
-        - "&c- &f1 Llave Items"
+        - "<red>Recompensas:</red>"
+        - "<red>- <white>+15000$</white></red>"
+        - "<red>- <white>1 Llave Items</white></red>"
         - ""
-        - "&7(&cClick Derecho para cancelar&7)"
+        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:timer_ball
-        name: "&f&lAscenso de Aura"
+        name: "<white><bold>Ascenso de Aura</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -275,17 +275,17 @@ challenge-list:
       needs-selection: true
       time-limit: "30d"
       description:
-        - "&fɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
-        - "&7Sube 3 Pokémon distintos al nivel 100."
+        - "<gradient:gold:yellow><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gray>Sube 3 Pokémon distintos al nivel 100.</gray>"
         - " "
-        - "&cRecompensas:"
-        - "&c- &f8 Diamantes"
-        - "&c- &f1 Llave Mega"
+        - "<red>Recompensas:</red>"
+        - "<red>- <white>8 Diamantes</white></red>"
+        - "<red>- <white>1 Llave Mega</white></red>"
         - ""
-        - "&7(&cClick Derecho para cancelar&7)"
+        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:dusk_ball
-        name: "&f&lLeyenda al Nivel 100"
+        name: "<white><bold>Leyenda al Nivel 100</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -313,17 +313,17 @@ challenge-list:
       needs-selection: true
       time-limit: "30d"
       description:
-        - "&fɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
-        - "&7Derrota a 50 entrenadores (jugadores) en batallas."
+        - "<gradient:dark_red:red><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gray>Derrota a 50 entrenadores (jugadores) en batallas.</gray>"
         - " "
-        - "&cRecompensas:"
-        - "&c- &f+12500$"
-        - "&c- &f2 Fichas de Arcade"
+        - "<red>Recompensas:</red>"
+        - "<red>- <white>+12500$</white></red>"
+        - "<red>- <white>2 Fichas de Arcade</white></red>"
         - ""
-        - "&7(&cClick Derecho para cancelar&7)"
+        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:master_ball
-        name: "&f&lCazador de Élite"
+        name: "<white><bold>Cazador de Élite</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -350,17 +350,17 @@ challenge-list:
       needs-selection: true
       time-limit: "30d"
       description:
-        - "&fɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
-        - "&7Captura un total de 500 Pokémon."
+        - "<gradient:green:dark_green><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gray>Captura un total de 500 Pokémon.</gray>"
         - " "
-        - "&cRecompensas:"
-        - "&c- &f1 Llave Sorpresa"
-        - "&c- &f15 Lingotes de Hierro"
+        - "<red>Recompensas:</red>"
+        - "<red>- <white>1 Llave Sorpresa</white></red>"
+        - "<red>- <white>15 Lingotes de Hierro</white></red>"
         - ""
-        - "&7(&cClick Derecho para cancelar&7)"
+        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:poke_ball
-        name: "&f&lCaptura Maestra"
+        name: "<white><bold>Captura Maestra</bold></white>"
         lore:
           - "{progression_status}"
           - " "
