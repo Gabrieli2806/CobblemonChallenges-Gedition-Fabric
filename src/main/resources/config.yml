@@ -1,0 +1,272 @@
+config-version: 1
+
+# These are customizable messages that appear in chat and sometimes inside of guis.
+# You can use MiniMessage formatting for advanced styling!
+# MiniMessage examples:
+# <gradient:red:blue>Gradient text</gradient>
+# <rainbow>Rainbow text</rainbow>
+# <hover:show_text:'Hover text'>Hoverable text</hover>
+# <click:run_command:'/help'>Clickable text</click>
+# <color:gold>Gold text</color> or <gold>Gold text</gold>
+# <bold>Bold</bold> <italic>Italic</italic> <underlined>Underlined</underlined>
+# Learn more at: https://webui.advntr.dev/
+Messages:
+  prefix: "<gradient:yellow:gold><bold>Cobblemon</bold></gradient> <white><bold>Challenges</bold></white> <dark_gray>»»»</dark_gray>"
+  issues:
+    unknown_challenge_list: "{prefix} <red>Unknown challenge <yellow>{challenge_list}</yellow>.</red>"
+  progression:
+    progression-entry: "<gray>{requirement-title}: <white>{progression-string}</white></gray>"
+  commands:
+    opening-base-gui: "{prefix} <gray>Complete and claim rewards from challenges here!</gray>"
+    reload: "{prefix} <gradient:green:dark_green><bold>Messages and guis have been reloaded!</bold></gradient>"
+    restart: "{prefix} <gradient:green:dark_green><bold>This player has had their challenge history reset!</bold></gradient>"
+  time:
+    day: "day"
+    days: "days"
+    twenty-four-hours: "24 hours"
+  requirements:
+    # When listing a player's progress on a challenge, these will be the prefix for that
+    progression-shorthand:
+      catch_pokemon: "<gold>{pokename}</gold> <green>Captured</green>"
+      evolve_pokemon: "<gold>{pokename}</gold> <blue>Evolved</blue>"
+      defeat_battler: "<gold>{battlerData}</gold> <red>Battles Won</red>"
+      harvest_apricorn: "<yellow>Apricorns Harvested</yellow>"
+      harvest_berry: "<light_purple>Berries Harvested</light_purple>"
+      mine_block: "<gray>{blockData}</gray> <yellow>Blocks Mined</yellow>"
+      place_block: "<gray>{blockData}</gray> <green>Blocks Placed</green>"
+      complete_challenge: "<rainbow>Challenges Completed</rainbow>"
+      pokemon_scanned: "<aqua>Pokemon Scanned</aqua>"
+      pokemon_seen: "<blue>Pokemon Seen</blue>"
+      milestone_time_played: "<gold>Time Played</gold>"
+      use_rare_candy: "<light_purple>Rare Candies Used</light_purple>"
+      hatch_egg: "<yellow>Eggs Hatched</yellow>"
+      breed_pokemon: "<pink>Pokemon Bred</pink>"
+      hatch_pokemon: "<green>Pokemon Hatched</green>"
+      exp_gained: "<blue>EXP Gained</blue>"
+      level_up_once: "<yellow>Levels Gained</yellow>"
+      level_up_to: "<gold>Pokemon Leveled</gold>"
+      trades_completed: "<aqua>Trades</aqua>"
+      fossils_revived: "<gray>Fossils Revived</gray>"
+      login: "<green>Login</green>"
+  challenges:
+    progression-string: "<white>{current}</white> <gray>/</gray> <gray>{target}</gray>"
+    completed:
+      - "<center><gradient:yellow:gold>[Challenge Completed]</gradient>"
+      - "<center><gradient:gold:yellow><bold>{challenge}</bold></gradient>"
+      - "                                 "
+      - "{challenge-description}"
+    progression_status:
+      before-attempt: "<yellow>Can be attempted</yellow>"
+      during-attempt: "<dark_green>Currently in progress</dark_green>"
+      post-completion: "<green>Already completed</green>"
+    failure:
+      time-ran-out: "{prefix} <red>Daily Quest <gold>{challenge}</gold> failed! You may attempt this challenge again, however any progress made previously has been reset.</red>"
+      challenge-no-longer-available: "{prefix} <red>La misión <gold>{challenge}</gold> ya no está disponible debido a la rotación. Por favor selecciona otra misión.</red>"
+    tracking-tag:
+      before-starting:
+        - "<center><gold><bold>CLICK TO TRACK</bold></gold>"
+        - "<center><yellow><bold>{time-remaining}</bold></yellow>"
+      after-starting:
+        - "<center><gold><bold>TRACKING</bold></gold>"
+        - "<center><yellow><bold>{time-remaining}</bold></yellow>"
+    # Mensajes personalizados para interacciones
+    replacement-success: "<green>Misión reemplazada exitosamente.</green>"
+    automatic-mission: "<gray>Esta es una misión automática - siempre está activa.</gray>"
+    already-in-progress: "<red>Esta misión ya está en progreso.</red>"
+    mission-cancelled: "<red>¡Misión cancelada: <yellow>{challenge_name}</yellow></red>"
+    mission-not-active: "<gray>Esta misión no está activa para cancelar.</gray>"
+    mission-already-completed: "<gray>Esta misión ya fue completada.</gray>"
+    mission-already-in-progress: "<gray>Esta misión ya está en progreso.</gray>"
+    
+    # Sistema de reemplazo de misión
+    replacement:
+      separator: "<gradient:yellow:gold>═════════════════════════════════════════</gradient>"
+      title: "<gradient:red:dark_red><bold>⚠  REEMPLAZO DE MISIÓN REQUERIDO  ⚠</bold></gradient>"
+      current-mission: "<gray>Ya tienes una misión activa en esta categoría:</gray>"
+      current-mission-name: "<gray>  Actual: <yellow>{challenge_name}</yellow></gray>"
+      new-mission: "<gray>Quieres seleccionar:</gray>"
+      new-mission-name: "<gray>  Nueva: <green>{challenge_name}</green></gray>"
+      warning: "<gradient:red:dark_red><bold>⚠ La misión actual se CANCELARÁ y perderás el progreso ⚠</bold></gradient>"
+      confirm-button-text: "[✓ CONFIRMAR REEMPLAZO]"
+      confirm-button-hover: "<green>Click para confirmar el reemplazo de la misión</green>"
+      cancel-button-text: "[✗ CANCELAR]"
+      cancel-button-hover: "<red>Click para cancelar y mantener la misión actual</red>"
+      cancel-success: "<gradient:yellow:gold>Reemplazo cancelado. Misión actual mantenida.</gradient>"
+
+# This is the menu where each challenge list is displayed.
+# Here you can move the lists and add new ones. No use MiniMessage Here
+base-menu:
+  window-name: "&l&eChallenges"
+  structure:
+    - "# # # # # # # # #"
+    - "# - 1 - 2 - 3 - #"
+    - "# # # # # # # # #"
+  ingredients:
+    '#':
+      material: BLACK_STAINED_GLASS_PANE
+      name: " "
+    '1':
+      linked_to: "daily" # Which gui it is referencing
+      material: BOOK
+      name: "&6Daily Challenges"
+      lore:
+        - "&7Left click me to see a list of Daily Challenges"
+    '2':
+      linked_to: "weekly" # Which gui it is referencing
+      material: BOOK
+      enchanted-effect: true
+      hiddenTooltips: ALL
+      name: "&l&bWeekly Challenges"
+      lore:
+        - "&7Left click me to see a list of Weekly Challenges"
+    '3':
+      linked_to: "monthly" # Which gui it is referencing
+      material: ENCHANTED_BOOK
+      name: "&l&2Monthly Challenges"
+      lore:
+        - "&7Left click me to see a list of Monthly Challenges"
+
+# This is what the challenge items should default to after being started or completed.
+# Only the material will change currently, so their custom lore and name will persist.
+challenges:
+  active-challenge-item: # Will only replace material of the challenge, not title or lore
+    material: CLOCK
+  completed-challenge-item: # Will only replace material of the challenge, not title or lore
+    material: END_CRYSTAL
+
+# Items for challenges that require permissions
+permission-challenges:
+  active-permission-challenge-item: # Will only replace material of the challenge, not title or lore
+    material: CLOCK
+  completed-permission-challenge-item: # Will only replace material of the challenge, not title or lore
+    material: END_CRYSTAL
+  no-permission-challenge-item: # Item shown when player lacks permission
+    material: BARRIER
+    name: "<red><bold>🔒 ACCESO DENEGADO</bold></red>"
+    lore:
+      - "<gray>Esta misión requiere permisos</gray>"
+      - "<gray>que no posees actualmente.</gray>"
+      - ""
+      - "<red>Click para ver detalles</red>"
+
+# These are examples that will not be loaded. Use this as a reference for what options are available
+# pokename/any: Can be a specific Pokémon name or any. Can include multiple options such as "bulbasaur/ivysaur/venusaur"
+# type/any: Specifies types (e.g., Fire, Water) or any.
+# ball/any: Can specify a type of Poké Ball or any.
+# amount: Represents the number of times an action should occur.
+# time_of_day: Required time to perform this event (morning, day, night).
+# is_legendary/is_ultra_beast: Boolean values for catching legendary or ultra beasts.
+# opponent_type: Specifies whether the opponent is wild, trainer, player, or a gym leader.
+# effectiveness: Describes effectiveness in battle (super-effective, normal, not-very-effective).
+# action: Can be mined, placed, craft, find, sell, buy, etc.
+triggers:
+  Catch_Pokemon: # Catch anything
+    pokename: any/charizard/bulbasaur/mewtwo
+    shiny: false
+    type: any
+    ball: any
+    amount: 1
+    time_of_day: any
+    is_legendary: false
+    is_ultra_beast: false
+    required-tags: any
+  complete_challenge:
+    amount: 1
+    challenge-list: any # This is the challenge list it must come from
+  Defeat_Battler: # Win a battle with these conditions
+    pokename: any
+    pokemon_type: any/any
+    amount: 1
+    shiny: false
+    is_legendary: false
+    is_ultra_beast: false
+    effectiveness: any/1.0/0.5/2.0
+    npc-player-gymleader-wild: any
+    required-tags: any
+  Evolve_Pokemon: # Evolve any pokemon
+    pokename: any
+    amount: 1
+    shiny: false
+    type: any
+    ball: any
+    time_of_day: any
+    required-tags: any
+
+  mine_block: # When a block is broken
+    type: any/stone
+    amount: 5
+  place_block: #When a block is placed
+    type: any/stone
+    amount: 5
+
+  harvest_apricorn: # Harvest an apricorn
+    type: any
+    amount: 1
+  harvest_berry: # Harvest a berry
+    type: any
+    amount: 1
+  milestone_time_played: #Playtime tracker. Counts upwards in 30 second increments
+    total-seconds: 60
+  use_rare_candy:
+    pokename: any
+    amount: 1
+    required-tags: any
+  pokemon_seen: # When a player has fought this pokemon in battle
+    amount: 100
+    pokename: any
+  pokemon_scanned: # This is when a player uses a pokedex to scan a pokemon
+    amount: 100
+    pokename: any
+
+  level_up_once: # When increasing their level by one, at all
+    pokename: any
+    shiny: false
+    type: any
+    ball: any
+    amount: 1
+    time_of_day: any
+    is_legendary: false
+    is_ultra_beast: false
+    required-tags: any
+  level_up_to: # When their level reaches a certain value
+    target level: 100
+    pokename: any
+    shiny: false
+    type: any
+    ball: any
+    amount: 1
+    time_of_day: any
+    is_legendary: false
+    is_ultra_beast: false
+    required-tags: any
+  hatch_egg: # When an egg has finished hatching
+    pokename: any
+    shiny: false
+    type: any
+    ball: any
+    amount: 1
+    time_of_day: any
+    is_legendary: false
+    is_ultra_beast: false
+    required-tags: any
+  trades_completed: # When the trade is completed. This is for the pokemon they sent themselves, not received.
+    pokename: any
+    shiny: false
+    type: any
+    ball: any
+    amount: 1
+    time_of_day: any
+    is_legendary: false
+    is_ultra_beast: false
+    required-tags: any
+  exp_gained: # When exp is gained by a pokemon
+    pokename: any
+    shiny: false
+    type: any
+    ball: any
+    amount: 1
+    time_of_day: any
+    is_legendary: false
+    is_ultra_beast: false
+    required-tags: any
+

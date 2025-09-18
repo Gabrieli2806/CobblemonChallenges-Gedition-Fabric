@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "cobblemonchallenges",
+  "version": "1.0.0",
+  "name": "Cobblemon Challenges",
+  "description": "Provide monthly, weekly, daily, or even seasonal challenges!",
+  "authors": [
+    "KuramaStone"
+  ],
+  "license": "MPL-2.0",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.github.kuramastone.cobblemonChallenges.CobbleChallengeMod"
+    ]
+  },
+  "depends": {
+    "java": ">=21",
+    "minecraft": ">=1.21",
+    "fabricloader": ">=0.16.0",
+    "fabric": "*",
+    "cobblemon": ">=1.6.0"
+  }
+}

@@ -1,0 +1,423 @@
+gui:
+  window-name: "\uDAFF\uDFFF\uDAFF\uDFFF\uDAFF\uDFFF\uDAFF\uDFFF\uDAFF\uDFFF\uDAFF\uDFFF\uDAFF\uDFFF\uDAFF\uDFFF\uDAFF\uDFFF\uDAFF\uDFFF"
+  structure:
+    - "- - - - - - - - -"
+    - "- - - . . . - - -"
+    - "- - - . . . - - -"
+    - "- - - . . . - - -"
+    - "- - - - - - - - -"
+    - "- - - < B > - - -"
+  ingredients:
+    '#':
+      material: BLACK_STAINED_GLASS_PANE
+      name: " "
+    'B':
+      material: laboratorio:lab_furniture_v1_empty
+      name: "&6ᴠᴏʟᴠᴇʀ"
+      lore:
+        - ""
+        - "&7¡Volver a la Central de Misiones!"
+        - ""
+      commands:
+        - "execute as {player} run challenges"
+    '<':
+      material: laboratorio:lab_furniture_v1_empty
+      name: "&6ᴘᴀɢɪɴᴀ ᴀɴᴛᴇʀɪᴏʀ"
+      back-page: true
+      lore:
+        - ""
+    '>':
+      material: laboratorio:lab_furniture_v1_empty
+      next-page: true
+      name: "&6ᴘᴀɢɪɴᴀ ꜱɪɢᴜɪᴇɴᴛᴇ"
+      lore:
+        - ""
+
+challenge-list:
+  max-challenges-per-player: 1
+  
+  # Mission rotation configuration
+  visible-missions: 9
+  rotation-interval: monthly
+  
+  challenges:
+
+    "Pescador Compasivo":
+      needs-selection: true
+      time-limit: "30d"
+      description:
+        - "&fɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
+        - "&7Pesca 30 Pokémon de tipo Agua y libéralos."
+        - " "
+        - "&cRecompensas:"
+        - "&c- &f+10000$"
+        - "&c- &f6 Diamantes"
+        - ""
+        - "&7(&cClick Derecho para cancelar&7)"
+      display-item:
+        material: cobblemon:net_ball
+        name: "&f&lPescador Compasivo"
+        lore:
+          - "{progression_status}"
+          - " "
+          - "{description}"
+          - " "
+          - "{tracking-tag}"
+      requirements:
+        1:
+          Fish_Pokemon:
+            pokename: any
+            shiny: false
+            type: water
+            ball: any
+            amount: 30
+            time_of_day: any
+            is_legendary: false
+            is_ultra_beast: false
+        2:
+          Release_Pokemon:
+            pokename: any
+            shiny: false
+            type: water
+            ball: any
+            amount: 30
+            time_of_day: any
+            is_legendary: false
+            is_ultra_beast: false
+      rewards:
+        commands:
+          - "deposit 10000 dollars {player}"
+          - "give {player} diamond 6"
+
+    "Evolución Suprema":
+      needs-selection: true
+      time-limit: "30d"
+      description:
+        - "&fɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
+        - "&7Evoluciona un total de 50 Pokémon."
+        - " "
+        - "&cRecompensas:"
+        - "&c- &f10 Caramelos Raros"
+        - "&c- &f2 Máx Pociones"
+        - "&c- &f1 Llave Mega"
+        - ""
+        - "&7(&cClick Derecho para cancelar&7)"
+      display-item:
+        material: cobblemon:great_ball
+        name: "&f&lEvolución Suprema"
+        lore:
+          - "{progression_status}"
+          - " "
+          - "{description}"
+          - " "
+          - "{tracking-tag}"
+      requirements:
+        1:
+          Evolve_Pokemon:
+            pokename: any
+            shiny: false
+            type: any
+            ball: any
+            amount: 50
+            time_of_day: any
+            is_legendary: false
+            is_ultra_beast: false
+      rewards:
+        commands:
+          - "give {player} cobblemon:rare_candy 10"
+          - "give {player} cobblemon:max_potion 2"
+          - "crates key give {player} Mega 1"
+
+    "Línea de Fuego":
+      needs-selection: true
+      time-limit: "30d"
+      description:
+        - "&fɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
+        - "&7Cría 5 Charizard y eclosiona 5 Charmander."
+        - " "
+        - "&cRecompensas:"
+        - "&c- &f+12000$"
+        - "&c- &f1 Pase de Incursión"
+        - ""
+        - "&7(&cClick Derecho para cancelar&7)"
+      display-item:
+        material: cobblemon:luxury_ball
+        name: "&f&lLínea de Fuego"
+        lore:
+          - "{progression_status}"
+          - " "
+          - "{description}"
+          - " "
+          - "{tracking-tag}"
+      requirements:
+        1:
+          Breed_Pokemon:
+            pokename: charizard
+            shiny: false
+            type: any
+            ball: any
+            amount: 5
+            time_of_day: any
+            is_legendary: false
+            is_ultra_beast: false
+        2:
+          Hatch_Pokemon:
+            pokename: charmander
+            shiny: false
+            type: any
+            ball: any
+            amount: 5
+            time_of_day: any
+            is_legendary: false
+            is_ultra_beast: false
+      rewards:
+        commands:
+          - "deposit 12000 dollars {player}"
+          - "raid give {player} pass *"
+
+    "Entrenador Dedicado":
+      needs-selection: true
+      time-limit: "30d"
+      description:
+        - "&fɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
+        - "&7Sube un total de 500 niveles con tus Pokémon."
+        - " "
+        - "&cRecompensas:"
+        - "&c- &f+20000$"
+        - "&c- &f15 Caramelos Raros"
+        - "&c- &f12 Lingotes de Hierro"
+        - ""
+        - "&7(&cClick Derecho para cancelar&7)"
+      display-item:
+        material: cobblemon:ultra_ball
+        name: "&f&lEntrenador Dedicado"
+        lore:
+          - "{progression_status}"
+          - " "
+          - "{description}"
+          - " "
+          - "{tracking-tag}"
+      requirements:
+        1:
+          level_up_once:
+            pokename: any
+            shiny: false
+            type: any
+            ball: any
+            amount: 500
+            time_of_day: any
+            is_legendary: false
+            is_ultra_beast: false
+      rewards:
+        commands:
+          - "deposit 20000 dollars {player}"
+          - "give {player} cobblemon:rare_candy 15"
+          - "give {player} iron_ingot 12"
+
+    "Ascenso de Aura":
+      needs-selection: true
+      time-limit: "30d"
+      description:
+        - "&fɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
+        - "&7Captura un Riolu, evoluciona a Lucario y súbelo a nivel 70."
+        - " "
+        - "&cRecompensas:"
+        - "&c- &f+15000$"
+        - "&c- &f1 Llave Items"
+        - ""
+        - "&7(&cClick Derecho para cancelar&7)"
+      display-item:
+        material: cobblemon:timer_ball
+        name: "&f&lAscenso de Aura"
+        lore:
+          - "{progression_status}"
+          - " "
+          - "{description}"
+          - " "
+          - "{tracking-tag}"
+      requirements:
+        1:
+          Catch_Pokemon:
+            pokename: riolu
+            shiny: false
+            type: any
+            ball: any
+            amount: 1
+            time_of_day: any
+            is_legendary: false
+            is_ultra_beast: false
+        2:
+          Evolve_Pokemon:
+            pokename: Lucario
+            amount: 1
+            shiny: false
+            type: any
+            ball: any
+            time_of_day: any
+            required-tags: any
+        3:
+          level_up_to:
+            target_level: 70
+            pokename: "Lucario"
+            shiny: false
+            type: any
+            ball: any
+            amount: 1
+            time_of_day: any
+            is_legendary: false
+            is_ultra_beast: false
+      rewards:
+        commands:
+          - "deposit 15000 dollars {player}"
+          - "crates key give {player} Items 1"
+
+    "Leyenda al Nivel 100":
+      needs-selection: true
+      time-limit: "30d"
+      description:
+        - "&fɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
+        - "&7Sube 3 Pokémon distintos al nivel 100."
+        - " "
+        - "&cRecompensas:"
+        - "&c- &f8 Diamantes"
+        - "&c- &f1 Llave Mega"
+        - ""
+        - "&7(&cClick Derecho para cancelar&7)"
+      display-item:
+        material: cobblemon:dusk_ball
+        name: "&f&lLeyenda al Nivel 100"
+        lore:
+          - "{progression_status}"
+          - " "
+          - "{description}"
+          - " "
+          - "{tracking-tag}"
+      requirements:
+        1:
+          level_up_to:
+            target_level: 100
+            pokename: any
+            shiny: false
+            type: any
+            ball: any
+            amount: 3
+            time_of_day: any
+            is_legendary: false
+            is_ultra_beast: false
+      rewards:
+        commands:
+          - "give {player} diamond 8"
+          - "crates key give {player} Mega 1"
+
+    "Cazador de Élite":
+      needs-selection: true
+      time-limit: "30d"
+      description:
+        - "&fɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
+        - "&7Derrota a 50 entrenadores (jugadores) en batallas."
+        - " "
+        - "&cRecompensas:"
+        - "&c- &f+12500$"
+        - "&c- &f2 Fichas de Arcade"
+        - ""
+        - "&7(&cClick Derecho para cancelar&7)"
+      display-item:
+        material: cobblemon:master_ball
+        name: "&f&lCazador de Élite"
+        lore:
+          - "{progression_status}"
+          - " "
+          - "{description}"
+          - " "
+          - "{tracking-tag}"
+      requirements:
+        1:
+          Defeat_Battler:
+            pokename: any
+            pokemon_type: any
+            amount: 50
+            shiny: false
+            is_legendary: false
+            is_ultra_beast: false
+            effectiveness: any
+            npc-player-gymleader-wild: player
+      rewards:
+        commands:
+          - "deposit 12500 dollars {player}"
+          - "deposit 2 fichas {player}"
+
+    "Captura Maestra":
+      needs-selection: true
+      time-limit: "30d"
+      description:
+        - "&fɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
+        - "&7Captura un total de 500 Pokémon."
+        - " "
+        - "&cRecompensas:"
+        - "&c- &f1 Llave Sorpresa"
+        - "&c- &f15 Lingotes de Hierro"
+        - ""
+        - "&7(&cClick Derecho para cancelar&7)"
+      display-item:
+        material: cobblemon:poke_ball
+        name: "&f&lCaptura Maestra"
+        lore:
+          - "{progression_status}"
+          - " "
+          - "{description}"
+          - " "
+          - "{tracking-tag}"
+      requirements:
+        1:
+          Catch_Pokemon:
+            pokename: any
+            shiny: false
+            type: any
+            ball: any
+            amount: 500
+            time_of_day: any
+            is_legendary: false
+            is_ultra_beast: false
+      rewards:
+        commands:
+          - "crates key give {player} Sorpresa 1"
+          - "give {player} iron_ingot 15"
+
+    "Cazador de Leyendas":
+      needs-selection: true
+      time-limit: "30d"
+      description:
+        - "&fɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
+        - "&7Captura 1 Pokémon Legendario o Mítico."
+        - " "
+        - "&cRecompensas:"
+        - "&c- &f+10000$"
+        - "&c- &f1 Llave Mega"
+        - "&c- &f1 Pase de Incursión"
+        - ""
+        - "&7(&cClick Derecho para cancelar&7)"
+      display-item:
+        material: cobblemon:beast_ball
+        name: "&f&lCazador de Leyendas"
+        lore:
+          - "{progression_status}"
+          - " "
+          - "{description}"
+          - " "
+          - "{tracking-tag}"
+      requirements:
+        1:
+          Catch_Pokemon:
+            pokename: any
+            shiny: false
+            type: any
+            ball: any
+            amount: 1
+            time_of_day: any
+            is_legendary: true
+            is_ultra_beast: false
+      rewards:
+        commands:
+          - "deposit 10000 dollars {player}"
+          - "crates key give {player} Mega 1"
+          - "raid give {player} pass *"

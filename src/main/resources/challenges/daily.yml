@@ -1,0 +1,637 @@
+gui:
+  window-name: "\uDAFF\uDFFF\uDAFF\uDFFF\uDAFF\uDFFF\uDAFF\uDFFF\uDAFF\uDFFF\uDAFF\uDFFF\uDAFF\uDFFF\uDAFF\uDFFF\uDAFF\uDFFF\uDAFF\uDFFF"
+  structure:
+    - "- - - - - - - - -"
+    - "- - - . . . - - -"
+    - "- - - . . . - - -"
+    - "- - - . . . - - -"
+    - "- - - - - - - - -"
+    - "- - - < B > - - -"
+
+  ingredients:
+    '#':
+      material: BLACK_STAINED_GLASS_PANE
+      name: " "
+    'B':
+      material: laboratorio:lab_furniture_v1_empty
+      name: "&6ᴠᴏʟᴠᴇʀ"
+      lore:
+        - ""
+        - "&7¡Volver a la Central de Misiones!"
+        - ""
+      commands:
+        - "execute as {player} run challenges"
+    '<':
+      material: laboratorio:lab_furniture_v1_empty
+      name: "&6ᴘᴀɢɪɴᴀ ᴀɴᴛᴇʀɪᴏʀ"
+      back-page: true
+      lore:
+        - ""
+    '>':
+      material: laboratorio:lab_furniture_v1_empty
+      next-page: true
+      name: "&6ᴘᴀɢɪɴᴀ ꜱɪɢᴜɪᴇɴᴛᴇ"
+      lore:
+        - ""
+
+challenge-list:
+  max-challenges-per-player: 1
+  
+  # Mission rotation configuration
+  visible-missions: 9
+  rotation-interval: daily
+  
+  challenges:
+
+    # --- FACILES / RAPIDAS ---
+    "Cosecha de Bonguris":
+      needs-selection: true
+      time-limit: "24h"
+      repeatable: 23h30m
+      description:
+        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
+        - "&7Cosecha 12 Bonguris de cualquier tipo."
+        - " "
+        - "&aRecompensas:"
+        - "&a- &f+200$"
+        - "&a- &f3 Bayas Aranja"
+        - "&a- &f2 Poké Ball"
+        - ""
+        - "&7(&cClick Derecho para cancelar&7)"
+      display-item:
+        material: cobblemon:poke_ball
+        name: "&f&lCosecha de Bonguris"
+        lore:
+          - "{progression_status}"
+          - " "
+          - "{description}"
+          - " "
+          - "{tracking-tag}"
+      requirements:
+        1:
+          harvest_apricorn:
+            type: any
+            amount: 12
+      rewards:
+        commands:
+          - "deposit 200 dollars {player}"
+          - "give {player} cobblemon:oran_berry 3"
+          - "give {player} cobblemon:poke_ball 2"
+
+    "Cosecha Roja":
+      needs-selection: true
+      time-limit: "24h"
+      repeatable: 23h30m
+      description:
+        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
+        - "&7Cosecha 20 Bonguris Rojos."
+        - " "
+        - "&aRecompensas:"
+        - "&a- &f+500$"
+        - "&a- &f2 Premier Ball"
+      display-item:
+        material: cobblemon:premier_ball
+        name: "&f&lCosecha Roja"
+        lore:
+          - "{progression_status}"
+          - " "
+          - "{description}"
+          - " "
+          - "{tracking-tag}"
+      requirements:
+        1:
+          harvest_apricorn:
+            type: red
+            amount: 20
+      rewards:
+        commands:
+          - "deposit 500 dollars {player}"
+          - "give {player} cobblemon:premier_ball 2"
+
+    "Cazador de Búhos":
+      needs-selection: true
+      time-limit: "24h"
+      repeatable: 23h30m
+      description:
+        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
+        - "&7Derrota 3 Hoothoot salvajes."
+        - " "
+        - "&aRecompensas:"
+        - "&a- &f+400$"
+        - "&a- &f1 Caramelo Raro"
+        - "&a- &f2 Pociones"
+        - ""
+        - "&7(&cClick Derecho para cancelar&7)"
+      display-item:
+        material: cobblemon:great_ball
+        name: "&f&lCazador de Búhos"
+        lore:
+          - "{progression_status}"
+          - " "
+          - "{description}"
+          - " "
+          - "{tracking-tag}"
+      requirements:
+        1:
+          Defeat_Battler:
+            pokename: hoothoot
+            pokemon_type: any
+            amount: 3
+            npc-player-gymleader-wild: wild
+      rewards:
+        commands:
+          - "deposit 400 dollars {player}"
+          - "give {player} cobblemon:rare_candy 1"
+          - "give {player} cobblemon:potion 2"
+
+    "Caza Eléctrica":
+      needs-selection: true
+      time-limit: "24h"
+      repeatable: 23h30m
+      description:
+        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
+        - "&7Captura 1 Pikachu."
+        - " "
+        - "&aRecompensas:"
+        - "&a- &f+500$"
+        - "&a- &f1 Caramelo Raro"
+        - "&a- &f2 Poké Ball"
+        - ""
+        - "&7(&cClick Derecho para cancelar&7)"
+      display-item:
+        material: cobblemon:dive_ball
+        name: "&f&lCaza Eléctrica"
+        lore:
+          - "{progression_status}"
+          - " "
+          - "{description}"
+          - " "
+          - "{tracking-tag}"
+      requirements:
+        1:
+          Catch_Pokemon:
+            pokename: pikachu
+            pokemon_type: any
+            amount: 1
+      rewards:
+        commands:
+          - "deposit 500 dollars {player}"
+          - "give {player} cobblemon:rare_candy 1"
+          - "give {player} cobblemon:poke_ball 2"
+
+    # --- NORMALES / MEDIAS ---
+    "Viajero del Tiempo":
+      needs-selection: false
+      time-limit: "24h"
+      repeatable: 23h30m
+      description:
+        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
+        - "&7Juega por 2 horas."
+        - " "
+        - "&aRecompensas:"
+        - "&a- &f+300$"
+        - "&a- &f2 Premier Ball"
+        - ""
+        - "&7(&cClick Derecho para cancelar&7)"
+      display-item:
+        material: cobblemon:luxury_ball
+        name: "&f&lViajero del Tiempo"
+        lore:
+          - "{progression_status}"
+          - " "
+          - "{description}"
+          - " "
+          - "{tracking-tag}"
+      requirements:
+        1:
+          milestone_time_played:
+            total-seconds: 7200
+      rewards:
+        commands:
+          - "deposit 300 dollars {player}"
+          - "give {player} cobblemon:premier_ball 2"
+
+    "Cazador de Diamantes":
+      needs-selection: true
+      time-limit: "24h"
+      repeatable: 23h30m
+      description:
+        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
+        - "&7Mina 3 Diamantes."
+        - " "
+        - "&aRecompensas:"
+        - "&a- &f+600$"
+        - "&a- &f2 Diamantes"
+        - ""
+        - "&7(&cClick Derecho para cancelar&7)"
+      display-item:
+        material: cobblemon:ultra_ball
+        name: "&f&lCazador de Diamantes"
+        lore:
+          - "{progression_status}"
+          - " "
+          - "{description}"
+          - " "
+          - "{tracking-tag}"
+      requirements:
+        1:
+          mine_block:
+            type: "minecraft:diamond_ore"
+            amount: 3
+      rewards:
+        commands:
+          - "deposit 600 dollars {player}"
+          - "give {player} minecraft:diamond 2"
+
+    "Entrenamiento Intenso":
+      needs-selection: true
+      time-limit: "24h"
+      repeatable: 23h30m
+      description:
+        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
+        - "&7Sube 15 niveles con tus Pokémon."
+        - " "
+        - "&aRecompensas:"
+        - "&a- &f+750$"
+        - "&a- &f3 Caramelos Raros"
+        - ""
+        - "&7(&cClick Derecho para cancelar&7)"
+      display-item:
+        material: cobblemon:repeat_ball
+        name: "&f&lEntrenamiento Intenso"
+        lore:
+          - "{progression_status}"
+          - " "
+          - "{description}"
+          - " "
+          - "{tracking-tag}"
+      requirements:
+        1:
+          level_up_once:
+            amount: 15
+      rewards:
+        commands:
+          - "deposit 750 dollars {player}"
+          - "give {player} cobblemon:rare_candy 3"
+
+    "Cazador Acuático":
+      needs-selection: true
+      time-limit: "24h"
+      repeatable: 23h30m
+      description:
+        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
+        - "&7Captura 5 Pokémon de Tipo Agua."
+        - " "
+        - "&aRecompensas:"
+        - "&a- &f+800$"
+        - "&a- &f3 Dive Ball"
+        - "&a- &f1 Caramelo Raro"
+        - ""
+        - "&7(&cClick Derecho para cancelar&7)"
+      display-item:
+        material: cobblemon:dusk_ball
+        name: "&f&lCazador Acuático"
+        lore:
+          - "{progression_status}"
+          - " "
+          - "{description}"
+          - " "
+          - "{tracking-tag}"
+      requirements:
+        1:
+          Catch_Pokemon:
+            pokemon_type: water
+            amount: 5
+      rewards:
+        commands:
+          - "deposit 800 dollars {player}"
+          - "give {player} cobblemon:dive_ball 3"
+          - "give {player} cobblemon:rare_candy 1"
+
+    "Minería Extrema":
+      needs-selection: true
+      time-limit: "24h"
+      repeatable: 23h30m
+      description:
+        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
+        - "&7Mina 5 menas de Diamante."
+        - " "
+        - "&aRecompensas:"
+        - "&a- &f+700$"
+        - "&a- &f3 Diamantes"
+        - ""
+        - "&7(&cClick Derecho para cancelar&7)"
+      display-item:
+        material: cobblemon:net_ball
+        name: "&f&lMinería Extrema"
+        lore:
+          - "{progression_status}"
+          - " "
+          - "{description}"
+          - " "
+          - "{tracking-tag}"
+      requirements:
+        1:
+          mine_block:
+            type: "minecraft:diamond_ore"
+            amount: 5
+      rewards:
+        commands:
+          - "deposit 700 dollars {player}"
+          - "give {player} minecraft:diamond 3"
+
+    # --- DIFICILES ---
+    "Derrota Voladores":
+      needs-selection: true
+      time-limit: "24h"
+      repeatable: 23h30m
+      description:
+        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
+        - "&7Derrota 15 Pokémon de Tipo Volador."
+        - " "
+        - "&aRecompensas:"
+        - "&a- &f+600$"
+        - "&a- &f4 Great Ball"
+        - "&a- &f1 Caramelo Raro"
+        - ""
+        - "&7(&cClick Derecho para cancelar&7)"
+      display-item:
+        material: cobblemon:timer_ball
+        name: "&f&lDerrota Voladores"
+        lore:
+          - "{progression_status}"
+          - " "
+          - "{description}"
+          - " "
+          - "{tracking-tag}"
+      requirements:
+        1:
+          Defeat_Battler:
+            pokemon_type: flying
+            amount: 15
+            npc-player-gymleader-wild: wild
+      rewards:
+        commands:
+          - "deposit 600 dollars {player}"
+          - "give {player} cobblemon:great_ball 4"
+          - "give {player} cobblemon:rare_candy 1"
+
+    "Domador de Normal":
+      needs-selection: true
+      time-limit: "24h"
+      repeatable: 23h30m
+      description:
+        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
+        - "&7Captura 12 Pokémon de Tipo Normal."
+        - " "
+        - "&aRecompensas:"
+        - "&a- &f+700$"
+        - "&a- &f3 Luxury Ball"
+        - ""
+        - "&7(&cClick Derecho para cancelar&7)"
+      display-item:
+        material: cobblemon:quick_ball
+        name: "&f&lDomador de Normal"
+        lore:
+          - "{progression_status}"
+          - " "
+          - "{description}"
+          - " "
+          - "{tracking-tag}"
+      requirements:
+        1:
+          Catch_Pokemon:
+            pokemon_type: normal
+            amount: 12
+      rewards:
+        commands:
+          - "deposit 700 dollars {player}"
+          - "give {player} cobblemon:luxury_ball 3"
+
+    "Cazador Incansable":
+      needs-selection: true
+      time-limit: "24h"
+      repeatable: 23h30m
+      description:
+        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
+        - "&7Derrota 30 Pokémon salvajes."
+        - " "
+        - "&aRecompensas:"
+        - "&a- &f+700$"
+        - "&a- &f3 Great Ball"
+        - "&a- &f2 Super Pociones"
+        - ""
+        - "&7(&cClick Derecho para cancelar&7)"
+      display-item:
+        material: cobblemon:heavy_ball
+        name: "&f&lCazador Incansable"
+        lore:
+          - "{progression_status}"
+          - " "
+          - "{description}"
+          - " "
+          - "{tracking-tag}"
+      requirements:
+        1:
+          Defeat_Battler:
+            amount: 30
+            npc-player-gymleader-wild: wild
+      rewards:
+        commands:
+          - "deposit 700 dollars {player}"
+          - "give {player} cobblemon:great_ball 3"
+          - "give {player} cobblemon:super_potion 2"
+
+    "Cazador Masivo":
+      needs-selection: true
+      time-limit: "24h"
+      repeatable: 23h30m
+      description:
+        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
+        - "&7Captura 25 Pokémon salvajes."
+        - " "
+        - "&aRecompensas:"
+        - "&a- &f+900$"
+        - "&a- &f5 Poké Ball"
+        - "&a- &f2 Super Pociones"
+        - ""
+        - "&7(&cClick Derecho para cancelar&7)"
+      display-item:
+        material: cobblemon:friend_ball
+        name: "&f&lCazador Masivo"
+        lore:
+          - "{progression_status}"
+          - " "
+          - "{description}"
+          - " "
+          - "{tracking-tag}"
+      requirements:
+        1:
+          Catch_Pokemon:
+            amount: 25
+      rewards:
+        commands:
+          - "deposit 900 dollars {player}"
+          - "give {player} cobblemon:poke_ball 5"
+          - "give {player} cobblemon:super_potion 2"
+
+    "Pesca Magikarp":
+      needs-selection: true
+      time-limit: "24h"
+      repeatable: 23h30m
+      description:
+        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
+        - "&7Pesca 10 Magikarp."
+        - " "
+        - "&aRecompensas:"
+        - "&a- &f+800$"
+        - "&a- &f1 Ficha de Arcade"
+        - "&a- &f2 Caramelos Raros"
+        - ""
+        - "&7(&cClick Derecho para cancelar&7)"
+      display-item:
+        material: cobblemon:lure_ball
+        name: "&f&lPesca Magikarp"
+        lore:
+          - "{progression_status}"
+          - " "
+          - "{description}"
+          - " "
+          - "{tracking-tag}"
+      requirements:
+        1:
+          Fish_Pokemon:
+            pokename: magikarp
+            amount: 10
+      rewards:
+        commands:
+          - "deposit 800 dollars {player}"
+          - "deposit 1 fichas {player}"
+          - "give {player} cobblemon:rare_candy 2"
+
+    # --- MUY DIFICILES ---
+    "Tiempo de Maestría":
+      needs-selection: false
+      time-limit: "24h"
+      repeatable: 23h30m
+      description:
+        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
+        - "&7Juega por 4 horas."
+        - " "
+        - "&aRecompensas:"
+        - "&a- &f+600$"
+        - "&a- &f2 Super Pociones"
+        - ""
+        - "&7(&cClick Derecho para cancelar&7)"
+      display-item:
+        material: cobblemon:moon_ball
+        name: "&f&lTiempo de Maestría"
+        lore:
+          - "{progression_status}"
+          - " "
+          - "{description}"
+          - " "
+          - "{tracking-tag}"
+      requirements:
+        1:
+          milestone_time_played:
+            total-seconds: 14400
+      rewards:
+        commands:
+          - "deposit 600 dollars {player}"
+          - "give {player} cobblemon:super_potion 2"
+
+    "Explorador Incansable":
+      needs-selection: false
+      time-limit: "24h"
+      repeatable: 23h30m
+      description:
+        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
+        - "&7Juega por 6 horas."
+        - " "
+        - "&aRecompensas:"
+        - "&a- &f1 Llave Normal"
+        - ""
+        - "&7(&cClick Derecho para cancelar&7)"
+      display-item:
+        material: cobblemon:beast_ball
+        name: "&f&lExplorador Incansable"
+        lore:
+          - "{progression_status}"
+          - " "
+          - "{description}"
+          - " "
+          - "{tracking-tag}"
+      requirements:
+        1:
+          milestone_time_played:
+            total-seconds: 21600
+      rewards:
+        commands:
+          - "crates key give {player} Normal 1"
+
+    "Sacrificio Magikarp":
+      needs-selection: true
+      time-limit: "24h"
+      repeatable: 23h30m
+      description:
+        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
+        - "&7Libera 15 Magikarp de tu PC."
+        - " "
+        - "&aRecompensas:"
+        - "&a- &f+1000$"
+        - "&a- &f1 Llave Normal"
+        - "&a- &f2 Caramelos Raros"
+        - ""
+        - "&7(&cClick Derecho para cancelar&7)"
+      display-item:
+        material: cobblemon:master_ball
+        name: "&f&lSacrificio Magikarp"
+        lore:
+          - "{progression_status}"
+          - " "
+          - "{description}"
+          - " "
+          - "{tracking-tag}"
+      requirements:
+        1:
+          Release_Pokemon:
+            pokename: magikarp
+            amount: 15
+      rewards:
+        commands:
+          - "deposit 1000 dollars {player}"
+          - "crates key give {player} Normal 1"
+          - "give {player} cobblemon:rare_candy 2"
+
+    "Duelo de Entrenadores":
+      needs-selection: true
+      time-limit: "24h"
+      repeatable: 23h30m
+      description:
+        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
+        - "&7Derrota a 15 jugadores (usuarios)."
+        - " "
+        - "&aRecompensas:"
+        - "&a- &f+1000$"
+        - "&a- &f5 Great Ball"
+        - ""
+        - "&7(&cClick Derecho para cancelar&7)"
+      display-item:
+        material: cobblemon:safari_ball
+        name: "&f&lDuelo de Entrenadores"
+        lore:
+          - "{progression_status}"
+          - " "
+          - "{description}"
+          - " "
+          - "{tracking-tag}"
+      requirements:
+        1:
+          Defeat_Battler:
+            npc-player-gymleader-wild: player
+            amount: 15
+      rewards:
+        commands:
+          - "deposit 1000 dollars {player}"
+          - "give {player} cobblemon:great_ball 5"

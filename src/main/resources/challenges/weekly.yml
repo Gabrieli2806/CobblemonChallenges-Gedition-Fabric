@@ -1,0 +1,396 @@
+gui:
+  window-name: "\uDAFF\uDFFF\uDAFF\uDFFF\uDAFF\uDFFF\uDAFF\uDFFF\uDAFF\uDFFF\uDAFF\uDFFF\uDAFF\uDFFF\uDAFF\uDFFF\uDAFF\uDFFF\uDAFF\uDFFF"
+  structure:
+    - "- - - - - - - - -"
+    - "- - - . . . - - -"
+    - "- - - . . . - - -"
+    - "- - - . . . - - -"
+    - "- - - - - - - - -"
+    - "- - - < B > - - -"
+  ingredients:
+    '#':
+      material: BLACK_STAINED_GLASS_PANE
+      name: " "
+    'B':
+      material: laboratorio:lab_furniture_v1_empty
+      name: "&6ᴠᴏʟᴠᴇʀ"
+      lore:
+        - ""
+        - "&7¡Volver a la Central de Misiones!"
+        - ""
+      commands:
+        - "execute as {player} run challenges"
+    '<':
+      material: laboratorio:lab_furniture_v1_empty
+      name: "&6ᴘᴀɢɪɴᴀ ᴀɴᴛᴇʀɪᴏʀ"
+      back-page: true
+      lore:
+        - ""
+    '>':
+      material: laboratorio:lab_furniture_v1_empty
+      next-page: true
+      name: "&6ᴘᴀɢɪɴᴀ ꜱɪɢᴜɪᴇɴᴛᴇ"
+      lore:
+        - ""
+
+challenge-list:
+  max-challenges-per-player: 1
+  
+  # Mission rotation configuration
+  visible-missions: 9
+  rotation-interval: weekly
+  
+  challenges:
+
+    "Crianza Masiva":
+      needs-selection: true
+      time-limit: "7d"
+      repeatable: 6d23h
+      description:
+        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
+        - "&7Cría 20 Pokémon de cualquier tipo."
+        - " "
+        - "    &bRecompensas:"
+        - "    &b- &f+8000$"
+        - "    &b- &f8 Ultra Balls"
+        - "    &b- &f10 Rare Candies"
+        - "    &b- &f1 Piedra Evolutiva"
+      display-item:
+        material: cobblemon:friend_ball
+        name: "&f&lCrianza Masiva"
+        lore:
+          - "{progression_status}"
+          - " "
+          - "{description}"
+          - " "
+          - "{tracking-tag}"
+      requirements:
+        1:
+          Breed_Pokemon:
+            pokename: any
+            shiny: false
+            type: any
+            ball: any
+            amount: 20
+            time_of_day: any
+            is_legendary: false
+            is_ultra_beast: false
+      rewards:
+        commands:
+          - "deposit 8000 dollars {player}"
+          - "give {player} cobblemon:ultra_ball 8"
+          - "give {player} cobblemon:rare_candy 10"
+          - "give {player} cobblemon:fire_stone 1"
+
+    "Pequeños Nacimientos":
+      needs-selection: true
+      time-limit: "7d"
+      repeatable: 6d23h
+      description:
+        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
+        - "&7Haz eclosionar 20 huevos Pokémon."
+        - " "
+        - "    &bRecompensas:"
+        - "    &b- &f+9000$"
+        - "    &b- &f6 Premier Balls"
+        - "    &b- &f8 Luxury Balls"
+        - "    &b- &f2 Super Pociones"
+      display-item:
+        material: cobblemon:moon_ball
+        name: "&f&lPequeños Nacimientos"
+        lore:
+          - "{progression_status}"
+          - " "
+          - "{description}"
+          - " "
+          - "{tracking-tag}"
+      requirements:
+        1:
+          Hatch_Pokemon:
+            pokename: any
+            shiny: false
+            type: any
+            ball: any
+            amount: 20
+            time_of_day: any
+            is_legendary: false
+            is_ultra_beast: false
+      rewards:
+        commands:
+          - "deposit 9000 dollars {player}"
+          - "give {player} cobblemon:premier_ball 6"
+          - "give {player} cobblemon:luxury_ball 8"
+          - "give {player} cobblemon:super_potion 2"
+
+    "Entrenamiento Legendario":
+      needs-selection: true
+      time-limit: "7d"
+      repeatable: 6d23h
+      description:
+        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
+        - "&7Sube un total de 350 niveles entre todos tus Pokémon."
+        - " "
+        - "    &bRecompensas:"
+        - "    &b- &f+10000$"
+        - "    &b- &f12 Rare Candies"
+        - "    &b- &f3 Hiper Pociones"
+        - "    &b- &f1 Pase de Incursión"
+      display-item:
+        material: cobblemon:heavy_ball
+        name: "&f&lEntrenamiento Legendario"
+        lore:
+          - "{progression_status}"
+          - " "
+          - "{description}"
+          - " "
+          - "{tracking-tag}"
+      requirements:
+        1:
+          level_up_once:
+            pokename: any
+            shiny: false
+            type: any
+            ball: any
+            amount: 350
+            time_of_day: any
+            is_legendary: false
+            is_ultra_beast: false
+      rewards:
+        commands:
+          - "deposit 10000 dollars {player}"
+          - "give {player} cobblemon:rare_candy 12"
+          - "give {player} cobblemon:hyper_potion 3"
+          - "raid give {player} pass *"
+
+    "Cazador Infatigable":
+      needs-selection: true
+      time-limit: "7d"
+      repeatable: 6d23h
+      description:
+        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
+        - "&7Derrota 200 Pokémon salvajes."
+        - " "
+        - "    &bRecompensas:"
+        - "    &b- &f+6000$"
+        - "    &b- &f10 Ultra Balls"
+        - "    &b- &f6 Diamantes"
+        - "    &b- &f2 Máx Pociones"
+      display-item:
+        material: cobblemon:dive_ball
+        name: "&f&lCazador Infatigable"
+        lore:
+          - "{progression_status}"
+          - " "
+          - "{description}"
+          - " "
+          - "{tracking-tag}"
+      requirements:
+        1:
+          Defeat_Battler:
+            pokename: any
+            pokemon_type: any
+            amount: 200
+            shiny: false
+            is_legendary: false
+            is_ultra_beast: false
+            effectiveness: any
+            npc-player-gymleader-wild: wild
+      rewards:
+        commands:
+          - "deposit 6000 dollars {player}"
+          - "give {player} cobblemon:ultra_ball 10"
+          - "give {player} diamond 6"
+          - "give {player} cobblemon:max_potion 2"
+
+    "Maratón de Capturas":
+      needs-selection: true
+      time-limit: "7d"
+      repeatable: 6d23h
+      description:
+        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
+        - "&7Captura 50 Pokémon de tipo Agua."
+        - " "
+        - "    &bRecompensas:"
+        - "    &b- &f+7000$"
+        - "    &b- &f10 Premier Balls"
+        - "    &b- &f5 Rare Candies"
+        - "    &b- &f2 Lingotes de Hierro"
+      display-item:
+        material: cobblemon:net_ball
+        name: "&f&lMaratón de Capturas"
+        lore:
+          - "{progression_status}"
+          - " "
+          - "{description}"
+          - " "
+          - "{tracking-tag}"
+      requirements:
+        1:
+          Catch_Pokemon:
+            pokename: any
+            shiny: false
+            type: water
+            ball: any
+            amount: 50
+            time_of_day: any
+            is_legendary: false
+            is_ultra_beast: false
+      rewards:
+        commands:
+          - "deposit 7000 dollars {player}"
+          - "give {player} cobblemon:premier_ball 10"
+          - "give {player} cobblemon:rare_candy 5"
+          - "give {player} iron_ingot 2"
+
+    "Cazador de Jefes":
+      needs-selection: true
+      time-limit: "7d"
+      repeatable: 6d23h
+      description:
+        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
+        - "&7Derrota 25 Pokémon de tipo Dragón."
+        - " "
+        - "    &bRecompensas:"
+        - "    &b- &f+9000$"
+        - "    &b- &f8 Ultra Balls"
+        - "    &b- &f4 Super Pociones"
+        - "    &b- &f1 Piedra Evolutiva"
+      display-item:
+        material: cobblemon:beast_ball
+        name: "&f&lCazador de Jefes"
+        lore:
+          - "{progression_status}"
+          - " "
+          - "{description}"
+          - " "
+          - "{tracking-tag}"
+      requirements:
+        1:
+          Defeat_Battler:
+            pokename: any
+            pokemon_type: dragon
+            amount: 25
+            shiny: false
+            is_legendary: false
+            is_ultra_beast: false
+            effectiveness: any
+            npc-player-gymleader-wild: wild
+      rewards:
+        commands:
+          - "deposit 9000 dollars {player}"
+          - "give {player} cobblemon:ultra_ball 8"
+          - "give {player} cobblemon:super_potion 4"
+          - "give {player} cobblemon:dawn_stone 1"
+
+    "Gran Aventura":
+      needs-selection: false
+      time-limit: "7d"
+      repeatable: 6d23h
+      description:
+        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
+        - "&7Juega un total de 20 horas en el servidor."
+        - " "
+        - "    &bRecompensas:"
+        - "    &b- &f+10000$"
+        - "    &b- &f10 Luxury Balls"
+        - "    &b- &f6 Rare Candies"
+        - "    &b- &f1 Llave Normal"
+      display-item:
+        material: cobblemon:cherish_ball
+        name: "&f&lGran Aventura"
+        lore:
+          - "{progression_status}"
+          - " "
+          - "{description}"
+          - " "
+          - "{tracking-tag}"
+      requirements:
+        1:
+          milestone_time_played:
+            total-seconds: 72000
+      rewards:
+        commands:
+          - "deposit 10000 dollars {player}"
+          - "give {player} cobblemon:luxury_ball 10"
+          - "give {player} cobblemon:rare_candy 6"
+          - "crates key give {player} Normal 1"
+
+    "Liberación Espiritual":
+      needs-selection: true
+      time-limit: "7d"
+      repeatable: 6d23h
+      description:
+        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
+        - "&7Libera 25 Pokémon desde tu PC."
+        - " "
+        - "    &bRecompensas:"
+        - "    &b- &f+7000$"
+        - "    &b- &f6 Ultra Balls"
+        - "    &b- &f6 Rare Candies"
+        - "    &b- &f2 Fichas de Arcade"
+      display-item:
+        material: cobblemon:safari_ball
+        name: "&f&lLiberación Espiritual"
+        lore:
+          - "{progression_status}"
+          - " "
+          - "{description}"
+          - " "
+          - "{tracking-tag}"
+      requirements:
+        1:
+          Release_Pokemon:
+            pokename: any
+            shiny: false
+            type: any
+            ball: any
+            amount: 25
+            time_of_day: any
+            is_legendary: false
+            is_ultra_beast: false
+      rewards:
+        commands:
+          - "deposit 7000 dollars {player}"
+          - "give {player} cobblemon:ultra_ball 6"
+          - "give {player} cobblemon:rare_candy 6"
+          - "deposit 2 fichas {player}"
+
+    "Comienzos de Kanto":
+      needs-selection: true
+      time-limit: "7d"
+      repeatable: 6d23h
+      description:
+        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
+        - "&7Captura a Bulbasaur, Charmander y Squirtle."
+        - " "
+        - "    &bRecompensas:"
+        - "    &b- &f+12000$"
+        - "    &b- &f10 Ultra Balls"
+        - "    &b- &f10 Rare Candies"
+        - "    &b- &f1 Llave Normal"
+      display-item:
+        material: cobblemon:master_ball
+        name: "&f&lComienzos de Kanto"
+        lore:
+          - "{progression_status}"
+          - " "
+          - "{description}"
+          - " "
+          - "{tracking-tag}"
+      requirements:
+        1:
+          Catch_Pokemon:
+            pokename: bulbasaur/charmander/squirtle
+            shiny: false
+            type: any
+            ball: any
+            amount: 3
+            time_of_day: any
+            is_legendary: false
+            is_ultra_beast: false
+      rewards:
+        commands:
+          - "deposit 12000 dollars {player}"
+          - "give {player} cobblemon:ultra_ball 10"
+          - "give {player} cobblemon:rare_candy 10"
+          - "crates key give {player} Normal 1"
