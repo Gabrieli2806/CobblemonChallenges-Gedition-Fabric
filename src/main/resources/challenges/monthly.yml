@@ -387,18 +387,18 @@ challenge-list:
       needs-selection: true
       time-limit: "30d"
       description:
-        - "&fɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
-        - "&7Captura 1 Pokémon Legendario o Mítico."
+        - "<gradient:dark_purple:purple><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gray>Captura 1 Pokémon Legendario o Mítico.</gray>"
         - " "
-        - "&cRecompensas:"
-        - "&c- &f+10000$"
-        - "&c- &f1 Llave Mega"
-        - "&c- &f1 Pase de Incursión"
+        - "<red>Recompensas:</red>"
+        - "<red>- <white>+10000$</white></red>"
+        - "<red>- <white>1 Llave Mega</white></red>"
+        - "<red>- <white>1 Pase de Incursión</white></red>"
         - ""
-        - "&7(&cClick Derecho para cancelar&7)"
+        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:beast_ball
-        name: "&f&lCazador de Leyendas"
+        name: "<white><bold>Cazador de Leyendas</bold></white>"
         lore:
           - "{progression_status}"
           - " "
