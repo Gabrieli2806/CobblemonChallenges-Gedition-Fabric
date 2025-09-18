@@ -284,6 +284,33 @@ public class CobbleChallengeAPI implements SimpleAPI {
     }
 
     /**
+     * Process raw MiniMessage text directly (for challenge descriptions, etc.)
+     * @param miniMessageText The raw MiniMessage text to process
+     * @param replacements Key-value pairs for placeholder replacement
+     * @return Adventure Component with MiniMessage formatting
+     */
+    public net.kyori.adventure.text.Component parseMiniMessage(String miniMessageText, Object... replacements) {
+        if (miniMessageText == null || miniMessageText.isEmpty()) {
+            return net.kyori.adventure.text.Component.empty();
+        }
+
+        String processedText = miniMessageText;
+
+        // Replace placeholders if provided
+        if (replacements.length > 0) {
+            if (replacements.length % 2 != 0) {
+                throw new IllegalArgumentException("Key was not provided with a replacement");
+            }
+
+            for (int i = 0; i < replacements.length; i += 2) {
+                processedText = processedText.replace(replacements[i].toString(), replacements[i + 1].toString());
+            }
+        }
+
+        return MiniMessageUtils.parse(processedText);
+    }
+
+    /**
      * Get a message using MiniMessage formatting and convert to Minecraft Component
      * @param key The message key
      * @param replacements Key-value pairs for placeholder replacement

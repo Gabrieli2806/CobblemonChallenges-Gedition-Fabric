@@ -43,11 +43,15 @@ public class ChallengeItem implements ItemProvider {
         ItemStack item = FabricAdapter.toItemStack(challenge.getDisplayConfig());
 
         //format lore
-        List<String> lore = new ArrayList<>();
+        List<net.minecraft.network.chat.Component> loreComponents = new ArrayList<>();
+
+        // Keep description as MiniMessage text for proper processing
+        String descriptionText = challenge.getDescription();
+
         for (String line : challenge.getDisplayConfig().getLore()) {
             String[] replacements = {
                     "{progression_status}", null,
-                    "{description}", challenge.getDescription(),
+                    "{description}", descriptionText,
                     "{tracking-tag}", null
             };
 
@@ -88,17 +92,17 @@ public class ChallengeItem implements ItemProvider {
                     line = line.replace(replacements[i], replacements[i + 1]);
             }
 
-            // Process MiniMessage after variable replacement
-            String processedLine = PlainTextComponentSerializer.plainText().serialize(
-                com.github.kuramastone.cobblemonChallenges.utils.MiniMessageUtils.parse(line));
-            List<String> lines = new ArrayList<>(List.of(StringUtils.splitByLineBreak(processedLine)));
-
-            lore.addAll(lines);
+            // Process MiniMessage and handle line breaks properly
+            String[] splitLines = StringUtils.splitByLineBreak(line);
+            for (String singleLine : splitLines) {
+                if (!singleLine.trim().isEmpty()) {
+                    net.kyori.adventure.text.Component adventureComponent = com.github.kuramastone.cobblemonChallenges.utils.MiniMessageUtils.parse(singleLine);
+                    loreComponents.add(FabricAdapter.adapt(adventureComponent));
+                }
+            }
         }
 
-        lore = StringUtils.centerStringListTags(lore);
-
-        ItemUtils.setLore(item, lore);
+        ItemUtils.setLoreComponents(item, loreComponents);
 
         if (profile.isChallengeCompleted(challenge.getName())) {
             item = ItemUtils.setItem(item, api.getConfigOptions().getCompletedChallengeItem().getItem());

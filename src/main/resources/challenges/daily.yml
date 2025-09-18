@@ -36,11 +36,11 @@ gui:
 
 challenge-list:
   max-challenges-per-player: 1
-  
+
   # Mission rotation configuration
   visible-missions: 9
   rotation-interval: daily
-  
+
   challenges:
 
     # --- FACILES / RAPIDAS ---
@@ -49,15 +49,15 @@ challenge-list:
       time-limit: "24h"
       repeatable: 23h30m
       description:
-        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
-        - "&7Cosecha 12 Bonguris de cualquier tipo."
+        - "<gradient:purple:light_purple><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gray>Cosecha 12 Bonguris de cualquier tipo.</gray>"
         - " "
-        - "&aRecompensas:"
-        - "&a- &f+200$"
-        - "&a- &f3 Bayas Aranja"
-        - "&a- &f2 Poké Ball"
+        - "<green>Recompensas:</green>"
+        - "<green>- <white>+200$</white></green>"
+        - "<green>- <white>3 Bayas Aranja</white></green>"
+        - "<green>- <white>2 Poké Ball</white></green>"
         - ""
-        - "&7(&cClick Derecho para cancelar&7)"
+        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:poke_ball
         name: "&f&lCosecha de Bonguris"
@@ -83,12 +83,12 @@ challenge-list:
       time-limit: "24h"
       repeatable: 23h30m
       description:
-        - "ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ"
-        - "&7Cosecha 20 Bonguris Rojos."
+        - "<gradient:red:dark_red>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</gradient>"
+        - "<gray>Cosecha 20 Bonguris Rojos.</gray>"
         - " "
-        - "&aRecompensas:"
-        - "&a- &f+500$"
-        - "&a- &f2 Premier Ball"
+        - "<green>Recompensas:</green>"
+        - "<green>- <white>+500$</white></green>"
+        - "<green>- <white>2 Premier Ball</white></green>"
       display-item:
         material: cobblemon:premier_ball
         name: "&f&lCosecha Roja"

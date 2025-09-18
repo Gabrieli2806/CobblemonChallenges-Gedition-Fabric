@@ -49,16 +49,16 @@ Messages:
       fossils_revived: "<gray>Fossils Revived</gray>"
       login: "<green>Login</green>"
   challenges:
-    progression-string: "<white>{current}</white> <gray>/</gray> <gray>{target}</gray>"
+    progression-string: "&f{current} &7/ &7{target}"
     completed:
       - "<center><gradient:yellow:gold>[Challenge Completed]</gradient>"
       - "<center><gradient:gold:yellow><bold>{challenge}</bold></gradient>"
       - "                                 "
       - "{challenge-description}"
     progression_status:
-      before-attempt: "<yellow>Can be attempted</yellow>"
-      during-attempt: "<dark_green>Currently in progress</dark_green>"
-      post-completion: "<green>Already completed</green>"
+      before-attempt: "&eCan be attempted"
+      during-attempt: "&2Currently in progress"
+      post-completion: "&aAlready completed"
     failure:
       time-ran-out: "{prefix} <red>Daily Quest <gold>{challenge}</gold> failed! You may attempt this challenge again, however any progress made previously has been reset.</red>"
       challenge-no-longer-available: "{prefix} <red>La misión <gold>{challenge}</gold> ya no está disponible debido a la rotación. Por favor selecciona otra misión.</red>"
