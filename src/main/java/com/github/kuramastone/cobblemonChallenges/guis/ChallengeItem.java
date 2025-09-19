@@ -46,12 +46,23 @@ public class ChallengeItem implements ItemProvider {
         List<net.minecraft.network.chat.Component> loreComponents = new ArrayList<>();
 
         // Keep description as MiniMessage text for proper processing
-        String descriptionText = challenge.getDescription();
+        List<String> descriptionLines = challenge.getDescriptionLines();
 
         for (String line : challenge.getDisplayConfig().getLore()) {
+            // Handle {description} replacement specially
+            if (line.contains("{description}")) {
+                // Process each description line individually as MiniMessage
+                for (String descLine : descriptionLines) {
+                    if (!descLine.trim().isEmpty()) {
+                        net.kyori.adventure.text.Component adventureComponent = com.github.kuramastone.cobblemonChallenges.utils.MiniMessageUtils.parse(descLine);
+                        loreComponents.add(FabricAdapter.adapt(adventureComponent));
+                    }
+                }
+                continue; // Skip normal processing for description lines
+            }
+
             String[] replacements = {
                     "{progression_status}", null,
-                    "{description}", descriptionText,
                     "{tracking-tag}", null
             };
 
@@ -59,32 +70,32 @@ public class ChallengeItem implements ItemProvider {
             if(challenge.doesNeedSelection()) {
                 if (profile.isChallengeInProgress(challenge.getName())) {
                     long timeRemaining = profile.getActiveChallengeProgress(challenge.getName()).getTimeRemaining();
-                    replacements[5] = PlainTextComponentSerializer.plainText().serialize(api.getMiniMessage("challenges.tracking-tag.after-starting", "{time-remaining}",
+                    replacements[3] = PlainTextComponentSerializer.plainText().serialize(api.getMiniMessage("challenges.tracking-tag.after-starting", "{time-remaining}",
                             StringUtils.formatSecondsToString(timeRemaining / 1000)));
                 }
                 else {
                     long timeRemaining = challenge.getMaxTimeInMilliseconds();
-                    replacements[5] = PlainTextComponentSerializer.plainText().serialize(api.getMiniMessage("challenges.tracking-tag.before-starting", "{time-remaining}",
+                    replacements[3] = PlainTextComponentSerializer.plainText().serialize(api.getMiniMessage("challenges.tracking-tag.before-starting", "{time-remaining}",
                             StringUtils.formatSecondsToString(timeRemaining / 1000)));
                 }
             }
 
             // insert correct progress tag
             if (profile.isChallengeCompleted(challenge.getName())) {
-                replacements[1] = PlainTextComponentSerializer.plainText().serialize(api.getMiniMessage("challenges.progression_status.post-completion"));
-                replacements[5] = ""; // remove tracking tag if completed
+                replacements[1] = "<green>Already completed</green>";
+                replacements[3] = ""; // remove tracking tag if completed
             }
             else if (profile.isChallengeInProgress(challenge.getName())) {
                 String progressLines = profile.getActiveChallengeProgress(challenge.getName()).getProgressListAsString();
-                replacements[1] = PlainTextComponentSerializer.plainText().serialize(api.getMiniMessage("challenges.progression_status.during-attempt")) + "\n" + progressLines;
+                replacements[1] = "<dark_green>Currently in progress</dark_green>" + "\n" + progressLines;
             }
             else {
-                replacements[1] = PlainTextComponentSerializer.plainText().serialize(api.getMiniMessage("challenges.progression_status.before-attempt"));
+                replacements[1] = "<yellow>Can be attempted</yellow>";
             }
 
             // remove tracking tag if no timer needed
             if(!challenge.doesNeedSelection()) {
-                replacements[5] = "";
+                replacements[3] = "";
             }
 
             for (int i = 0; i < replacements.length; i += 2) {

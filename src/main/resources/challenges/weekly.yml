@@ -47,7 +47,7 @@ challenge-list:
       time-limit: "7d"
       repeatable: 6d23h
       description:
-        - "<gradient:pink:light_purple><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
         - "<gray>Cría 20 Pokémon de cualquier tipo.</gray>"
         - " "
         - "<aqua>Recompensas:</aqua>"
@@ -57,7 +57,7 @@ challenge-list:
         - "<aqua>- <white>1 Piedra Evolutiva</white></aqua>"
       display-item:
         material: cobblemon:friend_ball
-        name: "<white><bold>Crianza Masiva</bold></white>"
+        name: "&f&lCrianza Masiva"
         lore:
           - "{progression_status}"
           - " "
@@ -87,7 +87,7 @@ challenge-list:
       time-limit: "7d"
       repeatable: 6d23h
       description:
-        - "<gradient:yellow:orange><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
         - "<gray>Haz eclosionar 20 huevos Pokémon.</gray>"
         - " "
         - "<aqua>Recompensas:</aqua>"
@@ -97,7 +97,7 @@ challenge-list:
         - "<aqua>- <white>2 Super Pociones</white></aqua>"
       display-item:
         material: cobblemon:moon_ball
-        name: "<white><bold>Pequeños Nacimientos</bold></white>"
+        name: "&f&lPequeños Nacimientos"
         lore:
           - "{progression_status}"
           - " "
@@ -127,7 +127,7 @@ challenge-list:
       time-limit: "7d"
       repeatable: 6d23h
       description:
-        - "<gradient:purple:dark_purple><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
         - "<gray>Sube un total de 350 niveles entre todos tus Pokémon.</gray>"
         - " "
         - "<aqua>Recompensas:</aqua>"
@@ -137,7 +137,7 @@ challenge-list:
         - "<aqua>- <white>1 Pase de Incursión</white></aqua>"
       display-item:
         material: cobblemon:heavy_ball
-        name: "<white><bold>Entrenamiento Legendario</bold></white>"
+        name: "&f&lEntrenamiento Legendario"
         lore:
           - "{progression_status}"
           - " "
@@ -167,7 +167,7 @@ challenge-list:
       time-limit: "7d"
       repeatable: 6d23h
       description:
-        - "<gradient:red:dark_red><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
         - "<gray>Derrota 200 Pokémon salvajes.</gray>"
         - " "
         - "<aqua>Recompensas:</aqua>"
@@ -177,7 +177,7 @@ challenge-list:
         - "<aqua>- <white>2 Máx Pociones</white></aqua>"
       display-item:
         material: cobblemon:dive_ball
-        name: "<white><bold>Cazador Infatigable</bold></white>"
+        name: "&f&lCazador Infatigable"
         lore:
           - "{progression_status}"
           - " "
@@ -207,7 +207,7 @@ challenge-list:
       time-limit: "7d"
       repeatable: 6d23h
       description:
-        - "<gradient:blue:dark_blue><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
         - "<gray>Captura 50 Pokémon de tipo Agua.</gray>"
         - " "
         - "<aqua>Recompensas:</aqua>"
@@ -217,7 +217,7 @@ challenge-list:
         - "<aqua>- <white>2 Lingotes de Hierro</white></aqua>"
       display-item:
         material: cobblemon:net_ball
-        name: "<white><bold>Maratón de Capturas</bold></white>"
+        name: "&f&lMaratón de Capturas"
         lore:
           - "{progression_status}"
           - " "
@@ -247,7 +247,7 @@ challenge-list:
       time-limit: "7d"
       repeatable: 6d23h
       description:
-        - "<gradient:dark_purple:red><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
         - "<gray>Derrota 25 Pokémon de tipo Dragón.</gray>"
         - " "
         - "<aqua>Recompensas:</aqua>"
@@ -257,7 +257,7 @@ challenge-list:
         - "<aqua>- <white>1 Piedra Evolutiva</white></aqua>"
       display-item:
         material: cobblemon:beast_ball
-        name: "<white><bold>Cazador de Jefes</bold></white>"
+        name: "&f&lCazador de Jefes"
         lore:
           - "{progression_status}"
           - " "
@@ -287,7 +287,7 @@ challenge-list:
       time-limit: "7d"
       repeatable: 6d23h
       description:
-        - "<gradient:green:dark_green><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
         - "<gray>Juega un total de 20 horas en el servidor.</gray>"
         - " "
         - "<aqua>Recompensas:</aqua>"
@@ -297,7 +297,7 @@ challenge-list:
         - "<aqua>- <white>1 Llave Normal</white></aqua>"
       display-item:
         material: cobblemon:cherish_ball
-        name: "<white><bold>Gran Aventura</bold></white>"
+        name: "&f&lGran Aventura"
         lore:
           - "{progression_status}"
           - " "
@@ -320,7 +320,7 @@ challenge-list:
       time-limit: "7d"
       repeatable: 6d23h
       description:
-        - "<gradient:light_purple:purple><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
         - "<gray>Libera 25 Pokémon desde tu PC.</gray>"
         - " "
         - "<aqua>Recompensas:</aqua>"
@@ -330,7 +330,7 @@ challenge-list:
         - "<aqua>- <white>2 Fichas de Arcade</white></aqua>"
       display-item:
         material: cobblemon:safari_ball
-        name: "<white><bold>Liberación Espiritual</bold></white>"
+        name: "&f&lLiberación Espiritual"
         lore:
           - "{progression_status}"
           - " "
@@ -360,7 +360,7 @@ challenge-list:
       time-limit: "7d"
       repeatable: 6d23h
       description:
-        - "<gradient:rainbow><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
         - "<gray>Captura a Bulbasaur, Charmander y Squirtle.</gray>"
         - " "
         - "<aqua>Recompensas:</aqua>"
@@ -370,7 +370,7 @@ challenge-list:
         - "<aqua>- <white>1 Llave Normal</white></aqua>"
       display-item:
         material: cobblemon:master_ball
-        name: "<white><bold>Comienzos de Kanto</bold></white>"
+        name: "&f&lComienzos de Kanto"
         lore:
           - "{progression_status}"
           - " "

@@ -49,26 +49,26 @@ Messages:
       fossils_revived: "<gray>Fossils Revived</gray>"
       login: "<green>Login</green>"
   challenges:
-    progression-string: "&f{current} &7/ &7{target}"
+    progression-string: "<white>{current}</white> <gray>/</gray> <gray>{target}</gray>"
     completed:
-      - "<center><gradient:yellow:gold>[Challenge Completed]</gradient>"
-      - "<center><gradient:gold:yellow><bold>{challenge}</bold></gradient>"
+      - "<gradient:yellow:gold>[Challenge Completed]</gradient>"
+      - "<gradient:gold:yellow><bold>{challenge}</bold></gradient>"
       - "                                 "
       - "{challenge-description}"
     progression_status:
-      before-attempt: "&eCan be attempted"
-      during-attempt: "&2Currently in progress"
-      post-completion: "&aAlready completed"
+      before-attempt: "<yellow>Can be attempted</yellow>"
+      during-attempt: "<dark_green>Currently in progress</dark_green>"
+      post-completion: "<green>Already completed</green>"
     failure:
       time-ran-out: "{prefix} <red>Daily Quest <gold>{challenge}</gold> failed! You may attempt this challenge again, however any progress made previously has been reset.</red>"
       challenge-no-longer-available: "{prefix} <red>La misión <gold>{challenge}</gold> ya no está disponible debido a la rotación. Por favor selecciona otra misión.</red>"
     tracking-tag:
       before-starting:
-        - "<center><gold><bold>CLICK TO TRACK</bold></gold>"
-        - "<center><yellow><bold>{time-remaining}</bold></yellow>"
+        - "<gold><bold>CLICK TO TRACK</bold></gold>"
+        - "<yellow><bold>{time-remaining}</bold></yellow>"
       after-starting:
-        - "<center><gold><bold>TRACKING</bold></gold>"
-        - "<center><yellow><bold>{time-remaining}</bold></yellow>"
+        - "<gold><bold>TRACKING</bold></gold>"
+        - "<yellow><bold>{time-remaining}</bold></yellow>"
     # Mensajes personalizados para interacciones
     replacement-success: "<green>Misión reemplazada exitosamente.</green>"
     automatic-mission: "<gray>Esta es una misión automática - siempre está activa.</gray>"
@@ -96,7 +96,7 @@ Messages:
 # This is the menu where each challenge list is displayed.
 # Here you can move the lists and add new ones. No use MiniMessage Here
 base-menu:
-  window-name: "&l&eChallenges"
+  window-name: "Challenges"
   structure:
     - "# # # # # # # # #"
     - "# - 1 - 2 - 3 - #"
@@ -108,23 +108,23 @@ base-menu:
     '1':
       linked_to: "daily" # Which gui it is referencing
       material: BOOK
-      name: "&6Daily Challenges"
+      name: "Daily Challenges"
       lore:
-        - "&7Left click me to see a list of Daily Challenges"
+        - "Left click me to see a list of Daily Challenges"
     '2':
       linked_to: "weekly" # Which gui it is referencing
       material: BOOK
       enchanted-effect: true
       hiddenTooltips: ALL
-      name: "&l&bWeekly Challenges"
+      name: "Weekly Challenges"
       lore:
-        - "&7Left click me to see a list of Weekly Challenges"
+        - "Left click me to see a list of Weekly Challenges"
     '3':
       linked_to: "monthly" # Which gui it is referencing
       material: ENCHANTED_BOOK
-      name: "&l&2Monthly Challenges"
+      name: "Monthly Challenges"
       lore:
-        - "&7Left click me to see a list of Monthly Challenges"
+        - "Left click me to see a list of Monthly Challenges"
 
 # This is what the challenge items should default to after being started or completed.
 # Only the material will change currently, so their custom lore and name will persist.

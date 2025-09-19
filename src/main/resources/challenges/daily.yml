@@ -49,7 +49,7 @@ challenge-list:
       time-limit: "24h"
       repeatable: 23h30m
       description:
-        - "<gradient:purple:light_purple><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
         - "<gray>Cosecha 12 Bonguris de cualquier tipo.</gray>"
         - " "
         - "<green>Recompensas:</green>"
@@ -60,7 +60,7 @@ challenge-list:
         - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:poke_ball
-        name: "<white><bold>Cosecha de Bonguris</bold></white>"
+        name: "&f&lCosecha de Bonguris"
         lore:
           - "{progression_status}"
           - " "
@@ -83,7 +83,7 @@ challenge-list:
       time-limit: "24h"
       repeatable: 23h30m
       description:
-        - "<gradient:red:dark_red>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</gradient>"
+        - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
         - "<gray>Cosecha 20 Bonguris Rojos.</gray>"
         - " "
         - "<green>Recompensas:</green>"
@@ -91,7 +91,7 @@ challenge-list:
         - "<green>- <white>2 Premier Ball</white></green>"
       display-item:
         material: cobblemon:premier_ball
-        name: "<white><bold>Cosecha Roja</bold></white>"
+        name: "&f&lCosecha Roja"
         lore:
           - "{progression_status}"
           - " "
@@ -113,7 +113,7 @@ challenge-list:
       time-limit: "24h"
       repeatable: 23h30m
       description:
-        - "<gradient:gold:orange><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
         - "<gray>Derrota 3 Hoothoot salvajes.</gray>"
         - " "
         - "<green>Recompensas:</green>"
@@ -124,7 +124,7 @@ challenge-list:
         - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:great_ball
-        name: "<white><bold>Cazador de Búhos</bold></white>"
+        name: "&f&lCazador de Búhos"
         lore:
           - "{progression_status}"
           - " "
@@ -149,7 +149,7 @@ challenge-list:
       time-limit: "24h"
       repeatable: 23h30m
       description:
-        - "<gradient:yellow:gold><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
         - "<gray>Captura 1 Pikachu.</gray>"
         - " "
         - "<green>Recompensas:</green>"
@@ -160,7 +160,7 @@ challenge-list:
         - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:dive_ball
-        name: "<white><bold>Caza Eléctrica</bold></white>"
+        name: "&f&lCaza Eléctrica"
         lore:
           - "{progression_status}"
           - " "
@@ -185,7 +185,7 @@ challenge-list:
       time-limit: "24h"
       repeatable: 23h30m
       description:
-        - "<gradient:blue:cyan><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
         - "<gray>Juega por 2 horas.</gray>"
         - " "
         - "<green>Recompensas:</green>"
@@ -195,7 +195,7 @@ challenge-list:
         - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:luxury_ball
-        name: "<white><bold>Viajero del Tiempo</bold></white>"
+        name: "&f&lViajero del Tiempo"
         lore:
           - "{progression_status}"
           - " "
@@ -226,7 +226,7 @@ challenge-list:
         - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:ultra_ball
-        name: "<white><bold>Cazador de Diamantes</bold></white>"
+        name: "&f&lCazador de Diamantes"
         lore:
           - "{progression_status}"
           - " "
@@ -248,7 +248,7 @@ challenge-list:
       time-limit: "24h"
       repeatable: 23h30m
       description:
-        - "<gradient:dark_purple:purple><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
         - "<gray>Sube 15 niveles con tus Pokémon.</gray>"
         - " "
         - "<green>Recompensas:</green>"
@@ -258,7 +258,7 @@ challenge-list:
         - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:repeat_ball
-        name: "<white><bold>Entrenamiento Intenso</bold></white>"
+        name: "&f&lEntrenamiento Intenso"
         lore:
           - "{progression_status}"
           - " "
@@ -279,7 +279,7 @@ challenge-list:
       time-limit: "24h"
       repeatable: 23h30m
       description:
-        - "<gradient:blue:dark_blue><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
         - "<gray>Captura 5 Pokémon de Tipo Agua.</gray>"
         - " "
         - "<green>Recompensas:</green>"
@@ -290,7 +290,7 @@ challenge-list:
         - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:dusk_ball
-        name: "<white><bold>Cazador Acuático</bold></white>"
+        name: "&f&lCazador Acuático"
         lore:
           - "{progression_status}"
           - " "
@@ -313,7 +313,7 @@ challenge-list:
       time-limit: "24h"
       repeatable: 23h30m
       description:
-        - "<gradient:gray:white><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
         - "<gray>Mina 5 menas de Diamante.</gray>"
         - " "
         - "<green>Recompensas:</green>"
@@ -323,7 +323,7 @@ challenge-list:
         - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:net_ball
-        name: "<white><bold>Minería Extrema</bold></white>"
+        name: "&f&lMinería Extrema"
         lore:
           - "{progression_status}"
           - " "
@@ -346,7 +346,7 @@ challenge-list:
       time-limit: "24h"
       repeatable: 23h30m
       description:
-        - "<gradient:light_purple:dark_purple><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
         - "<gray>Derrota 15 Pokémon de Tipo Volador.</gray>"
         - " "
         - "<green>Recompensas:</green>"
@@ -357,7 +357,7 @@ challenge-list:
         - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:timer_ball
-        name: "<white><bold>Derrota Voladores</bold></white>"
+        name: "&f&lDerrota Voladores"
         lore:
           - "{progression_status}"
           - " "
@@ -381,7 +381,7 @@ challenge-list:
       time-limit: "24h"
       repeatable: 23h30m
       description:
-        - "<gradient:white:gray><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
         - "<gray>Captura 12 Pokémon de Tipo Normal.</gray>"
         - " "
         - "<green>Recompensas:</green>"
@@ -391,7 +391,7 @@ challenge-list:
         - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:quick_ball
-        name: "<white><bold>Domador de Normal</bold></white>"
+        name: "&f&lDomador de Normal"
         lore:
           - "{progression_status}"
           - " "
@@ -413,7 +413,7 @@ challenge-list:
       time-limit: "24h"
       repeatable: 23h30m
       description:
-        - "<gradient:dark_red:red><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
         - "<gray>Derrota 30 Pokémon salvajes.</gray>"
         - " "
         - "<green>Recompensas:</green>"
@@ -424,7 +424,7 @@ challenge-list:
         - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:heavy_ball
-        name: "<white><bold>Cazador Incansable</bold></white>"
+        name: "&f&lCazador Incansable"
         lore:
           - "{progression_status}"
           - " "
@@ -447,7 +447,7 @@ challenge-list:
       time-limit: "24h"
       repeatable: 23h30m
       description:
-        - "<gradient:green:dark_green><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
         - "<gray>Captura 25 Pokémon salvajes.</gray>"
         - " "
         - "<green>Recompensas:</green>"
@@ -458,7 +458,7 @@ challenge-list:
         - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:friend_ball
-        name: "<white><bold>Cazador Masivo</bold></white>"
+        name: "&f&lCazador Masivo"
         lore:
           - "{progression_status}"
           - " "
@@ -480,7 +480,7 @@ challenge-list:
       time-limit: "24h"
       repeatable: 23h30m
       description:
-        - "<gradient:gold:yellow><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
         - "<gray>Pesca 10 Magikarp.</gray>"
         - " "
         - "<green>Recompensas:</green>"
@@ -491,7 +491,7 @@ challenge-list:
         - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:lure_ball
-        name: "<white><bold>Pesca Magikarp</bold></white>"
+        name: "&f&lPesca Magikarp"
         lore:
           - "{progression_status}"
           - " "
@@ -515,7 +515,7 @@ challenge-list:
       time-limit: "24h"
       repeatable: 23h30m
       description:
-        - "<gradient:dark_blue:blue><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
         - "<gray>Juega por 4 horas.</gray>"
         - " "
         - "<green>Recompensas:</green>"
@@ -525,7 +525,7 @@ challenge-list:
         - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:moon_ball
-        name: "<white><bold>Tiempo de Maestría</bold></white>"
+        name: "&f&lTiempo de Maestría"
         lore:
           - "{progression_status}"
           - " "
@@ -546,7 +546,7 @@ challenge-list:
       time-limit: "24h"
       repeatable: 23h30m
       description:
-        - "<gradient:dark_green:green><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
         - "<gray>Juega por 6 horas.</gray>"
         - " "
         - "<green>Recompensas:</green>"
@@ -555,7 +555,7 @@ challenge-list:
         - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:beast_ball
-        name: "<white><bold>Explorador Incansable</bold></white>"
+        name: "&f&lExplorador Incansable"
         lore:
           - "{progression_status}"
           - " "
@@ -575,7 +575,7 @@ challenge-list:
       time-limit: "24h"
       repeatable: 23h30m
       description:
-        - "<gradient:orange:red><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
         - "<gray>Libera 15 Magikarp de tu PC.</gray>"
         - " "
         - "<green>Recompensas:</green>"
@@ -586,7 +586,7 @@ challenge-list:
         - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:master_ball
-        name: "<white><bold>Sacrificio Magikarp</bold></white>"
+        name: "&f&lSacrificio Magikarp"
         lore:
           - "{progression_status}"
           - " "
@@ -609,7 +609,7 @@ challenge-list:
       time-limit: "24h"
       repeatable: 23h30m
       description:
-        - "<gradient:dark_purple:red><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
         - "<gray>Derrota a 15 jugadores (usuarios).</gray>"
         - " "
         - "<green>Recompensas:</green>"
@@ -619,7 +619,7 @@ challenge-list:
         - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:safari_ball
-        name: "<white><bold>Duelo de Entrenadores</bold></white>"
+        name: "&f&lDuelo de Entrenadores"
         lore:
           - "{progression_status}"
           - " "

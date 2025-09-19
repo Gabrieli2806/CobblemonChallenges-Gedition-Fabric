@@ -46,7 +46,7 @@ challenge-list:
       needs-selection: true
       time-limit: "30d"
       description:
-        - "<gradient:aqua:blue><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
         - "<gray>Pesca 30 Pokémon de tipo Agua y libéralos.</gray>"
         - " "
         - "<red>Recompensas:</red>"
@@ -56,7 +56,7 @@ challenge-list:
         - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:net_ball
-        name: "<white><bold>Pescador Compasivo</bold></white>"
+        name: "&f&lPescador Compasivo"
         lore:
           - "{progression_status}"
           - " "
@@ -93,7 +93,7 @@ challenge-list:
       needs-selection: true
       time-limit: "30d"
       description:
-        - "<gradient:green:lime><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
         - "<gray>Evoluciona un total de 50 Pokémon.</gray>"
         - " "
         - "<red>Recompensas:</red>"
@@ -104,7 +104,7 @@ challenge-list:
         - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:great_ball
-        name: "<white><bold>Evolución Suprema</bold></white>"
+        name: "&f&lEvolución Suprema"
         lore:
           - "{progression_status}"
           - " "
@@ -132,7 +132,7 @@ challenge-list:
       needs-selection: true
       time-limit: "30d"
       description:
-        - "<gradient:red:orange><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
         - "<gray>Cría 5 Charizard y eclosiona 5 Charmander.</gray>"
         - " "
         - "<red>Recompensas:</red>"
@@ -142,7 +142,7 @@ challenge-list:
         - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:luxury_ball
-        name: "<white><bold>Línea de Fuego</bold></white>"
+        name: "&f&lLínea de Fuego"
         lore:
           - "{progression_status}"
           - " "
@@ -179,7 +179,7 @@ challenge-list:
       needs-selection: true
       time-limit: "30d"
       description:
-        - "<gradient:purple:magenta><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
         - "<gray>Sube un total de 500 niveles con tus Pokémon.</gray>"
         - " "
         - "<red>Recompensas:</red>"
@@ -190,7 +190,7 @@ challenge-list:
         - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:ultra_ball
-        name: "<white><bold>Entrenador Dedicado</bold></white>"
+        name: "&f&lEntrenador Dedicado"
         lore:
           - "{progression_status}"
           - " "
@@ -218,7 +218,7 @@ challenge-list:
       needs-selection: true
       time-limit: "30d"
       description:
-        - "<gradient:blue:cyan><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
         - "<gray>Captura un Riolu, evoluciona a Lucario y súbelo a nivel 70.</gray>"
         - " "
         - "<red>Recompensas:</red>"
@@ -228,7 +228,7 @@ challenge-list:
         - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:timer_ball
-        name: "<white><bold>Ascenso de Aura</bold></white>"
+        name: "&f&lAscenso de Aura"
         lore:
           - "{progression_status}"
           - " "
@@ -275,7 +275,7 @@ challenge-list:
       needs-selection: true
       time-limit: "30d"
       description:
-        - "<gradient:gold:yellow><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
         - "<gray>Sube 3 Pokémon distintos al nivel 100.</gray>"
         - " "
         - "<red>Recompensas:</red>"
@@ -285,7 +285,7 @@ challenge-list:
         - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:dusk_ball
-        name: "<white><bold>Leyenda al Nivel 100</bold></white>"
+        name: "&f&lLeyenda al Nivel 100"
         lore:
           - "{progression_status}"
           - " "
@@ -313,7 +313,7 @@ challenge-list:
       needs-selection: true
       time-limit: "30d"
       description:
-        - "<gradient:dark_red:red><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
         - "<gray>Derrota a 50 entrenadores (jugadores) en batallas.</gray>"
         - " "
         - "<red>Recompensas:</red>"
@@ -323,7 +323,7 @@ challenge-list:
         - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:master_ball
-        name: "<white><bold>Cazador de Élite</bold></white>"
+        name: "&f&lCazador de Élite"
         lore:
           - "{progression_status}"
           - " "
@@ -350,7 +350,7 @@ challenge-list:
       needs-selection: true
       time-limit: "30d"
       description:
-        - "<gradient:green:dark_green><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
         - "<gray>Captura un total de 500 Pokémon.</gray>"
         - " "
         - "<red>Recompensas:</red>"
@@ -360,7 +360,7 @@ challenge-list:
         - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:poke_ball
-        name: "<white><bold>Captura Maestra</bold></white>"
+        name: "&f&lCaptura Maestra"
         lore:
           - "{progression_status}"
           - " "
@@ -387,7 +387,7 @@ challenge-list:
       needs-selection: true
       time-limit: "30d"
       description:
-        - "<gradient:dark_purple:purple><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
+        - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
         - "<gray>Captura 1 Pokémon Legendario o Mítico.</gray>"
         - " "
         - "<red>Recompensas:</red>"
@@ -398,7 +398,7 @@ challenge-list:
         - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:beast_ball
-        name: "<white><bold>Cazador de Leyendas</bold></white>"
+        name: "&f&lCazador de Leyendas"
         lore:
           - "{progression_status}"
           - " "

@@ -22,6 +22,7 @@ public class Challenge {
     private List<Reward> rewards;
     private List<Requirement> requirements;
     private String description;
+    private List<String> descriptionLines;
     private String permission;
 
     private boolean needsSelection; // does it need to be selected for a player to make progress?
@@ -29,7 +30,7 @@ public class Challenge {
     private long repeatableEveryMilliseconds = -1; // how often this challenge can be completed. -1 for only once
 
     public Challenge(String name, @Nullable String permission, List<Reward> rewards, List<Requirement> requirements, ItemConfig displayItem,
-                     boolean needsSelection, long maxTimeInMilliseconds, String description, long repeatableEveryMilliseconds) {
+                     boolean needsSelection, long maxTimeInMilliseconds, String description, List<String> descriptionLines, long repeatableEveryMilliseconds) {
         this.name = name;
         this.rewards = rewards;
         this.requirements = requirements;
@@ -37,6 +38,7 @@ public class Challenge {
         this.needsSelection = needsSelection;
         this.maxTimeInMilliseconds = maxTimeInMilliseconds;
         this.description = description;
+        this.descriptionLines = descriptionLines;
         this.repeatableEveryMilliseconds = repeatableEveryMilliseconds;
         this.permission = permission;
     }
@@ -70,13 +72,14 @@ public class Challenge {
             }
         }
 
-        String description = StringUtils.collapseWithNextLines(section.getStringList("description"));
+        List<String> descriptionLines = section.getStringList("description");
+        String description = StringUtils.collapseWithNextLines(descriptionLines);
         String perm = null;
         if (section.hasKey("permission")) {
             perm = section.getString("permission");
         }
 
-        return new Challenge(challengeID, perm, rewards, requirementList, displayItem, needsSelection, timeToComplete, description, repeatableEveryMilliseconds);
+        return new Challenge(challengeID, perm, rewards, requirementList, displayItem, needsSelection, timeToComplete, description, descriptionLines, repeatableEveryMilliseconds);
     }
 
     public long getRepeatableEveryMilliseconds() {
@@ -119,6 +122,10 @@ public class Challenge {
 
     public String getDescription() {
         return description;
+    }
+
+    public List<String> getDescriptionLines() {
+        return descriptionLines;
     }
 
     public String getPermission() {
