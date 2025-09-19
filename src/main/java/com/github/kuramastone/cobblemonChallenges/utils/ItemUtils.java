@@ -71,19 +71,53 @@ public class ItemUtils {
     }
 
     public static ItemStack createItemStack(ItemConfig config) {
-        return createItemStack(config.getMaterial(), config.getAmount(), FabricAdapter.adapt(ComponentEditor.decorateComponent("&r" + config.getName())),
-                config.getLore() == null ? null : config.getLore().stream()
-                        .map(str -> ComponentEditor.decorateComponent("&r" + str))
-                        .map(FabricAdapter::adapt)
-                        .map(mu -> (Component) mu).collect(Collectors.toUnmodifiableList()),
-                config.getEnchants(),
-                config.getCustommodeldata());
+        // Process name with MiniMessage if available, fallback to legacy
+        Component nameComponent = null;
+        if (config.getName() != null && !config.getName().isEmpty()) {
+            try {
+                // Use direct MiniMessage processing through Adventure Component then convert
+                net.kyori.adventure.text.Component adventureComponent = com.github.kuramastone.cobblemonChallenges.utils.MiniMessageUtils.parse(config.getName());
+                nameComponent = FabricAdapter.adapt(adventureComponent);
+            } catch (Exception e) {
+                // Fallback to legacy processing if MiniMessage fails
+                nameComponent = FabricAdapter.adapt(ComponentEditor.decorateComponent("&r" + config.getName()));
+            }
+        }
+
+        // Process lore with MiniMessage if available, fallback to legacy
+        List<Component> loreComponents = null;
+        if (config.getLore() != null) {
+            loreComponents = new ArrayList<>();
+            for (String loreLine : config.getLore()) {
+                try {
+                    // Use direct MiniMessage processing through Adventure Component then convert
+                    net.kyori.adventure.text.Component adventureComponent = com.github.kuramastone.cobblemonChallenges.utils.MiniMessageUtils.parse(loreLine);
+                    Component loreComponent = FabricAdapter.adapt(adventureComponent);
+                    loreComponents.add(loreComponent);
+                } catch (Exception e) {
+                    // Fallback to legacy processing if MiniMessage fails
+                    Component loreComponent = FabricAdapter.adapt(ComponentEditor.decorateComponent("&r" + loreLine));
+                    loreComponents.add(loreComponent);
+                }
+            }
+        }
+
+        return createItemStack(config.getMaterial(), config.getAmount(), nameComponent, loreComponents,
+                config.getEnchants(), config.getCustommodeldata());
     }
 
     public static void setLore(ItemStack item, List<String> lore) {
         List<Component> loreText = new ArrayList<>();
         for (String loreLine : lore) {
-            loreText.add(FabricAdapter.adapt(ComponentEditor.decorateComponent("&r" + loreLine)));
+            try {
+                // Use direct MiniMessage processing through Adventure Component then convert
+                net.kyori.adventure.text.Component adventureComponent = com.github.kuramastone.cobblemonChallenges.utils.MiniMessageUtils.parse(loreLine);
+                Component loreComponent = FabricAdapter.adapt(adventureComponent);
+                loreText.add(loreComponent);
+            } catch (Exception e) {
+                // Fallback to legacy processing if MiniMessage fails
+                loreText.add(FabricAdapter.adapt(ComponentEditor.decorateComponent("&r" + loreLine)));
+            }
         }
         setLoreComponents(item, loreText);
     }

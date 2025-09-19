@@ -57,7 +57,7 @@ challenge-list:
         - "<italic:false><aqua>- <italic:false><white>1 Piedra Evolutiva</white></aqua>"
       display-item:
         material: cobblemon:friend_ball
-        name: "&f&lCrianza Masiva"
+        name: "<italic:false><white><bold>Crianza Masiva</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -97,7 +97,7 @@ challenge-list:
         - "<italic:false><aqua>- <italic:false><white>2 Super Pociones</white></aqua>"
       display-item:
         material: cobblemon:moon_ball
-        name: "&f&lPequeños Nacimientos"
+        name: "<italic:false><white><bold>Pequeños Nacimientos</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -137,7 +137,7 @@ challenge-list:
         - "<italic:false><aqua>- <italic:false><white>1 Pase de Incursión</white></aqua>"
       display-item:
         material: cobblemon:heavy_ball
-        name: "&f&lEntrenamiento Legendario"
+        name: "<italic:false><white><bold>Entrenamiento Legendario</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -177,7 +177,7 @@ challenge-list:
         - "<italic:false><aqua>- <italic:false><white>2 Máx Pociones</white></aqua>"
       display-item:
         material: cobblemon:dive_ball
-        name: "&f&lCazador Infatigable"
+        name: "<italic:false><white><bold>Cazador Infatigable</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -217,7 +217,7 @@ challenge-list:
         - "<italic:false><aqua>- <italic:false><white>2 Lingotes de Hierro</white></aqua>"
       display-item:
         material: cobblemon:net_ball
-        name: "&f&lMaratón de Capturas"
+        name: "<italic:false><white><bold>Maratón de Capturas</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -257,7 +257,7 @@ challenge-list:
         - "<italic:false><aqua>- <italic:false><white>1 Piedra Evolutiva</white></aqua>"
       display-item:
         material: cobblemon:beast_ball
-        name: "&f&lCazador de Jefes"
+        name: "<italic:false><white><bold>Cazador de Jefes</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -297,7 +297,7 @@ challenge-list:
         - "<italic:false><aqua>- <italic:false><white>1 Llave Normal</white></aqua>"
       display-item:
         material: cobblemon:cherish_ball
-        name: "&f&lGran Aventura"
+        name: "<italic:false><white><bold>Gran Aventura</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -330,7 +330,7 @@ challenge-list:
         - "<italic:false><aqua>- <italic:false><white>2 Fichas de Arcade</white></aqua>"
       display-item:
         material: cobblemon:safari_ball
-        name: "&f&lLiberación Espiritual"
+        name: "<italic:false><white><bold>Liberación Espiritual</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -370,7 +370,7 @@ challenge-list:
         - "<italic:false><aqua>- <italic:false><white>1 Llave Normal</white></aqua>"
       display-item:
         material: cobblemon:master_ball
-        name: "&f&lComienzos de Kanto"
+        name: "<italic:false><white><bold>Comienzos de Kanto</bold></white>"
         lore:
           - "{progression_status}"
           - " "

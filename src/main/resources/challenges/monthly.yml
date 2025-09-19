@@ -56,7 +56,7 @@ challenge-list:
         - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:net_ball
-        name: "&f&lPescador Compasivo"
+        name: "<italic:false><white><bold>Pescador Compasivo</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -104,7 +104,7 @@ challenge-list:
         - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:great_ball
-        name: "&f&lEvolución Suprema"
+        name: "<italic:false><white><bold>Evolución Suprema</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -142,7 +142,7 @@ challenge-list:
         - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:luxury_ball
-        name: "&f&lLínea de Fuego"
+        name: "<italic:false><white><bold>Línea de Fuego</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -190,7 +190,7 @@ challenge-list:
         - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:ultra_ball
-        name: "&f&lEntrenador Dedicado"
+        name: "<italic:false><white><bold>Entrenador Dedicado</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -228,7 +228,7 @@ challenge-list:
         - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:timer_ball
-        name: "&f&lAscenso de Aura"
+        name: "<italic:false><white><bold>Ascenso de Aura</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -285,7 +285,7 @@ challenge-list:
         - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:dusk_ball
-        name: "&f&lLeyenda al Nivel 100"
+        name: "<italic:false><white><bold>Leyenda al Nivel 100</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -323,7 +323,7 @@ challenge-list:
         - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:master_ball
-        name: "&f&lCazador de Élite"
+        name: "<italic:false><white><bold>Cazador de Élite</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -360,7 +360,7 @@ challenge-list:
         - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:poke_ball
-        name: "&f&lCaptura Maestra"
+        name: "<italic:false><white><bold>Captura Maestra</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -398,7 +398,7 @@ challenge-list:
         - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:beast_ball
-        name: "&f&lCazador de Leyendas"
+        name: "<italic:false><white><bold>Cazador de Leyendas</bold></white>"
         lore:
           - "{progression_status}"
           - " "

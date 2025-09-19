@@ -107,24 +107,30 @@ base-menu:
       name: " "
     '1':
       linked_to: "daily" # Which gui it is referencing
-      material: BOOK
-      name: "Daily Challenges"
+      material: COBBLEMON:VERDANT_BALL
+      name: "<italic:false><color:#8cffa1>ᴍɪꜱɪᴏɴᴇꜱ ꜰᴀᴄɪʟᴇꜱ</color>"
       lore:
-        - "Left click me to see a list of Daily Challenges"
+        - ""
+        - "<italic:false><gray>¡Click para ver las sencillas!</gray>"
+        - ""
     '2':
       linked_to: "weekly" # Which gui it is referencing
-      material: BOOK
+      material: COBBLEMON:GREAT_BALL
       enchanted-effect: true
       hiddenTooltips: ALL
-      name: "Weekly Challenges"
+      name: "<italic:false><bold><blue>Misiones Semanales</blue></bold>"
       lore:
-        - "Left click me to see a list of Weekly Challenges"
+        - ""
+        - "<italic:false><gray>¡Click para ver las misiones de la semana!</gray>"
+        - ""
     '3':
       linked_to: "monthly" # Which gui it is referencing
-      material: ENCHANTED_BOOK
-      name: "Monthly Challenges"
+      material: COBBLEMON:MASTER_BALL
+      name: "<italic:false><bold><gold>Misiones Mensuales</gold></bold>"
       lore:
-        - "Left click me to see a list of Monthly Challenges"
+        - ""
+        - "<italic:false><gray>¡Click para ver las misiones del mes!</gray>"
+        - ""
 
 # This is what the challenge items should default to after being started or completed.
 # Only the material will change currently, so their custom lore and name will persist.

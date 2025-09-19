@@ -60,7 +60,7 @@ challenge-list:
         - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:poke_ball
-        name: "&f&lCosecha de Bonguris"
+        name: "<italic:false><white><bold>Cosecha de Bonguris</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -91,7 +91,7 @@ challenge-list:
         - "<italic:false><green>- <italic:false><white>2 Premier Ball</white></green>"
       display-item:
         material: cobblemon:premier_ball
-        name: "&f&lCosecha Roja"
+        name: "<italic:false><white><bold>Cosecha Roja</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -124,7 +124,7 @@ challenge-list:
         - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:great_ball
-        name: "&f&lCazador de Búhos"
+        name: "<italic:false><white><bold>Cazador de Búhos</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -160,7 +160,7 @@ challenge-list:
         - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:dive_ball
-        name: "&f&lCaza Eléctrica"
+        name: "<italic:false><white><bold>Caza Eléctrica</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -195,7 +195,7 @@ challenge-list:
         - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:luxury_ball
-        name: "&f&lViajero del Tiempo"
+        name: "<italic:false><white><bold>Viajero del Tiempo</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -226,7 +226,7 @@ challenge-list:
         - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:ultra_ball
-        name: "&f&lCazador de Diamantes"
+        name: "<italic:false><white><bold>Cazador de Diamantes</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -258,7 +258,7 @@ challenge-list:
         - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:repeat_ball
-        name: "&f&lEntrenamiento Intenso"
+        name: "<italic:false><white><bold>Entrenamiento Intenso</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -290,7 +290,7 @@ challenge-list:
         - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:dusk_ball
-        name: "&f&lCazador Acuático"
+        name: "<italic:false><white><bold>Cazador Acuático</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -323,7 +323,7 @@ challenge-list:
         - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:net_ball
-        name: "&f&lMinería Extrema"
+        name: "<italic:false><white><bold>Minería Extrema</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -357,7 +357,7 @@ challenge-list:
         - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:timer_ball
-        name: "&f&lDerrota Voladores"
+        name: "<italic:false><white><bold>Derrota Voladores</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -391,7 +391,7 @@ challenge-list:
         - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:quick_ball
-        name: "&f&lDomador de Normal"
+        name: "<italic:false><white><bold>Domador de Normal</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -424,7 +424,7 @@ challenge-list:
         - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:heavy_ball
-        name: "&f&lCazador Incansable"
+        name: "<italic:false><white><bold>Cazador Incansable</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -458,7 +458,7 @@ challenge-list:
         - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:friend_ball
-        name: "&f&lCazador Masivo"
+        name: "<italic:false><white><bold>Cazador Masivo</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -491,7 +491,7 @@ challenge-list:
         - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:lure_ball
-        name: "&f&lPesca Magikarp"
+        name: "<italic:false><white><bold>Pesca Magikarp</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -525,7 +525,7 @@ challenge-list:
         - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:moon_ball
-        name: "&f&lTiempo de Maestría"
+        name: "<italic:false><white><bold>Tiempo de Maestría</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -555,7 +555,7 @@ challenge-list:
         - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:beast_ball
-        name: "&f&lExplorador Incansable"
+        name: "<italic:false><white><bold>Explorador Incansable</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -586,7 +586,7 @@ challenge-list:
         - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:master_ball
-        name: "&f&lSacrificio Magikarp"
+        name: "<italic:false><white><bold>Sacrificio Magikarp</bold></white>"
         lore:
           - "{progression_status}"
           - " "
@@ -619,7 +619,7 @@ challenge-list:
         - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:safari_ball
-        name: "&f&lDuelo de Entrenadores"
+        name: "<italic:false><white><bold>Duelo de Entrenadores</bold></white>"
         lore:
           - "{progression_status}"
           - " "
