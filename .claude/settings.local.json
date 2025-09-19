@@ -5,7 +5,8 @@
       "Bash(./gradlew:*)",
       "Bash(.gradlew build)",
       "Bash(find:*)",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "Bash(sed:*)"
     ],
     "deny": [],
     "ask": []

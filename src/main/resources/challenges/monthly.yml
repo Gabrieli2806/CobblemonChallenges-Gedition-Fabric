@@ -13,23 +13,23 @@ gui:
       name: " "
     'B':
       material: laboratorio:lab_furniture_v1_empty
-      name: "<gold>ᴠᴏʟᴠᴇʀ</gold>"
+      name: "<italic:false><gold>ᴠᴏʟᴠᴇʀ</gold>"
       lore:
         - ""
-        - "<gray>¡Volver a la Central de Misiones!</gray>"
+        - "<italic:false><gray>¡Volver a la Central de Misiones!</gray>"
         - ""
       commands:
         - "execute as {player} run challenges"
     '<':
       material: laboratorio:lab_furniture_v1_empty
-      name: "<gold>ᴘᴀɢɪɴᴀ ᴀɴᴛᴇʀɪᴏʀ</gold>"
+      name: "<italic:false><gold>ᴘᴀɢɪɴᴀ ᴀɴᴛᴇʀɪᴏʀ</gold>"
       back-page: true
       lore:
         - ""
     '>':
       material: laboratorio:lab_furniture_v1_empty
       next-page: true
-      name: "<gold>ᴘᴀɢɪɴᴀ ꜱɪɢᴜɪᴇɴᴛᴇ</gold>"
+      name: "<italic:false><gold>ᴘᴀɢɪɴᴀ ꜱɪɢᴜɪᴇɴᴛᴇ</gold>"
       lore:
         - ""
 
@@ -47,13 +47,13 @@ challenge-list:
       time-limit: "30d"
       description:
         - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
-        - "<gray>Pesca 30 Pokémon de tipo Agua y libéralos.</gray>"
+        - "<italic:false><gray>Pesca 30 Pokémon de tipo Agua y libéralos.</gray>"
         - " "
-        - "<red>Recompensas:</red>"
-        - "<red>- <white>+10000$</white></red>"
-        - "<red>- <white>6 Diamantes</white></red>"
+        - "<italic:false><red>Recompensas:</red>"
+        - "<italic:false><red>- <italic:false><white>+10000$</white></red>"
+        - "<italic:false><red>- <italic:false><white>6 Diamantes</white></red>"
         - ""
-        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
+        - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:net_ball
         name: "&f&lPescador Compasivo"
@@ -94,14 +94,14 @@ challenge-list:
       time-limit: "30d"
       description:
         - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
-        - "<gray>Evoluciona un total de 50 Pokémon.</gray>"
+        - "<italic:false><gray>Evoluciona un total de 50 Pokémon.</gray>"
         - " "
-        - "<red>Recompensas:</red>"
-        - "<red>- <white>10 Caramelos Raros</white></red>"
-        - "<red>- <white>2 Máx Pociones</white></red>"
-        - "<red>- <white>1 Llave Mega</white></red>"
+        - "<italic:false><red>Recompensas:</red>"
+        - "<italic:false><red>- <italic:false><white>10 Caramelos Raros</white></red>"
+        - "<italic:false><red>- <italic:false><white>2 Máx Pociones</white></red>"
+        - "<italic:false><red>- <italic:false><white>1 Llave Mega</white></red>"
         - ""
-        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
+        - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:great_ball
         name: "&f&lEvolución Suprema"
@@ -133,13 +133,13 @@ challenge-list:
       time-limit: "30d"
       description:
         - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
-        - "<gray>Cría 5 Charizard y eclosiona 5 Charmander.</gray>"
+        - "<italic:false><gray>Cría 5 Charizard y eclosiona 5 Charmander.</gray>"
         - " "
-        - "<red>Recompensas:</red>"
-        - "<red>- <white>+12000$</white></red>"
-        - "<red>- <white>1 Pase de Incursión</white></red>"
+        - "<italic:false><red>Recompensas:</red>"
+        - "<italic:false><red>- <italic:false><white>+12000$</white></red>"
+        - "<italic:false><red>- <italic:false><white>1 Pase de Incursión</white></red>"
         - ""
-        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
+        - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:luxury_ball
         name: "&f&lLínea de Fuego"
@@ -180,14 +180,14 @@ challenge-list:
       time-limit: "30d"
       description:
         - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
-        - "<gray>Sube un total de 500 niveles con tus Pokémon.</gray>"
+        - "<italic:false><gray>Sube un total de 500 niveles con tus Pokémon.</gray>"
         - " "
-        - "<red>Recompensas:</red>"
-        - "<red>- <white>+20000$</white></red>"
-        - "<red>- <white>15 Caramelos Raros</white></red>"
-        - "<red>- <white>12 Lingotes de Hierro</white></red>"
+        - "<italic:false><red>Recompensas:</red>"
+        - "<italic:false><red>- <italic:false><white>+20000$</white></red>"
+        - "<italic:false><red>- <italic:false><white>15 Caramelos Raros</white></red>"
+        - "<italic:false><red>- <italic:false><white>12 Lingotes de Hierro</white></red>"
         - ""
-        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
+        - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:ultra_ball
         name: "&f&lEntrenador Dedicado"
@@ -219,13 +219,13 @@ challenge-list:
       time-limit: "30d"
       description:
         - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
-        - "<gray>Captura un Riolu, evoluciona a Lucario y súbelo a nivel 70.</gray>"
+        - "<italic:false><gray>Captura un Riolu, evoluciona a Lucario y súbelo a nivel 70.</gray>"
         - " "
-        - "<red>Recompensas:</red>"
-        - "<red>- <white>+15000$</white></red>"
-        - "<red>- <white>1 Llave Items</white></red>"
+        - "<italic:false><red>Recompensas:</red>"
+        - "<italic:false><red>- <italic:false><white>+15000$</white></red>"
+        - "<italic:false><red>- <italic:false><white>1 Llave Items</white></red>"
         - ""
-        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
+        - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:timer_ball
         name: "&f&lAscenso de Aura"
@@ -276,13 +276,13 @@ challenge-list:
       time-limit: "30d"
       description:
         - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
-        - "<gray>Sube 3 Pokémon distintos al nivel 100.</gray>"
+        - "<italic:false><gray>Sube 3 Pokémon distintos al nivel 100.</gray>"
         - " "
-        - "<red>Recompensas:</red>"
-        - "<red>- <white>8 Diamantes</white></red>"
-        - "<red>- <white>1 Llave Mega</white></red>"
+        - "<italic:false><red>Recompensas:</red>"
+        - "<italic:false><red>- <italic:false><white>8 Diamantes</white></red>"
+        - "<italic:false><red>- <italic:false><white>1 Llave Mega</white></red>"
         - ""
-        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
+        - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:dusk_ball
         name: "&f&lLeyenda al Nivel 100"
@@ -314,13 +314,13 @@ challenge-list:
       time-limit: "30d"
       description:
         - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
-        - "<gray>Derrota a 50 entrenadores (jugadores) en batallas.</gray>"
+        - "<italic:false><gray>Derrota a 50 entrenadores (jugadores) en batallas.</gray>"
         - " "
-        - "<red>Recompensas:</red>"
-        - "<red>- <white>+12500$</white></red>"
-        - "<red>- <white>2 Fichas de Arcade</white></red>"
+        - "<italic:false><red>Recompensas:</red>"
+        - "<italic:false><red>- <italic:false><white>+12500$</white></red>"
+        - "<italic:false><red>- <italic:false><white>2 Fichas de Arcade</white></red>"
         - ""
-        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
+        - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:master_ball
         name: "&f&lCazador de Élite"
@@ -351,13 +351,13 @@ challenge-list:
       time-limit: "30d"
       description:
         - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
-        - "<gray>Captura un total de 500 Pokémon.</gray>"
+        - "<italic:false><gray>Captura un total de 500 Pokémon.</gray>"
         - " "
-        - "<red>Recompensas:</red>"
-        - "<red>- <white>1 Llave Sorpresa</white></red>"
-        - "<red>- <white>15 Lingotes de Hierro</white></red>"
+        - "<italic:false><red>Recompensas:</red>"
+        - "<italic:false><red>- <italic:false><white>1 Llave Sorpresa</white></red>"
+        - "<italic:false><red>- <italic:false><white>15 Lingotes de Hierro</white></red>"
         - ""
-        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
+        - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:poke_ball
         name: "&f&lCaptura Maestra"
@@ -388,14 +388,14 @@ challenge-list:
       time-limit: "30d"
       description:
         - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
-        - "<gray>Captura 1 Pokémon Legendario o Mítico.</gray>"
+        - "<italic:false><gray>Captura 1 Pokémon Legendario o Mítico.</gray>"
         - " "
-        - "<red>Recompensas:</red>"
-        - "<red>- <white>+10000$</white></red>"
-        - "<red>- <white>1 Llave Mega</white></red>"
-        - "<red>- <white>1 Pase de Incursión</white></red>"
+        - "<italic:false><red>Recompensas:</red>"
+        - "<italic:false><red>- <italic:false><white>+10000$</white></red>"
+        - "<italic:false><red>- <italic:false><white>1 Llave Mega</white></red>"
+        - "<italic:false><red>- <italic:false><white>1 Pase de Incursión</white></red>"
         - ""
-        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
+        - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:beast_ball
         name: "&f&lCazador de Leyendas"

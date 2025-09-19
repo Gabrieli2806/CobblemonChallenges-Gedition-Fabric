@@ -326,14 +326,38 @@ public class CobbleChallengeAPI implements SimpleAPI {
     }
 
     public void reloadConfig() {
+        // Prevent rotation during reload
+        CobbleChallengeMod.preventRotationOnReload = true;
+
         saveProfiles();
         loadConfigOptions();
         loadChallenges();
         loadProfiles();
+
+        // Re-enable rotation after reload
+        CobbleChallengeMod.preventRotationOnReload = false;
     }
 
     public List<PlayerProfile> getProfiles() {
         return new ArrayList<>(profileMap.values());
+    }
+
+    public boolean loadRotationData(ChallengeList challengeList) {
+        YamlConfig rotationData = new YamlConfig(CobbleChallengeMod.defaultDataFolder(), "rotation-data.yml");
+        String listName = challengeList.getName();
+
+        if (rotationData.containsKey(listName + ".last-rotation-time")) {
+            long lastRotationTime = rotationData.getLong(listName + ".last-rotation-time");
+            challengeList.setLastRotationTime(lastRotationTime);
+
+            // Load visible challenges if they exist
+            if (rotationData.containsKey(listName + ".visible-challenges")) {
+                List<String> visibleChallengeNames = rotationData.getStringList(listName + ".visible-challenges");
+                return challengeList.loadVisibleChallenges(visibleChallengeNames);
+            }
+            return true; // Found rotation time data
+        }
+        return false; // No rotation data found for this challenge list
     }
     
     private void saveRotationData() {

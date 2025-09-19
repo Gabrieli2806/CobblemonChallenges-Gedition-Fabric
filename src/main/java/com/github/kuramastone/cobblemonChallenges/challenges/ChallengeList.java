@@ -35,7 +35,29 @@ public class ChallengeList {
         
         // Initialize visible challenges
         this.visibleChallenges = new ArrayList<>();
-        rotateVisibleChallenges();
+
+        // Only rotate if not during reload/initialization
+        if (!CobbleChallengeMod.preventRotationOnReload) {
+            rotateVisibleChallenges();
+        } else {
+            // During reload, initialize with all challenges or preserve existing rotation data
+            initializeVisibleChallengesDuringReload();
+        }
+    }
+
+    private void initializeVisibleChallengesDuringReload() {
+        // Try to load existing rotation data to preserve current missions
+        if (api.loadRotationData(this)) {
+            // Successfully loaded existing rotation data
+            return;
+        }
+
+        // Fallback: show all challenges or first few challenges if rotation data is not available
+        if (visibleMissions >= challengeMap.size()) {
+            visibleChallenges = new ArrayList<>(challengeMap);
+        } else {
+            visibleChallenges = new ArrayList<>(challengeMap.subList(0, Math.min(visibleMissions, challengeMap.size())));
+        }
     }
 
     public static ChallengeList load(CobbleChallengeAPI api, String challengeListID, YamlConfig section) {
@@ -342,19 +364,23 @@ public class ChallengeList {
     /**
      * Load visible challenges from saved data
      */
-    public void loadVisibleChallenges(List<String> visibleChallengeNames) {
+    public boolean loadVisibleChallenges(List<String> visibleChallengeNames) {
         visibleChallenges.clear();
-        
+
         for (String challengeName : visibleChallengeNames) {
             Challenge challenge = getChallenge(challengeName);
             if (challenge != null) {
                 visibleChallenges.add(challenge);
             }
         }
-        
-        // If we couldn't load any visible challenges, perform a rotation
+
+        // If we couldn't load any visible challenges, perform a rotation (only if not during reload)
         if (visibleChallenges.isEmpty()) {
-            rotateVisibleChallenges();
+            if (!CobbleChallengeMod.preventRotationOnReload) {
+                rotateVisibleChallenges();
+            }
+            return false; // Couldn't load saved challenges
         }
+        return true; // Successfully loaded saved challenges
     }
 }

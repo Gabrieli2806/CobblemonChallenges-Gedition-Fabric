@@ -136,10 +136,8 @@ public class OldCommandHandler {
     }
 
     private static int handleReloadCommand(CommandContext<CommandSourceStack> context) {
-        // Prevent rotation during reload
-        CobbleChallengeMod.preventRotationOnReload = true;
+        // The reloadConfig method now handles rotation prevention internally
         api.reloadConfig();
-        CobbleChallengeMod.preventRotationOnReload = false;
 
         context.getSource().sendSystemMessage(FabricAdapter.adapt(api.getMiniMessage("commands.reload")));
         return 1;

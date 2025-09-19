@@ -14,23 +14,23 @@ gui:
       name: " "
     'B':
       material: laboratorio:lab_furniture_v1_empty
-      name: "<gold>ᴠᴏʟᴠᴇʀ</gold>"
+      name: "<italic:false><gold>ᴠᴏʟᴠᴇʀ</gold>"
       lore:
         - ""
-        - "<gray>¡Volver a la Central de Misiones!</gray>"
+        - "<italic:false><gray>¡Volver a la Central de Misiones!</gray>"
         - ""
       commands:
         - "execute as {player} run challenges"
     '<':
       material: laboratorio:lab_furniture_v1_empty
-      name: "<gold>ᴘᴀɢɪɴᴀ ᴀɴᴛᴇʀɪᴏʀ</gold>"
+      name: "<italic:false><gold>ᴘᴀɢɪɴᴀ ᴀɴᴛᴇʀɪᴏʀ</gold>"
       back-page: true
       lore:
         - ""
     '>':
       material: laboratorio:lab_furniture_v1_empty
       next-page: true
-      name: "<gold>ᴘᴀɢɪɴᴀ ꜱɪɢᴜɪᴇɴᴛᴇ</gold>"
+      name: "<italic:false><gold>ᴘᴀɢɪɴᴀ ꜱɪɢᴜɪᴇɴᴛᴇ</gold>"
       lore:
         - ""
 
@@ -50,14 +50,14 @@ challenge-list:
       repeatable: 23h30m
       description:
         - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
-        - "<gray>Cosecha 12 Bonguris de cualquier tipo.</gray>"
+        - "<italic:false><gray>Cosecha 12 Bonguris de cualquier tipo.</gray>"
         - " "
-        - "<green>Recompensas:</green>"
-        - "<green>- <white>+200$</white></green>"
-        - "<green>- <white>3 Bayas Aranja</white></green>"
-        - "<green>- <white>2 Poké Ball</white></green>"
+        - "<italic:false><green>Recompensas:</green>"
+        - "<italic:false><green>- <italic:false><white>+200$</white></green>"
+        - "<italic:false><green>- <italic:false><white>3 Bayas Aranja</white></green>"
+        - "<italic:false><green>- <italic:false><white>2 Poké Ball</white></green>"
         - ""
-        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
+        - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:poke_ball
         name: "&f&lCosecha de Bonguris"
@@ -84,11 +84,11 @@ challenge-list:
       repeatable: 23h30m
       description:
         - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
-        - "<gray>Cosecha 20 Bonguris Rojos.</gray>"
+        - "<italic:false><gray>Cosecha 20 Bonguris Rojos.</gray>"
         - " "
-        - "<green>Recompensas:</green>"
-        - "<green>- <white>+500$</white></green>"
-        - "<green>- <white>2 Premier Ball</white></green>"
+        - "<italic:false><green>Recompensas:</green>"
+        - "<italic:false><green>- <italic:false><white>+500$</white></green>"
+        - "<italic:false><green>- <italic:false><white>2 Premier Ball</white></green>"
       display-item:
         material: cobblemon:premier_ball
         name: "&f&lCosecha Roja"
@@ -114,14 +114,14 @@ challenge-list:
       repeatable: 23h30m
       description:
         - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
-        - "<gray>Derrota 3 Hoothoot salvajes.</gray>"
+        - "<italic:false><gray>Derrota 3 Hoothoot salvajes.</gray>"
         - " "
-        - "<green>Recompensas:</green>"
-        - "<green>- <white>+400$</white></green>"
-        - "<green>- <white>1 Caramelo Raro</white></green>"
-        - "<green>- <white>2 Pociones</white></green>"
+        - "<italic:false><green>Recompensas:</green>"
+        - "<italic:false><green>- <italic:false><white>+400$</white></green>"
+        - "<italic:false><green>- <italic:false><white>1 Caramelo Raro</white></green>"
+        - "<italic:false><green>- <italic:false><white>2 Pociones</white></green>"
         - ""
-        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
+        - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:great_ball
         name: "&f&lCazador de Búhos"
@@ -150,14 +150,14 @@ challenge-list:
       repeatable: 23h30m
       description:
         - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
-        - "<gray>Captura 1 Pikachu.</gray>"
+        - "<italic:false><gray>Captura 1 Pikachu.</gray>"
         - " "
-        - "<green>Recompensas:</green>"
-        - "<green>- <white>+500$</white></green>"
-        - "<green>- <white>1 Caramelo Raro</white></green>"
-        - "<green>- <white>2 Poké Ball</white></green>"
+        - "<italic:false><green>Recompensas:</green>"
+        - "<italic:false><green>- <italic:false><white>+500$</white></green>"
+        - "<italic:false><green>- <italic:false><white>1 Caramelo Raro</white></green>"
+        - "<italic:false><green>- <italic:false><white>2 Poké Ball</white></green>"
         - ""
-        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
+        - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:dive_ball
         name: "&f&lCaza Eléctrica"
@@ -186,13 +186,13 @@ challenge-list:
       repeatable: 23h30m
       description:
         - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
-        - "<gray>Juega por 2 horas.</gray>"
+        - "<italic:false><gray>Juega por 2 horas.</gray>"
         - " "
-        - "<green>Recompensas:</green>"
-        - "<green>- <white>+300$</white></green>"
-        - "<green>- <white>2 Premier Ball</white></green>"
+        - "<italic:false><green>Recompensas:</green>"
+        - "<italic:false><green>- <italic:false><white>+300$</white></green>"
+        - "<italic:false><green>- <italic:false><white>2 Premier Ball</white></green>"
         - ""
-        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
+        - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:luxury_ball
         name: "&f&lViajero del Tiempo"
@@ -217,13 +217,13 @@ challenge-list:
       repeatable: 23h30m
       description:
         - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
-        - "<gray>Mina 3 Diamantes.</gray>"
+        - "<italic:false><gray>Mina 3 Diamantes.</gray>"
         - " "
-        - "<green>Recompensas:</green>"
-        - "<green>- <white>+600$</white></green>"
-        - "<green>- <white>2 Diamantes</white></green>"
+        - "<italic:false><green>Recompensas:</green>"
+        - "<italic:false><green>- <italic:false><white>+600$</white></green>"
+        - "<italic:false><green>- <italic:false><white>2 Diamantes</white></green>"
         - ""
-        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
+        - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:ultra_ball
         name: "&f&lCazador de Diamantes"
@@ -249,13 +249,13 @@ challenge-list:
       repeatable: 23h30m
       description:
         - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
-        - "<gray>Sube 15 niveles con tus Pokémon.</gray>"
+        - "<italic:false><gray>Sube 15 niveles con tus Pokémon.</gray>"
         - " "
-        - "<green>Recompensas:</green>"
-        - "<green>- <white>+750$</white></green>"
-        - "<green>- <white>3 Caramelos Raros</white></green>"
+        - "<italic:false><green>Recompensas:</green>"
+        - "<italic:false><green>- <italic:false><white>+750$</white></green>"
+        - "<italic:false><green>- <italic:false><white>3 Caramelos Raros</white></green>"
         - ""
-        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
+        - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:repeat_ball
         name: "&f&lEntrenamiento Intenso"
@@ -280,14 +280,14 @@ challenge-list:
       repeatable: 23h30m
       description:
         - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
-        - "<gray>Captura 5 Pokémon de Tipo Agua.</gray>"
+        - "<italic:false><gray>Captura 5 Pokémon de Tipo Agua.</gray>"
         - " "
-        - "<green>Recompensas:</green>"
-        - "<green>- <white>+800$</white></green>"
-        - "<green>- <white>3 Dive Ball</white></green>"
-        - "<green>- <white>1 Caramelo Raro</white></green>"
+        - "<italic:false><green>Recompensas:</green>"
+        - "<italic:false><green>- <italic:false><white>+800$</white></green>"
+        - "<italic:false><green>- <italic:false><white>3 Dive Ball</white></green>"
+        - "<italic:false><green>- <italic:false><white>1 Caramelo Raro</white></green>"
         - ""
-        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
+        - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:dusk_ball
         name: "&f&lCazador Acuático"
@@ -314,13 +314,13 @@ challenge-list:
       repeatable: 23h30m
       description:
         - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
-        - "<gray>Mina 5 menas de Diamante.</gray>"
+        - "<italic:false><gray>Mina 5 menas de Diamante.</gray>"
         - " "
-        - "<green>Recompensas:</green>"
-        - "<green>- <white>+700$</white></green>"
-        - "<green>- <white>3 Diamantes</white></green>"
+        - "<italic:false><green>Recompensas:</green>"
+        - "<italic:false><green>- <italic:false><white>+700$</white></green>"
+        - "<italic:false><green>- <italic:false><white>3 Diamantes</white></green>"
         - ""
-        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
+        - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:net_ball
         name: "&f&lMinería Extrema"
@@ -347,14 +347,14 @@ challenge-list:
       repeatable: 23h30m
       description:
         - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
-        - "<gray>Derrota 15 Pokémon de Tipo Volador.</gray>"
+        - "<italic:false><gray>Derrota 15 Pokémon de Tipo Volador.</gray>"
         - " "
-        - "<green>Recompensas:</green>"
-        - "<green>- <white>+600$</white></green>"
-        - "<green>- <white>4 Great Ball</white></green>"
-        - "<green>- <white>1 Caramelo Raro</white></green>"
+        - "<italic:false><green>Recompensas:</green>"
+        - "<italic:false><green>- <italic:false><white>+600$</white></green>"
+        - "<italic:false><green>- <italic:false><white>4 Great Ball</white></green>"
+        - "<italic:false><green>- <italic:false><white>1 Caramelo Raro</white></green>"
         - ""
-        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
+        - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:timer_ball
         name: "&f&lDerrota Voladores"
@@ -382,13 +382,13 @@ challenge-list:
       repeatable: 23h30m
       description:
         - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
-        - "<gray>Captura 12 Pokémon de Tipo Normal.</gray>"
+        - "<italic:false><gray>Captura 12 Pokémon de Tipo Normal.</gray>"
         - " "
-        - "<green>Recompensas:</green>"
-        - "<green>- <white>+700$</white></green>"
-        - "<green>- <white>3 Luxury Ball</white></green>"
+        - "<italic:false><green>Recompensas:</green>"
+        - "<italic:false><green>- <italic:false><white>+700$</white></green>"
+        - "<italic:false><green>- <italic:false><white>3 Luxury Ball</white></green>"
         - ""
-        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
+        - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:quick_ball
         name: "&f&lDomador de Normal"
@@ -414,14 +414,14 @@ challenge-list:
       repeatable: 23h30m
       description:
         - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
-        - "<gray>Derrota 30 Pokémon salvajes.</gray>"
+        - "<italic:false><gray>Derrota 30 Pokémon salvajes.</gray>"
         - " "
-        - "<green>Recompensas:</green>"
-        - "<green>- <white>+700$</white></green>"
-        - "<green>- <white>3 Great Ball</white></green>"
-        - "<green>- <white>2 Super Pociones</white></green>"
+        - "<italic:false><green>Recompensas:</green>"
+        - "<italic:false><green>- <italic:false><white>+700$</white></green>"
+        - "<italic:false><green>- <italic:false><white>3 Great Ball</white></green>"
+        - "<italic:false><green>- <italic:false><white>2 Super Pociones</white></green>"
         - ""
-        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
+        - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:heavy_ball
         name: "&f&lCazador Incansable"
@@ -448,14 +448,14 @@ challenge-list:
       repeatable: 23h30m
       description:
         - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
-        - "<gray>Captura 25 Pokémon salvajes.</gray>"
+        - "<italic:false><gray>Captura 25 Pokémon salvajes.</gray>"
         - " "
-        - "<green>Recompensas:</green>"
-        - "<green>- <white>+900$</white></green>"
-        - "<green>- <white>5 Poké Ball</white></green>"
-        - "<green>- <white>2 Super Pociones</white></green>"
+        - "<italic:false><green>Recompensas:</green>"
+        - "<italic:false><green>- <italic:false><white>+900$</white></green>"
+        - "<italic:false><green>- <italic:false><white>5 Poké Ball</white></green>"
+        - "<italic:false><green>- <italic:false><white>2 Super Pociones</white></green>"
         - ""
-        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
+        - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:friend_ball
         name: "&f&lCazador Masivo"
@@ -481,14 +481,14 @@ challenge-list:
       repeatable: 23h30m
       description:
         - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
-        - "<gray>Pesca 10 Magikarp.</gray>"
+        - "<italic:false><gray>Pesca 10 Magikarp.</gray>"
         - " "
-        - "<green>Recompensas:</green>"
-        - "<green>- <white>+800$</white></green>"
-        - "<green>- <white>1 Ficha de Arcade</white></green>"
-        - "<green>- <white>2 Caramelos Raros</white></green>"
+        - "<italic:false><green>Recompensas:</green>"
+        - "<italic:false><green>- <italic:false><white>+800$</white></green>"
+        - "<italic:false><green>- <italic:false><white>1 Ficha de Arcade</white></green>"
+        - "<italic:false><green>- <italic:false><white>2 Caramelos Raros</white></green>"
         - ""
-        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
+        - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:lure_ball
         name: "&f&lPesca Magikarp"
@@ -516,13 +516,13 @@ challenge-list:
       repeatable: 23h30m
       description:
         - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
-        - "<gray>Juega por 4 horas.</gray>"
+        - "<italic:false><gray>Juega por 4 horas.</gray>"
         - " "
-        - "<green>Recompensas:</green>"
-        - "<green>- <white>+600$</white></green>"
-        - "<green>- <white>2 Super Pociones</white></green>"
+        - "<italic:false><green>Recompensas:</green>"
+        - "<italic:false><green>- <italic:false><white>+600$</white></green>"
+        - "<italic:false><green>- <italic:false><white>2 Super Pociones</white></green>"
         - ""
-        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
+        - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:moon_ball
         name: "&f&lTiempo de Maestría"
@@ -547,12 +547,12 @@ challenge-list:
       repeatable: 23h30m
       description:
         - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
-        - "<gray>Juega por 6 horas.</gray>"
+        - "<italic:false><gray>Juega por 6 horas.</gray>"
         - " "
-        - "<green>Recompensas:</green>"
-        - "<green>- <white>1 Llave Normal</white></green>"
+        - "<italic:false><green>Recompensas:</green>"
+        - "<italic:false><green>- <italic:false><white>1 Llave Normal</white></green>"
         - ""
-        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
+        - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:beast_ball
         name: "&f&lExplorador Incansable"
@@ -576,14 +576,14 @@ challenge-list:
       repeatable: 23h30m
       description:
         - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
-        - "<gray>Libera 15 Magikarp de tu PC.</gray>"
+        - "<italic:false><gray>Libera 15 Magikarp de tu PC.</gray>"
         - " "
-        - "<green>Recompensas:</green>"
-        - "<green>- <white>+1000$</white></green>"
-        - "<green>- <white>1 Llave Normal</white></green>"
-        - "<green>- <white>2 Caramelos Raros</white></green>"
+        - "<italic:false><green>Recompensas:</green>"
+        - "<italic:false><green>- <italic:false><white>+1000$</white></green>"
+        - "<italic:false><green>- <italic:false><white>1 Llave Normal</white></green>"
+        - "<italic:false><green>- <italic:false><white>2 Caramelos Raros</white></green>"
         - ""
-        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
+        - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:master_ball
         name: "&f&lSacrificio Magikarp"
@@ -610,13 +610,13 @@ challenge-list:
       repeatable: 23h30m
       description:
         - "<gradient:aqua:dark_aqua><bold>ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ</bold></gradient>"
-        - "<gray>Derrota a 15 jugadores (usuarios).</gray>"
+        - "<italic:false><gray>Derrota a 15 jugadores (usuarios).</gray>"
         - " "
-        - "<green>Recompensas:</green>"
-        - "<green>- <white>+1000$</white></green>"
-        - "<green>- <white>5 Great Ball</white></green>"
+        - "<italic:false><green>Recompensas:</green>"
+        - "<italic:false><green>- <italic:false><white>+1000$</white></green>"
+        - "<italic:false><green>- <italic:false><white>5 Great Ball</white></green>"
         - ""
-        - "<gray>(<red>Click Derecho para cancelar</red>)</gray>"
+        - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
         material: cobblemon:safari_ball
         name: "&f&lDuelo de Entrenadores"
