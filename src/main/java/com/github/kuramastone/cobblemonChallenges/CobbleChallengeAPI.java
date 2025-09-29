@@ -325,6 +325,11 @@ public class CobbleChallengeAPI implements SimpleAPI {
         return new HashSet<>(challengeListMap.values());
     }
 
+    public String getRawMiniMessageString(String key) {
+        ComponentEditor editor = configOptions.messages.getOrDefault(key, new ComponentEditor(key));
+        return editor.getText();
+    }
+
     public void reloadConfig() {
         // Prevent rotation during reload
         CobbleChallengeMod.preventRotationOnReload = true;

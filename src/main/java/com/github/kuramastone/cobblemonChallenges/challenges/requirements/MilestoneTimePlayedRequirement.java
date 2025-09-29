@@ -96,10 +96,9 @@ public class MilestoneTimePlayedRequirement implements Requirement {
 
         @Override
         public String getProgressString() {
-            return PlainTextComponentSerializer.plainText().serialize(
-                CobbleChallengeMod.instance.getAPI().getMiniMessage("challenges.progression-string",
-                "{current}", String.valueOf(this.progressAmount),
-                "{target}", String.valueOf(this.requirement.totalTime)));
+            return CobbleChallengeMod.instance.getAPI().getRawMiniMessageString("challenges.progression-string")
+                .replace("{current}", String.valueOf(this.progressAmount))
+                .replace("{target}", String.valueOf(this.requirement.totalTime));
         }
     }
 }

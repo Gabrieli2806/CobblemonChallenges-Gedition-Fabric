@@ -162,18 +162,14 @@ public class StringUtils {
             if (remainingSeconds == 0) {
 
                 if(days == 1) {
-                    return PlainTextComponentSerializer.plainText().serialize(
-                            CobbleChallengeMod.instance.getAPI().getMiniMessage("time.twenty-four-hours"));
+                    return CobbleChallengeMod.instance.getAPI().getRawMiniMessageString("time.twenty-four-hours");
                 }
                 else {
-                    return days + " "+PlainTextComponentSerializer.plainText().serialize(
-                            CobbleChallengeMod.instance.getAPI().getMiniMessage("time.days")); // Full day duration
+                    return days + " " + CobbleChallengeMod.instance.getAPI().getRawMiniMessageString("time.days"); // Full day duration
                 }
 
             } else {
-                return days + (days == 1 ? " "+PlainTextComponentSerializer.plainText().serialize(
-                        CobbleChallengeMod.instance.getAPI().getMiniMessage("time.day"))+" " : " "+PlainTextComponentSerializer.plainText().serialize(
-                        CobbleChallengeMod.instance.getAPI().getMiniMessage("time.days"))+" ") + formatHHMMSS(remainingSeconds);
+                return days + (days == 1 ? " " + CobbleChallengeMod.instance.getAPI().getRawMiniMessageString("time.day") + " " : " " + CobbleChallengeMod.instance.getAPI().getRawMiniMessageString("time.days") + " ") + formatHHMMSS(remainingSeconds);
             }
         } else {
             // For less than a day, just return in HH:mm:ss format

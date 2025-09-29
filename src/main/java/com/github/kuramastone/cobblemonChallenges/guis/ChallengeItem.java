@@ -70,13 +70,13 @@ public class ChallengeItem implements ItemProvider {
             if(challenge.doesNeedSelection()) {
                 if (profile.isChallengeInProgress(challenge.getName())) {
                     long timeRemaining = profile.getActiveChallengeProgress(challenge.getName()).getTimeRemaining();
-                    replacements[3] = PlainTextComponentSerializer.plainText().serialize(api.getMiniMessage("challenges.tracking-tag.after-starting", "{time-remaining}",
-                            StringUtils.formatSecondsToString(timeRemaining / 1000)));
+                    replacements[3] = api.getRawMiniMessageString("challenges.tracking-tag.after-starting").replace("{time-remaining}",
+                            StringUtils.formatSecondsToString(timeRemaining / 1000));
                 }
                 else {
                     long timeRemaining = challenge.getMaxTimeInMilliseconds();
-                    replacements[3] = PlainTextComponentSerializer.plainText().serialize(api.getMiniMessage("challenges.tracking-tag.before-starting", "{time-remaining}",
-                            StringUtils.formatSecondsToString(timeRemaining / 1000)));
+                    replacements[3] = api.getRawMiniMessageString("challenges.tracking-tag.before-starting").replace("{time-remaining}",
+                            StringUtils.formatSecondsToString(timeRemaining / 1000));
                 }
             }
 
