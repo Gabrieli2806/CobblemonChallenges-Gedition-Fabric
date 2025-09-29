@@ -3,7 +3,7 @@ package com.github.kuramastone.cobblemonChallenges.gui;
 import com.github.kuramastone.bUtilities.ComponentEditor;
 import com.github.kuramastone.cobblemonChallenges.listeners.TickScheduler;
 import com.github.kuramastone.cobblemonChallenges.utils.FabricAdapter;
-import net.kyori.adventure.text.Component;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.Container;
 import net.minecraft.world.MenuProvider;
@@ -55,7 +55,16 @@ public class SimpleWindow {
     public void show(ServerPlayer player) {
 
         Objects.requireNonNull(player, "Player cannot be null");
-        Component name = ComponentEditor.decorateComponent(guiConfig.getWindowName());
+        // Process window name with MiniMessage if available, fallback to legacy
+        Component name;
+        try {
+            // Use direct MiniMessage processing
+            net.kyori.adventure.text.Component adventureComponent = com.github.kuramastone.cobblemonChallenges.utils.MiniMessageUtils.parse(guiConfig.getWindowName());
+            name = FabricAdapter.adapt(adventureComponent);
+        } catch (Exception e) {
+            // Fallback to legacy processing if MiniMessage fails
+            name = FabricAdapter.adapt(ComponentEditor.decorateComponent(guiConfig.getWindowName()));
+        }
         int rows = guiConfig.getStructure().size();
         CustomContainer container = new CustomContainer(rows);
         container.setClickRunnable(this::handleClick);
@@ -270,7 +279,7 @@ public class SimpleWindow {
 
         @Override
         public net.minecraft.network.chat.Component getDisplayName() {
-            return FabricAdapter.adapt(name);
+            return name;
         }
 
         @Nullable

@@ -23,7 +23,7 @@ Messages:
   time:
     day: "day"
     days: "days"
-    twenty-four-hours: "24 hours"
+    twenty-four-hours: "<italic:false><yellow>24 hours</yellow>"
   requirements:
     # When listing a player's progress on a challenge, these will be the prefix for that
     progression-shorthand:
@@ -94,9 +94,9 @@ Messages:
       cancel-success: "<gradient:yellow:gold>Reemplazo cancelado. Misión actual mantenida.</gradient>"
 
 # This is the menu where each challenge list is displayed.
-# Here you can move the lists and add new ones. No use MiniMessage Here
+# Here you can move the lists and add new ones. MiniMessage is now supported!
 base-menu:
-  window-name: "Challenges"
+  window-name: "<italic:false><gradient:aqua:dark_aqua><bold>Challenges</bold></gradient>"
   structure:
     - "# # # # # # # # #"
     - "# - 1 - 2 - 3 - #"

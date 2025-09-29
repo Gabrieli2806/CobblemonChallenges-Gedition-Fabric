@@ -67,7 +67,7 @@ public class MilestoneTimePlayedRequirement implements Requirement {
         public void progress(Object obj) {
             if (matchesMethod(obj)) {
                 if (meetsCriteria(getType().cast(obj))) {
-                    progressAmount += 1;
+                    progressAmount += 30; // Each event represents 30 seconds of playtime
                     progressAmount = Math.min(progressAmount, this.requirement.totalTime);
                 }
             }

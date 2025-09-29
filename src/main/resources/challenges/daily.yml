@@ -1,5 +1,5 @@
 gui:
-  window-name: "\uDAFF\uDFFF\uDAFF\uDFFF\uDAFF\uDFFF\uDAFF\uDFFF\uDAFF\uDFFF\uDAFF\uDFFF\uDAFF\uDFFF\uDAFF\uDFFF\uDAFF\uDFFF\uDAFF\uDFFF"
+  window-name: "<italic:false><gradient:green:dark_green><bold>ᴍɪꜱɪᴏɴᴇꜱ ᴅɪᴀʀɪᴀꜱ</bold></gradient>"
   structure:
     - "- - - - - - - - -"
     - "- - - . . . - - -"
@@ -156,6 +156,7 @@ challenge-list:
         - "<italic:false><green>- <italic:false><white>+500$</white></green>"
         - "<italic:false><green>- <italic:false><white>1 Caramelo Raro</white></green>"
         - "<italic:false><green>- <italic:false><white>2 Poké Ball</white></green>"
+        - "<italic:false><gray>Tiempo límite: <gradient:yellow:gold>24 Hours</gradient></gray>"
         - ""
         - "<italic:false><gray>(<italic:false><red>Click Derecho para cancelar</red>)</gray>"
       display-item:
