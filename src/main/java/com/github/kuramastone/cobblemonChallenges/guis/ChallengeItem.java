@@ -4,9 +4,11 @@ import com.github.kuramastone.bUtilities.ComponentEditor;
 import com.github.kuramastone.cobblemonChallenges.CobbleChallengeAPI;
 import com.github.kuramastone.cobblemonChallenges.CobbleChallengeMod;
 import com.github.kuramastone.cobblemonChallenges.challenges.Challenge;
+import com.github.kuramastone.cobblemonChallenges.challenges.ChallengeList;
 import com.github.kuramastone.cobblemonChallenges.gui.ItemProvider;
 import com.github.kuramastone.cobblemonChallenges.gui.SimpleWindow;
 import com.github.kuramastone.cobblemonChallenges.player.PlayerProfile;
+import com.github.kuramastone.cobblemonChallenges.player.ChallengeProgress;
 import com.github.kuramastone.cobblemonChallenges.utils.FabricAdapter;
 import com.github.kuramastone.cobblemonChallenges.utils.ItemUtils;
 import com.github.kuramastone.cobblemonChallenges.utils.StringUtils;
@@ -88,6 +90,48 @@ public class ChallengeItem implements ItemProvider {
             else if (profile.isChallengeInProgress(challenge.getName())) {
                 String progressLines = profile.getActiveChallengeProgress(challenge.getName()).getProgressListAsString();
                 replacements[1] = "<dark_green>Currently in progress</dark_green>" + "\n" + progressLines;
+            }
+            else if (!challenge.doesNeedSelection()) {
+                // For automatic challenges, ensure time-played challenges get initialized properly
+                boolean hasTimePlayedRequirement = challenge.getRequirements().stream()
+                    .anyMatch(req -> req.getName().equals("milestone_time_played"));
+
+                if (hasTimePlayedRequirement) {
+                    // Check if challenge is already in progress
+                    ChallengeProgress progress = profile.getActiveChallengeProgress(challenge.getName());
+                    if (progress != null) {
+                        String progressLines = progress.getProgressListAsString();
+                        replacements[1] = "<dark_green>Currently in progress</dark_green>" + "\n" + progressLines;
+                    } else {
+                        // For automatic time-played challenges, initialize them if not already active
+                        // This ensures they show up like weekly challenges do
+                        try {
+                            // Get the challenge list that contains this challenge
+                            ChallengeList challengeList = api.getChallengeLists().stream()
+                                .filter(list -> list.getChallengeMap().stream()
+                                    .anyMatch(c -> c.getName().equals(challenge.getName())))
+                                .findFirst()
+                                .orElse(null);
+
+                            if (challengeList != null) {
+                                profile.addActiveChallenge(challengeList, challenge);
+                                progress = profile.getActiveChallengeProgress(challenge.getName());
+                                if (progress != null) {
+                                    String progressLines = progress.getProgressListAsString();
+                                    replacements[1] = "<dark_green>Currently in progress</dark_green>" + "\n" + progressLines;
+                                } else {
+                                    replacements[1] = "<yellow>Initializing tracking...</yellow>";
+                                }
+                            } else {
+                                replacements[1] = "<yellow>Can be attempted</yellow>";
+                            }
+                        } catch (Exception e) {
+                            replacements[1] = "<yellow>Can be attempted</yellow>";
+                        }
+                    }
+                } else {
+                    replacements[1] = "<yellow>Can be attempted</yellow>";
+                }
             }
             else {
                 replacements[1] = "<yellow>Can be attempted</yellow>";

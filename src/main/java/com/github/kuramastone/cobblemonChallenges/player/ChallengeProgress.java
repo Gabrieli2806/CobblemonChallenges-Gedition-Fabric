@@ -173,17 +173,16 @@ public class ChallengeProgress {
 
             pokename = Character.toUpperCase(pokename.charAt(0)) + pokename.substring(1);
 
-            String reqTitle = PlainTextComponentSerializer.plainText().serialize(
-                    api.getMiniMessage("requirements.progression-shorthand.%s".formatted(set.getKey().toLowerCase()),
-                    "{battlerData}", battlerData,
-                    "{pokename}", pokename,
-                    "{blockData}", blockData))
+            String reqTitle = api.getRawMiniMessageString("requirements.progression-shorthand.%s".formatted(set.getKey().toLowerCase()))
+                    .replace("{battlerData}", battlerData)
+                    .replace("{pokename}", pokename)
+                    .replace("{blockData}", blockData)
                     .replace("  ", " ");
 
-            sb.append(PlainTextComponentSerializer.plainText().serialize(
-                    api.getMiniMessage("progression.progression-entry",
-                    "{requirement-title}", reqTitle,
-                    "{progression-string}", set.getValue().getProgressString())).replace("{block_data?}", "")
+            sb.append(api.getRawMiniMessageString("progression.progression-entry")
+                    .replace("{requirement-title}", reqTitle)
+                    .replace("{progression-string}", set.getValue().getProgressString())
+                    .replace("{block_data?}", "")
             ).append("\n");
         }
 
