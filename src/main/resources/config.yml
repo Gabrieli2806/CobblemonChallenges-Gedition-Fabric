@@ -56,8 +56,8 @@ Messages:
       - "                                 "
       - "{challenge-description}"
     progression_status:
-      before-attempt: "<italic:false><yellow>Can be attempted</yellow>"
-      during-attempt: "<dark_green>Currently in progress</dark_green>"
+      before-attempt: "<italic:false><red>¡ᴄʟɪᴄ ᴘᴀʀᴀ ɪɴɪᴄɪᴀʀ!</red>"
+      during-attempt: "<dark_green>En Progreso</dark_green>"
       post-completion: "<green>Already completed</green>"
     failure:
       time-ran-out: "{prefix} <italic:false><red>Daily Quest <gold>{challenge}</gold> failed! You may attempt this challenge again, however any progress made previously has been reset.</red>"

@@ -84,57 +84,20 @@ public class ChallengeItem implements ItemProvider {
 
             // insert correct progress tag
             if (profile.isChallengeCompleted(challenge.getName())) {
-                replacements[1] = "<green>Already completed</green>";
+                replacements[1] = api.getRawMiniMessageString("challenges.progression_status.post-completion");
                 replacements[3] = ""; // remove tracking tag if completed
             }
             else if (profile.isChallengeInProgress(challenge.getName())) {
                 String progressLines = profile.getActiveChallengeProgress(challenge.getName()).getProgressListAsString();
-                replacements[1] = "<dark_green>Currently in progress</dark_green>" + "\n" + progressLines;
+                replacements[1] = api.getRawMiniMessageString("challenges.progression_status.during-attempt") + "\n" + progressLines;
             }
             else if (!challenge.doesNeedSelection()) {
-                // For automatic challenges, ensure time-played challenges get initialized properly
-                boolean hasTimePlayedRequirement = challenge.getRequirements().stream()
-                    .anyMatch(req -> req.getName().equals("milestone_time_played"));
-
-                if (hasTimePlayedRequirement) {
-                    // Check if challenge is already in progress
-                    ChallengeProgress progress = profile.getActiveChallengeProgress(challenge.getName());
-                    if (progress != null) {
-                        String progressLines = progress.getProgressListAsString();
-                        replacements[1] = "<dark_green>Currently in progress</dark_green>" + "\n" + progressLines;
-                    } else {
-                        // For automatic time-played challenges, initialize them if not already active
-                        // This ensures they show up like weekly challenges do
-                        try {
-                            // Get the challenge list that contains this challenge
-                            ChallengeList challengeList = api.getChallengeLists().stream()
-                                .filter(list -> list.getChallengeMap().stream()
-                                    .anyMatch(c -> c.getName().equals(challenge.getName())))
-                                .findFirst()
-                                .orElse(null);
-
-                            if (challengeList != null) {
-                                profile.addActiveChallenge(challengeList, challenge);
-                                progress = profile.getActiveChallengeProgress(challenge.getName());
-                                if (progress != null) {
-                                    String progressLines = progress.getProgressListAsString();
-                                    replacements[1] = "<dark_green>Currently in progress</dark_green>" + "\n" + progressLines;
-                                } else {
-                                    replacements[1] = "<yellow>Initializing tracking...</yellow>";
-                                }
-                            } else {
-                                replacements[1] = "<yellow>Can be attempted</yellow>";
-                            }
-                        } catch (Exception e) {
-                            replacements[1] = "<yellow>Can be attempted</yellow>";
-                        }
-                    }
-                } else {
-                    replacements[1] = "<yellow>Can be attempted</yellow>";
-                }
+                // For automatic challenges that aren't in progress, show "Can be attempted"
+                // The proper initialization should happen in PlayerProfile.addUnrestrictedChallenges()
+                replacements[1] = api.getRawMiniMessageString("challenges.progression_status.before-attempt");
             }
             else {
-                replacements[1] = "<yellow>Can be attempted</yellow>";
+                replacements[1] = api.getRawMiniMessageString("challenges.progression_status.before-attempt");
             }
 
             // remove tracking tag if no timer needed
