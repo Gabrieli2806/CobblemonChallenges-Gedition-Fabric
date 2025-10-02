@@ -16,7 +16,7 @@ import com.github.kuramastone.cobblemonChallenges.events.PlayerJoinEvent;
 import com.github.kuramastone.cobblemonChallenges.listeners.ChallengeListener;
 import com.github.kuramastone.cobblemonChallenges.listeners.TickScheduler;
 import com.github.kuramastone.cobblemonChallenges.player.PlayerProfile;
-// import dev.neovitalism.neodaycare.api.NeoDaycareEvents; // Commented out to avoid dependency issues
+import dev.neovitalism.neodaycare.api.NeoDaycareEvents;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
@@ -165,8 +165,7 @@ public class CobbleChallengeMod implements ModInitializer {
         CobblemonEvents.TRADE_COMPLETED.subscribe(Priority.HIGHEST, ChallengeListener::onTradeCompleted);
         CobblemonEvents.FOSSIL_REVIVED.subscribe(Priority.HIGHEST, ChallengeListener::onFossilRevived);
 
-        // NeoDaycare integration disabled to avoid dependency issues
-        /*
+        // NeoDaycare integration
         if (FabricLoader.getInstance().isModLoaded("neodaycare")) {
             try {
                 NeoDaycareEvents.EGG_HATCHED.register((a,b) -> ChallengeListener.onBreed(new HatchPokemonRequirement.EggHatchedEventData(ServerPlayer.class.cast(a), b)));
@@ -177,7 +176,6 @@ public class CobbleChallengeMod implements ModInitializer {
                 logger.warn("NeoDaycare mod detected but integration failed: " + e.getMessage());
             }
         }
-        */
     }
 
     public CobbleChallengeAPI getAPI() {

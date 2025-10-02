@@ -117,27 +117,41 @@ public class DefeatBattlerRequirement implements Requirement {
                 return false;
 
             // check npc/player/gymleader/wild
-            StringBuilder enemyType = new StringBuilder();
+            List<String> enemyTypes = new ArrayList<>();
             List<BattlePokemon> enemyPokemon = new ArrayList<>();
             for (BattleActor participant : event.getLosers()) {
                 enemyPokemon.addAll(participant.getPokemonList());
                 if (participant instanceof EntityBackedBattleActor<?> entityBackedBattleActor) {
                     if (entityBackedBattleActor.getEntity() instanceof Player)
-                        enemyType.append("player/");
+                        enemyTypes.add("player");
                     else
-                        enemyType.append("wild/");
+                        enemyTypes.add("wild");
                 }
                 else if (participant instanceof AIBattleActor aiBattleActor) {
-                    enemyType.append("npc/");
+                    enemyTypes.add("npc");
                 }
                 else {
-                    enemyType.append("wild/");
+                    enemyTypes.add("wild");
                 }
             }
 
-            // check if acceptable requirements contains any of the enemytypes we inserted
-            if (!StringUtils.doesStringContainCategory(requirement.enemyType.split("/"), enemyType.toString())) {
-                return false;
+            // check if any of the enemy types match the requirement
+            // If requirement is "any", always pass
+            if (!requirement.enemyType.equalsIgnoreCase("any")) {
+                String[] acceptedTypes = requirement.enemyType.split("/");
+                boolean matchesEnemyType = false;
+                for (String enemyType : enemyTypes) {
+                    for (String acceptedType : acceptedTypes) {
+                        if (acceptedType.equalsIgnoreCase(enemyType)) {
+                            matchesEnemyType = true;
+                            break;
+                        }
+                    }
+                    if (matchesEnemyType) break;
+                }
+                if (!matchesEnemyType) {
+                    return false;
+                }
             }
 
             for (BattlePokemon battlePokemon : enemyPokemon) {

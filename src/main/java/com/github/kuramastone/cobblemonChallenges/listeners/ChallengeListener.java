@@ -47,7 +47,9 @@ public class ChallengeListener {
 
     public static void passEvent(Object event, Player player) {
         try {
-            passEvent(event, player.getUUID());
+            if (player != null) {
+                passEvent(event, player.getUUID());
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -161,7 +163,12 @@ public class ChallengeListener {
 
     public static void onPlayerJoin(PlayerJoinEvent event) {
         // delay this to allow player to fully join before triggering
-        TickScheduler.scheduleLater(60L, () -> passEvent(event, event.getPlayer()));
+        TickScheduler.scheduleLater(60L, () -> {
+            // Force initialization of automatic challenges when player joins
+            PlayerProfile profile = api.getOrCreateProfile(event.getPlayer().getUUID());
+            profile.addUnrestrictedChallenges(); // Ensure automatic challenges are added
+            passEvent(event, event.getPlayer());
+        });
     }
 
     public static Unit onBobberSpawnPokemon(BobberSpawnPokemonEvent.Post post) {

@@ -104,6 +104,14 @@ public class CatchPokemonRequirement implements Requirement {
             boolean is_ultra_beast = pokemon.isUltraBeast();
             boolean is_mythical = pokemon.isMythical();
 
+            // Debug logging for mythical/legendary/ultra beast detection
+            if (requirement.is_mythical || requirement.is_legendary || requirement.is_ultra_beast) {
+                CobbleChallengeMod.logger.info("Catch_Pokemon check - Pokemon: {}, isLegendary: {}, isMythical: {}, isUltraBeast: {}",
+                    pokename, is_legendary, is_mythical, is_ultra_beast);
+                CobbleChallengeMod.logger.info("Catch_Pokemon requirements - legendary: {}, mythical: {}, ultra_beast: {}",
+                    requirement.is_legendary, requirement.is_mythical, requirement.is_ultra_beast);
+            }
+
             if (!StringUtils.doesStringContainCategory(requirement.pokename.split("/"), pokename)) {
                 return false;
             }

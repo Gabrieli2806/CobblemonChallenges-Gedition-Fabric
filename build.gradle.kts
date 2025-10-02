@@ -92,7 +92,7 @@ dependencies {
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.10.0")
 
     includeAndImplement("com.github.kuramastone:BUtilities-Core:$bUtilitiesVersion")
-    // modImplementation("me.neovitalism.neodaycare:neodaycare:1.4.1") // Commented out to avoid dependency issues
+    modImplementation("me.neovitalism.neodaycare:neodaycare:1.4.1")
     // Adventure Platform Fabric - provides native Adventure support for Minecraft 1.21.1
     modImplementation(include("net.kyori:adventure-platform-fabric:5.14.0")!!)
 
