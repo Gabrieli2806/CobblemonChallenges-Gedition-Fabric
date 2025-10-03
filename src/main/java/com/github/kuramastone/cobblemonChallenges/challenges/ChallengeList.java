@@ -141,74 +141,150 @@ public class ChallengeList {
     public long getLastRotationTime() {
         return lastRotationTime;
     }
+
+    /**
+     * Get time remaining until next rotation in milliseconds
+     * Returns -1 if rotation is disabled
+     */
+    public long getTimeUntilNextRotation() {
+        if ("disabled".equals(rotationInterval)) {
+            return -1;
+        }
+
+        long requiredMillis = parseRotationInterval(rotationInterval);
+        if (requiredMillis == -1) {
+            return -1;
+        }
+
+        long currentTime = System.currentTimeMillis();
+        long timeSinceRotation = currentTime - lastRotationTime;
+        long timeRemaining = requiredMillis - timeSinceRotation;
+
+        return Math.max(0, timeRemaining);
+    }
+
+    /**
+     * Get time remaining until next rotation formatted as "Xd Xh Xm"
+     * Returns "Disabled" if rotation is disabled
+     */
+    public String getTimeUntilNextRotationFormatted() {
+        long remaining = getTimeUntilNextRotation();
+
+        if (remaining == -1) {
+            return "Disabled";
+        }
+
+        if (remaining == 0) {
+            return "Ready to rotate";
+        }
+
+        long days = remaining / (24 * 60 * 60 * 1000L);
+        remaining %= (24 * 60 * 60 * 1000L);
+
+        long hours = remaining / (60 * 60 * 1000L);
+        remaining %= (60 * 60 * 1000L);
+
+        long minutes = remaining / (60 * 1000L);
+
+        StringBuilder result = new StringBuilder();
+        if (days > 0) {
+            result.append(days).append("d ");
+        }
+        if (hours > 0 || days > 0) {
+            result.append(hours).append("h ");
+        }
+        result.append(minutes).append("m");
+
+        return result.toString().trim();
+    }
     
     /**
      * Check if rotation is needed and perform it if necessary
      */
     public void checkAndPerformRotation() {
         if ("disabled".equals(rotationInterval)) {
-            // CobbleChallengeMod.logger.debug("Rotation disabled for challenge list: {}", name);
             return; // No rotation
         }
 
         // Prevent rotation during reload/initialization
         if (CobbleChallengeMod.preventRotationOnReload) {
-            // CobbleChallengeMod.logger.debug("Rotation temporarily disabled during reload for challenge list: {}", name);
             return;
         }
-        
+
         long currentTime = System.currentTimeMillis();
         long timeSinceRotation = currentTime - lastRotationTime;
-        
-        // Convert to hours for easier reading
-        long hoursSinceRotation = timeSinceRotation / (60 * 60 * 1000L);
-        
-        boolean shouldRotate = false;
-        long requiredHours = 0;
-        
-        // Check if it's a custom interval (like "15d" for 15 days)
-        if (rotationInterval.toLowerCase().endsWith("d")) {
-            try {
-                // Parse custom days (e.g., "15d" -> 15 days)
-                String daysString = rotationInterval.toLowerCase().replace("d", "");
-                int customDays = Integer.parseInt(daysString);
-                requiredHours = customDays * 24;
-                shouldRotate = timeSinceRotation >= customDays * 24L * 60 * 60 * 1000L;
-                // CobbleChallengeMod.logger.debug("Custom rotation interval: {} days ({} hours)", customDays, requiredHours);
-            } catch (NumberFormatException e) {
-                CobbleChallengeMod.logger.error("Invalid custom rotation interval format: '{}'. Use format like '15d' for 15 days", rotationInterval);
-                return; // Skip rotation if format is invalid
-            }
-        } else {
-            // Standard intervals
-            switch (rotationInterval.toLowerCase()) {
-                case "daily":
-                    requiredHours = 24;
-                    shouldRotate = timeSinceRotation >= 24 * 60 * 60 * 1000L; // 24 hours
-                    break;
-                case "weekly":
-                    requiredHours = 7 * 24;
-                    shouldRotate = timeSinceRotation >= 7 * 24 * 60 * 60 * 1000L; // 7 days
-                    break;
-                case "monthly":
-                    requiredHours = 30 * 24;
-                    shouldRotate = timeSinceRotation >= 30L * 24 * 60 * 60 * 1000L; // 30 days
-                    break;
-                default:
-                    CobbleChallengeMod.logger.error("Unknown rotation interval: '{}'. Valid options: daily, weekly, monthly, disabled, or custom format like '15d'", rotationInterval);
-                    return;
-            }
+
+        // Parse the rotation interval to milliseconds
+        long requiredMillis = parseRotationInterval(rotationInterval);
+        if (requiredMillis == -1) {
+            return; // Invalid format, already logged error
         }
-        
-        // CobbleChallengeMod.logger.debug("Rotation check for '{}': {} hours since last rotation, {} hours required for {} rotation. Should rotate: {}", 
-//  // name, hoursSinceRotation, requiredHours, rotationInterval, shouldRotate);
-        
+
+        boolean shouldRotate = timeSinceRotation >= requiredMillis;
+
         if (shouldRotate) {
             // Performing automatic rotation
             rotateVisibleChallenges();
             lastRotationTime = currentTime;
             // Rotation completed
+            CobbleChallengeMod.logger.info("Automatic rotation performed for '{}' (interval: {})", name, rotationInterval);
         }
+    }
+
+    /**
+     * Parse rotation interval string to milliseconds
+     * Supports formats: "daily", "weekly", "monthly", "15d", "1d12h", "7d12h", "2h30m", etc.
+     */
+    private long parseRotationInterval(String interval) {
+        interval = interval.toLowerCase().trim();
+
+        // Standard intervals
+        switch (interval) {
+            case "daily":
+                return 24 * 60 * 60 * 1000L; // 24 hours
+            case "weekly":
+                return 7 * 24 * 60 * 60 * 1000L; // 7 days
+            case "monthly":
+                return 30L * 24 * 60 * 60 * 1000L; // 30 days
+        }
+
+        // Custom interval parsing (e.g., "1d12h", "7d", "12h30m", "2h", "30m")
+        try {
+            long totalMillis = 0;
+
+            // Extract days
+            if (interval.contains("d")) {
+                int dIndex = interval.indexOf('d');
+                String daysStr = interval.substring(0, dIndex);
+                totalMillis += Long.parseLong(daysStr) * 24 * 60 * 60 * 1000L;
+                interval = interval.substring(dIndex + 1);
+            }
+
+            // Extract hours
+            if (interval.contains("h")) {
+                int hIndex = interval.indexOf('h');
+                String hoursStr = interval.substring(0, hIndex);
+                totalMillis += Long.parseLong(hoursStr) * 60 * 60 * 1000L;
+                interval = interval.substring(hIndex + 1);
+            }
+
+            // Extract minutes
+            if (interval.contains("m")) {
+                int mIndex = interval.indexOf('m');
+                String minutesStr = interval.substring(0, mIndex);
+                totalMillis += Long.parseLong(minutesStr) * 60 * 1000L;
+            }
+
+            if (totalMillis > 0) {
+                return totalMillis;
+            }
+        } catch (Exception e) {
+            CobbleChallengeMod.logger.error("Invalid rotation interval format: '{}'. Use formats like: 'daily', 'weekly', 'monthly', '15d', '1d12h', '7d12h', '2h30m'", rotationInterval);
+            return -1;
+        }
+
+        CobbleChallengeMod.logger.error("Unknown rotation interval: '{}'. Valid formats: 'daily', 'weekly', 'monthly', '15d', '1d12h', '7d12h', '2h30m'", rotationInterval);
+        return -1;
     }
     
     /**
@@ -216,43 +292,57 @@ public class ChallengeList {
      */
     private void rotateVisibleChallenges() {
         // Rotating visible challenges
-        
+
+        // CANCEL ALL ACTIVE CHALLENGES FOR THIS LIST WHEN ROTATION HAPPENS
+        cancelAllActiveChallengesForThisList();
+
         if (visibleMissions >= challengeMap.size()) {
             // Show all challenges if we have fewer challenges than visible missions
             visibleChallenges = new ArrayList<>(challengeMap);
             // Showing all challenges (no rotation needed)
             return;
         }
-        
-        // Get active challenges that should be preserved
-        Set<Challenge> activeChallenges = getActiveChallengesForRotation();
-        // Found active challenges to preserve
-        
-        // Create a list of challenges that can be rotated (exclude active ones)
-        List<Challenge> availableForRotation = new ArrayList<>();
-        for (Challenge challenge : challengeMap) {
-            if (!activeChallenges.contains(challenge)) {
-                availableForRotation.add(challenge);
-            }
-        }
-        
-        // Available challenges for rotation
-        
+
+        // Create a list of all challenges available for rotation
+        List<Challenge> availableForRotation = new ArrayList<>(challengeMap);
+
         // Shuffle the available challenges for random selection
         Collections.shuffle(availableForRotation, new Random());
-        
-        // Start with active challenges
-        visibleChallenges = new ArrayList<>(activeChallenges);
-        
-        // Add random challenges up to the visible limit
-        int remainingSlots = visibleMissions - activeChallenges.size();
-        for (int i = 0; i < remainingSlots && i < availableForRotation.size(); i++) {
+
+        // Select random challenges up to the visible limit
+        visibleChallenges = new ArrayList<>();
+        for (int i = 0; i < visibleMissions && i < availableForRotation.size(); i++) {
             visibleChallenges.add(availableForRotation.get(i));
         }
-        
-        // Rotation complete
-        
+
         // Rotation completed
+    }
+
+    /**
+     * Cancel ALL active challenges for ALL players in this challenge list
+     */
+    private void cancelAllActiveChallengesForThisList() {
+        int canceledCount = 0;
+
+        for (PlayerProfile profile : api.getProfiles()) {
+            List<ChallengeProgress> toRemove = new ArrayList<>();
+
+            for (ChallengeProgress progress : profile.getActiveChallenges()) {
+                if (progress.getParentList().getName().equals(this.name)) {
+                    toRemove.add(progress);
+                }
+            }
+
+            // Remove all active challenges from this list for this player
+            for (ChallengeProgress progress : toRemove) {
+                profile.removeActiveChallenge(progress);
+                canceledCount++;
+            }
+        }
+
+        if (canceledCount > 0) {
+            CobbleChallengeMod.logger.info("Rotation: Canceled {} active challenge(s) from challenge list '{}'", canceledCount, name);
+        }
     }
     
     /**

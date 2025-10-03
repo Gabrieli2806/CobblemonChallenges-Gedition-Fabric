@@ -61,7 +61,7 @@ public class CobbleChallengeMod implements ModInitializer {
         startRepeatableScheduler();
         startRotationScheduler();
         OldCommandHandler.register();
-//        registerCommands();
+//        registerCommands(); // Disabled - requires fabric-permissions-api
         registerTrackedEvents();
 
     }
