@@ -38,7 +38,7 @@ challenge-list:
   
   # Mission rotation configuration
   visible-missions: 9
-  rotation-interval: monthly
+  rotation-interval: 15d12h  # Rotates every 15 days and 12 hours
   
   challenges:
 
