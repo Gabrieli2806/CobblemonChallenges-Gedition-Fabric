@@ -1,6 +1,6 @@
 package com.github.kuramastone.cobblemonChallenges.challenges.requirements;
 
-import com.cobblemon.mod.common.api.events.pokemon.TradeCompletedEvent;
+import com.cobblemon.mod.common.api.events.pokemon.TradeEvent;
 import com.cobblemon.mod.common.api.types.ElementalType;
 import com.cobblemon.mod.common.pokemon.Pokemon;
 import com.github.kuramastone.bUtilities.yaml.YamlConfig;
@@ -11,7 +11,6 @@ import com.github.kuramastone.cobblemonChallenges.utils.PixelmonUtils;
 import com.github.kuramastone.cobblemonChallenges.utils.StringUtils;
 import net.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
@@ -59,21 +58,19 @@ public class TradeCompletedRequirement implements Requirement {
     }
 
     // Static nested Progression class
-    public static class TradesCompletedProgression implements Progression<TradeCompletedEvent> {
+    public static class TradesCompletedProgression implements Progression<TradeEvent.Post> {
 
-        private PlayerProfile profile;
         private TradeCompletedRequirement requirement;
         private int progressAmount;
 
         public TradesCompletedProgression(PlayerProfile profile, TradeCompletedRequirement requirement) {
-            this.profile = profile;
             this.requirement = requirement;
             this.progressAmount = 0;
         }
 
         @Override
-        public Class<TradeCompletedEvent> getType() {
-            return TradeCompletedEvent.class;
+        public Class<TradeEvent.Post> getType() {
+            return TradeEvent.Post.class;
         }
 
         @Override
@@ -91,7 +88,7 @@ public class TradeCompletedRequirement implements Requirement {
         }
 
         @Override
-        public boolean meetsCriteria(TradeCompletedEvent event) {
+        public boolean meetsCriteria(TradeEvent.Post event) {
 
             Pokemon pokemon = event.getTradeParticipant1Pokemon();
             String pokename = pokemon.getSpecies().getName();

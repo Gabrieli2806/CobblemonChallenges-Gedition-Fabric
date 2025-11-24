@@ -13,7 +13,6 @@ import net.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer;
 
 import java.util.List;
 import java.util.UUID;
-import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 public class HatchEggRequirement implements Requirement {
@@ -58,21 +57,19 @@ public class HatchEggRequirement implements Requirement {
     }
 
     // Static nested Progression class
-    public static class HatchEggProgression implements Progression<HatchEggEvent> {
+    public static class HatchEggProgression implements Progression<HatchEggEvent.Post> {
 
-        private PlayerProfile profile;
         private HatchEggRequirement requirement;
         private int progressAmount;
 
         public HatchEggProgression(PlayerProfile profile, HatchEggRequirement requirement) {
-            this.profile = profile;
             this.requirement = requirement;
             this.progressAmount = 0;
         }
 
         @Override
-        public Class<HatchEggEvent> getType() {
-            return HatchEggEvent.class;
+        public Class<HatchEggEvent.Post> getType() {
+            return HatchEggEvent.Post.class;
         }
 
         @Override
@@ -90,12 +87,12 @@ public class HatchEggRequirement implements Requirement {
         }
 
         @Override
-        public boolean meetsCriteria(HatchEggEvent event) {
-            Pokemon pokemon = event.getEgg().create();
+        public boolean meetsCriteria(HatchEggEvent.Post event) {
+            Pokemon pokemon = event.getPokemon();
             String pokename = pokemon.getSpecies().getName();
             boolean shiny = pokemon.getShiny();
             List<ElementalType> types = StreamSupport.stream(pokemon.getTypes().spliterator(), false).toList();
-            String ballName = event.getEgg().getPokeball();
+            String ballName = pokemon.getCaughtBall().getName().toString();
             long time_of_day = event.getPlayer().level().getDayTime();
             boolean is_legendary = pokemon.isLegendary();
             boolean is_ultra_beast = pokemon.isUltraBeast();

@@ -136,7 +136,7 @@ public class ChallengeListener {
         return null;
     }
 
-    public static Unit onExpGained(ExperienceGainedPostEvent event) {
+    public static Unit onExpGained(ExperienceGainedEvent.Post event) {
         if (event.getPokemon().getOwnerPlayer() != null)
             passEvent(event, event.getPokemon().getOwnerPlayer());
         return null;
@@ -148,7 +148,7 @@ public class ChallengeListener {
         return null;
     }
 
-    public static Unit onTradeCompleted(TradeCompletedEvent event) {
+    public static Unit onTradeCompleted(TradeEvent.Post event) {
         passEvent(event, event.getTradeParticipant1().getUuid());
         passEvent(event, event.getTradeParticipant2().getUuid());
         return null;

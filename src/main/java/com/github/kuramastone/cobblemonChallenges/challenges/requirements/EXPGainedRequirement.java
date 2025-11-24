@@ -1,6 +1,6 @@
 package com.github.kuramastone.cobblemonChallenges.challenges.requirements;
 
-import com.cobblemon.mod.common.api.events.pokemon.ExperienceGainedPostEvent;
+import com.cobblemon.mod.common.api.events.pokemon.ExperienceGainedEvent;
 import com.cobblemon.mod.common.api.types.ElementalType;
 import com.cobblemon.mod.common.pokemon.Pokemon;
 import com.github.kuramastone.bUtilities.yaml.YamlConfig;
@@ -11,7 +11,6 @@ import com.github.kuramastone.cobblemonChallenges.utils.PixelmonUtils;
 import com.github.kuramastone.cobblemonChallenges.utils.StringUtils;
 import net.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
@@ -61,21 +60,19 @@ public class EXPGainedRequirement implements Requirement {
     }
 
     // Static nested Progression class
-    public static class ExpGainedProgression implements Progression<ExperienceGainedPostEvent> {
+    public static class ExpGainedProgression implements Progression<ExperienceGainedEvent.Post> {
 
-        private PlayerProfile profile;
         private EXPGainedRequirement requirement;
         private int progressAmount;
 
         public ExpGainedProgression(PlayerProfile profile, EXPGainedRequirement requirement) {
-            this.profile = profile;
             this.requirement = requirement;
             this.progressAmount = 0;
         }
 
         @Override
-        public Class<ExperienceGainedPostEvent> getType() {
-            return ExperienceGainedPostEvent.class;
+        public Class<ExperienceGainedEvent.Post> getType() {
+            return ExperienceGainedEvent.Post.class;
         }
 
         @Override
@@ -87,14 +84,14 @@ public class EXPGainedRequirement implements Requirement {
         public void progress(Object obj) {
             if (matchesMethod(obj)) {
                 if (meetsCriteria(getType().cast(obj))) {
-                    ExperienceGainedPostEvent event = getType().cast(obj);
+                    ExperienceGainedEvent.Post event = getType().cast(obj);
                     progressAmount += event.getExperience();
                 }
             }
         }
 
         @Override
-        public boolean meetsCriteria(ExperienceGainedPostEvent event) {
+        public boolean meetsCriteria(ExperienceGainedEvent.Post event) {
 
             Pokemon pokemon = event.getPokemon();
             String pokename = pokemon.getSpecies().getName();

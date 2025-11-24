@@ -96,7 +96,7 @@ dependencies {
     // Adventure Platform Fabric - provides native Adventure support for Minecraft 1.21.1
     modImplementation(include("net.kyori:adventure-platform-fabric:5.14.0")!!)
 
-    modImplementation("com.cobblemon:fabric:1.6.1+1.21.1-SNAPSHOT")
+    modImplementation("com.cobblemon:fabric:1.7.0+1.21.1")
     // commands
     shade("io.github.revxrsal:lamp.common:4.0.0-rc.9")
     modShade("io.github.revxrsal:lamp.fabric:4.0.0-rc.9")
